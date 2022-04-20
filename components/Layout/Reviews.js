@@ -106,7 +106,7 @@ export default function Reviews() {
           <Flex alignItems="center">
             <Avatar size="lg" name="Segun Adebayo" src="/profile/man2.png" />
             <Box ml="5" w={notSmallerScreen ? "90%" : "60%"}>
-              <Text>Mr Khan</Text>
+              <Text>Wk</Text>
             </Box>
           </Flex>
           <Text
