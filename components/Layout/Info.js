@@ -27,26 +27,28 @@ function Info() {
             bgClip="text"
             fontSize="5xl"
             textAlign="center"
-            fontWeight="700"
-            letterSpacing="5px"
+            fontWeight="900"
+            textTransform="uppercase"
+            letterSpacing="4px"
           >
             Carparlar
           </Heading>
           <Heading
             textAlign="center"
-            fontSize="lg"
+            fontSize="25"
             textTransform="uppercase"
             maxW="100%"
-            width="40%"
+            w="60%"
             mx="auto"
-            my="-2.5rem"
+            my="-2.7rem"
+            letterSpacing="1px"
           >
             easy finance facilities with carpalar
           </Heading>
           <Text
             mt="10"
-            width="50%"
-            fontSize="16px"
+            width="80%"
+            fontSize="20"
             mx="auto"
             letterSpacing="1px"
             textAlign="left"
@@ -58,8 +60,8 @@ function Info() {
           </Text>
           <Text
             mt="6"
-            width="50%"
-            fontSize="16px"
+            width="80%"
+            fontSize="20"
             mx="auto"
             letterSpacing="1px"
             textAlign="left"
@@ -81,16 +83,17 @@ function Info() {
           </Button>
         </Flex>
 
-        <Flex px="50" flexWrap="wrap" flexDir="row" width="50%">
-          <Flex>
+        <Flex px="20" flexWrap="wrap" flexDir="row" width="50vw" gap="30">
+          <Flex w="100%" gap="5">
             <Box
               position="relative"
-              boxSize="280px"
-              minW={notSmallerScreen ? "45%" : "100%"}
-              m="5"
+              // boxSize="20%"
+              minH="30vh"
+              w={notSmallerScreen ? "50%" : "100%"}
+              // m="5"
               boxShadow="lg"
-              mb="5"
-              mt="5"
+              // mb="5"
+              // mt="5"
               padding="5"
               borderRadius="10"
             >
@@ -120,12 +123,14 @@ function Info() {
             </Box>
             <Box
               position="relative"
-              boxSize="280px"
-              minW={notSmallerScreen ? "45%" : "100%"}
-              mr="5"
-              mt="5"
+              // boxSize=""
+              // minW={notSmallerScreen ? "45%" : "100%"}
+              w={notSmallerScreen ? "50%" : "100%"}
+              minH="30vh"
+              // mr="5"
+              // mt="5"
               boxShadow="lg"
-              mb="5"
+              // mb="5"
               padding="5"
               borderRadius="10"
             >
@@ -153,15 +158,16 @@ function Info() {
               </Box>
             </Box>
           </Flex>
-          <Flex>
+          <Flex w="100%" gap="5" mt="2xl">
             <Box
               position="relative"
-              boxSize="280px"
-              minW={notSmallerScreen ? "45%" : "100%"}
-              mr="5"
-              mt="5"
+              // boxSize="280px"
+              w={notSmallerScreen ? "50%" : "100%"}
+              // mr="5"
+              // mt="5"
               boxShadow="lg"
-              mb="5"
+              // mb="5"
+              minH="30vh"
               padding="5"
               borderRadius="10"
             >
@@ -190,12 +196,13 @@ function Info() {
             </Box>
             <Box
               position="relative"
-              boxSize="280px"
-              minW={notSmallerScreen ? "45%" : "100%"}
-              mr="5"
-              mt="5"
+              // boxSize="280px"
+              w={notSmallerScreen ? "50%" : "100%"}
+              // mr="5"
+              // mt="5"
               boxShadow="lg"
-              mb="5"
+              minH="30vh"
+              // mb="5"
               padding="5"
               borderRadius="10"
             >

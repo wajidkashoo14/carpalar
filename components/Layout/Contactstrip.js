@@ -32,13 +32,13 @@ function Contactstrip() {
       </Flex>
 
       <Flex gap="18" alignItems="center">
-        <Link mx="2">
+        <Link mx="2" id="social">
           <FaFacebook size="30" color="blue" />
         </Link>
-        <Link mx="2">
+        <Link mx="2" id="social">
           <FaWhatsapp size="30" color="green" />
         </Link>
-        <Link mx="2">
+        <Link mx="2" id="social">
           <FaInstagram size="30" color="red" />
         </Link>
       </Flex>
