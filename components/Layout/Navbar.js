@@ -54,6 +54,14 @@ function Navbar() {
         >
           How it works
         </Link>
+        <Link
+          fontSize="20px"
+          textDecoration="none"
+          _hover={{ color: "grey.700" }}
+          href="/contact"
+        >
+          Contact us
+        </Link>
       </Flex>
     </Container>
   );
