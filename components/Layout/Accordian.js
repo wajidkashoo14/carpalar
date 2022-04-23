@@ -15,7 +15,7 @@ import Link from "next/link";
 
 function Accordian() {
   return (
-    <Box mt="10rem" textAlign="center" w="100vw" minH="100vh" px="6rem">
+    <Box mt="7rem" textAlign="center" w="100vw" minH="100vh" px="6rem">
       <Heading mt="10">Frequently Asked Questions</Heading>
       <Box
         display="flex"
@@ -175,7 +175,7 @@ function Accordian() {
 
       <Link href="/aboutus">
         <Button
-          mt="-12rem"
+          mt="-15rem"
           className="primaryButton"
           backgroundColor="#4258EF"
           _hover={{ backgroundColor: "#273edc" }}

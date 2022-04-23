@@ -7,7 +7,6 @@ import Search from "../components/Layout/Search";
 import Info from "../components/Layout/Info";
 import Howitworks from "../components/Layout/Howitworks";
 import Featuredcars from "../components/Layout/Featuredcars";
-import About from "../components/Layout/About";
 import Reviews from "../components/Layout/Reviews";
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Info />
       <Howitworks />
       <Featuredcars />
-      <About />
       <Reviews />
     </>
   );
