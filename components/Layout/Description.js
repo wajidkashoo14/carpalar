@@ -17,7 +17,7 @@ function Description() {
         Description
       </Heading>
       <Text mb="10" fontSize="lg" width="100%" fontWeight="medium">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+        {` Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
         scrambled it to make a type specimen book. It has survived not only five
@@ -25,14 +25,14 @@ function Description() {
         essentially unchanged. It was popularised in the 1960s with the release
         of Letraset sheets containing Lorem Ipsum passages, and more recently
         with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        of Lorem Ipsum.`}
       </Text>
 
       <Text mb="10" fontSize="lg" fontWeight="medium">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+        {`Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        scrambled it to make a type specimen book.`}
       </Text>
       <Box
         display="flex"
@@ -125,7 +125,6 @@ function Description() {
 
           //   alignItems="flex-start"
         >
-          '
           <Heading as="h5" fontSize="md" width="10rem">
             Standard features include
           </Heading>
