@@ -16,7 +16,13 @@ function Aboutcarpalar() {
   return (
     <Container maxW="100%" h="70vh" px="10" textAlign="center">
       <Flex>
-        <Image src="/homecar.jpg" h="30rem" w="50vw" layout="fixed" />
+        <Image
+          style={{ borderRadius: "50px" }}
+          src="/homecar.jpg"
+          h="30rem"
+          w="50vw"
+          //   layout="fixed"
+        />
         <Flex flexDir="column" px="5rem">
           <Heading mb="7" textTransform="uppercase" textAlign="left">
             About Carpalar
