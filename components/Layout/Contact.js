@@ -101,7 +101,7 @@ function Contact() {
                 px="6"
                 letterSpacing="2px"
                 fontSize="xl"
-                ml="32.5rem"
+                ml="30.5rem"
               >
                 Send
               </Button>

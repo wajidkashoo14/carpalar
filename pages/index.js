@@ -8,6 +8,9 @@ import Info from "../components/Layout/Info";
 import Howitworks from "../components/Layout/Howitworks";
 import Featuredcars from "../components/Layout/Featuredcars";
 import Reviews from "../components/Layout/Reviews";
+import Footer from "../components/Layout/Footer";
+import Aboutcarpalar from "../components/Layout/Aboutcarpalar";
+import Whycarpalar from "../components/Layout/Whycarpalar";
 export default function Home() {
   return (
     <>
@@ -18,7 +21,10 @@ export default function Home() {
       <Info />
       <Howitworks />
       <Featuredcars />
+      <Aboutcarpalar />
       <Reviews />
+      <Whycarpalar />
+      <Footer />
     </>
   );
 }
