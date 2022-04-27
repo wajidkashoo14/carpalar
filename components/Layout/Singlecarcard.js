@@ -24,11 +24,11 @@ export default function Singlecarcard() {
           src="/homecar.jpg"
           height={200}
           width={260}
-          borderRadius="5"
+          style={{ borderRadius: "15px" }}
           overflow="hidden"
         />
         <Text
-          my="1"
+          mt="2"
           mx="2"
           width="4rem"
           padding=".1rem"
