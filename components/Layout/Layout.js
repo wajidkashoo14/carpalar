@@ -5,10 +5,10 @@ import Navbar from "./Navbar";
 
 function Layout() {
   return (
-    <Box>
+    <>
       <Contactstrip />
       <Navbar />
-    </Box>
+    </>
   );
 }
 
