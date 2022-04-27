@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Hero() {
   return (
-    <Container className={styles.hero} maxW="100%">
+    <Container className={styles.hero} maxW="100%" z-index="-1">
       <Heading
         textTransform="uppercase"
         as="h2"

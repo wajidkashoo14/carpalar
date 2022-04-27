@@ -12,6 +12,9 @@ function Navbar() {
       justifyContent="space-between"
       px="10"
       height="5rem"
+      boxShadow="lg"
+      bg="#fff"
+      z-Index="1000"
     >
       <Link
         href="/"

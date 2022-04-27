@@ -28,7 +28,7 @@ export default function Aboutus() {
   }, []);
   return (
     <Box>
-      <Flex flexDir="column" alignItems="center" p="10" minH="40vh">
+      <Flex flexDir="column" alignItems="center" p="10" minH="40vh" mt="10">
         <Heading
           textAlign="center"
           size="4xl"
@@ -120,7 +120,7 @@ export default function Aboutus() {
         </Text>
       </Flex>
 
-      <Cards />
+      {/* <Cards /> */}
       <Flex gap="20" py="10" bg="#F2F5FB" flexDir="column">
         <Heading
           textTransform="uppercase"

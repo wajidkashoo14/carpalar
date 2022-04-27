@@ -1,4 +1,12 @@
-import { Container, Flex, Heading, Text, Divider, Box } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Heading,
+  Text,
+  Divider,
+  Box,
+  Image,
+} from "@chakra-ui/react";
 import React from "react";
 
 function Description() {
@@ -225,73 +233,34 @@ function Description() {
             <Divider width="100%" mx="auto" color="" p="2" />
           </Box>
         </Flex>
-
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          width="60%"
-          mt="10"
-          flexDir="column"
-        >
-          <Flex
-            justifyContent="space-between"
-            alignItems="center"
-            w="60%"
-            mt="2"
-          >
-            <Text>Fuel type</Text>
-            <Text fontWeight="bold">Gasoline</Text>
-          </Flex>
-          <Divider width="100%" mx="auto" color="" p="2" />
-
-          <Flex
-            justifyContent="space-between"
-            alignItems="center"
-            w="60%"
-            mt="2"
-          >
-            <Text>Fuel type</Text>
-            <Text fontWeight="bold">Gasoline</Text>
-          </Flex>
-          <Divider width="100%" mx="auto" color="" p="2" />
-
-          <Flex
-            justifyContent="space-between"
-            alignItems="center"
-            w="60%"
-            mt="2"
-          >
-            <Text>Fuel type</Text>
-            <Text fontWeight="bold">Gasoline</Text>
-          </Flex>
-          <Divider width="100%" mx="auto" color="" p="2" />
-
-          <Flex
-            justifyContent="space-between"
-            alignItems="center"
-            w="60%"
-            mt="2"
-          >
-            <Text>Fuel type</Text>
-            <Text fontWeight="bold">Gasoline</Text>
-          </Flex>
-          <Divider width="100%" mx="auto" color="" p="2" />
-
-          <Flex
-            justifyContent="space-between"
-            alignItems="center"
-            w="60%"
-            mt="2"
-          >
-            <Text>Fuel type</Text>
-            <Text fontWeight="bold">Gasoline</Text>
-          </Flex>
-          <Divider width="100%" mx="auto" color="" p="2" />
-        </Box>
       </Box>
 
-      <Box>
+      <Box mt="5" mb="10rem">
         <Heading>Reviews</Heading>
+        <Flex justifyContent="flex-start" alignItems="center" ml="auto" mt="10">
+          <Image src="./homecar.jpg" h="4rem" w="4rem" borderRadius="50%" />
+          <Text ml="5" fontWeight="600">
+            Wajid huassain
+          </Text>
+        </Flex>
+        <Text my="3">I like autumn in the seaon ans autumn in the symmer</Text>
+        <Divider />
+        <Flex justifyContent="flex-start" alignItems="center" ml="auto" mt="10">
+          <Image src="./homecar.jpg" h="4rem" w="4rem" borderRadius="50%" />
+          <Text ml="5" fontWeight="600">
+            Irfan Afzal
+          </Text>
+        </Flex>
+        <Text my="3">I like autumn in the seaon ans autumn in the symmer</Text>
+        <Divider />
+        <Flex justifyContent="flex-start" alignItems="center" ml="auto" mt="10">
+          <Image src="./homecar.jpg" h="4rem" w="4rem" borderRadius="50%" />
+          <Text ml="5" fontWeight="600">
+            Hussain Ali
+          </Text>
+        </Flex>
+        <Divider />
+        <Text my="3">I like autumn in the seaon ans autumn in the symmer</Text>
       </Box>
     </Container>
   );

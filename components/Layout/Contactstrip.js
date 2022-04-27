@@ -14,6 +14,7 @@ function Contactstrip() {
       px="20"
       justifyContent="space-between"
       boxShadow="xs"
+      z-Index="1000"
     >
       <Flex alignItems="center" gap="10">
         <Flex alignItems="center" gap="5">

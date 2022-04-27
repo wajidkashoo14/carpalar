@@ -79,7 +79,7 @@ export default function Singlecarcard() {
           width="95%"
           mx="auto"
         >
-          Rent now
+          Details
         </Button>
       </Flex>
     </Box>

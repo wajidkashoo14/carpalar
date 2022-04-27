@@ -302,7 +302,7 @@ const Track = ({
 
   const handleClick = useCallback(
     (event) =>
-      node.current.contains(event.target)
+      node?.current?.contains(event.target)
         ? setTrackIsActive(true)
         : setTrackIsActive(false),
     [setTrackIsActive]

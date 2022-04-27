@@ -15,7 +15,7 @@ import Link from "next/link";
 
 function Accordian() {
   return (
-    <Box mt="7rem" textAlign="center" w="100vw" minH="100vh" px="6rem">
+    <Box my="10rem" textAlign="center" w="100vw" minH="100vh" px="6rem">
       <Heading mt="10">Frequently Asked Questions</Heading>
       <Box
         display="flex"
