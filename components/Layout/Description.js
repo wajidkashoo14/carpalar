@@ -16,7 +16,7 @@ function Description() {
       <Heading width="100vw" mb="10">
         Description
       </Heading>
-      <Text mb="10" fontSize="lg" width="100%" fontWeight="medium">
+      <Text mb="10" fontSize="lg" width="100%" fontWeight="normal">
         {` Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -28,7 +28,7 @@ function Description() {
         of Lorem Ipsum.`}
       </Text>
 
-      <Text mb="10" fontSize="lg" fontWeight="medium">
+      <Text mb="10" fontSize="lg" fontWeight="normal">
         {`Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -37,20 +37,45 @@ function Description() {
       <Box
         display="flex"
         flexDir="column"
-        width="100%"
-        alignItems="center"
+        width="70%"
+        // alignItems="center"
         justifyContent="center"
       >
+        <Heading as="h2" mb="5" textAlign="left">
+          Features
+        </Heading>
         <Flex
           justifyContent="space-between"
           alignItems="center"
           mt="2"
           w="100%"
         >
-          <Text>Fuel type</Text>
-          <Text fontWeight="bold">Gasoline</Text>
+          <Text>year</Text>
+          <Text fontWeight="bold">2020</Text>
         </Flex>
-        <Divider width="80%" mx="auto" color="" p="2" />
+        <Divider width="100%" mx="auto" color="" p="2" />
+
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          mt="2"
+        >
+          <Text>make</Text>
+          <Text fontWeight="bold">Tesla</Text>
+        </Flex>
+        <Divider width="100%" mx="auto" color="" p="2" />
+
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          mt="2"
+        >
+          <Text>model</Text>
+          <Text fontWeight="bold">GV24</Text>
+        </Flex>
+        <Divider width="100%" mx="auto" color="" p="2" />
 
         <Flex
           justifyContent="space-between"
@@ -59,9 +84,9 @@ function Description() {
           mt="2"
         >
           <Text>Fuel type</Text>
-          <Text fontWeight="bold">Gasoline</Text>
+          <Text fontWeight="bold">Electric</Text>
         </Flex>
-        <Divider width="80%" mx="auto" color="" p="2" />
+        <Divider width="100%" mx="auto" color="" p="2" />
 
         <Flex
           justifyContent="space-between"
@@ -69,10 +94,10 @@ function Description() {
           width="100%"
           mt="2"
         >
-          <Text>Fuel type</Text>
-          <Text fontWeight="bold">Gasoline</Text>
+          <Text>Mileage</Text>
+          <Text fontWeight="bold">23</Text>
         </Flex>
-        <Divider width="80%" mx="auto" color="" p="2" />
+        <Divider width="100%" mx="auto" color="" p="2" />
 
         <Flex
           justifyContent="space-between"
@@ -80,32 +105,60 @@ function Description() {
           width="100%"
           mt="2"
         >
-          <Text>Fuel type</Text>
-          <Text fontWeight="bold">Gasoline</Text>
+          <Text>Engine</Text>
+          <Text fontWeight="bold">23nts</Text>
         </Flex>
-        <Divider width="80%" mx="auto" color="" p="2" />
-
+        <Divider width="100%" mx="auto" color="" p="2" />
         <Flex
           justifyContent="space-between"
           alignItems="center"
           width="100%"
           mt="2"
         >
-          <Text>Fuel type</Text>
-          <Text fontWeight="bold">Gasoline</Text>
+          <Text>Engine</Text>
+          <Text fontWeight="bold">23nts</Text>
         </Flex>
-        <Divider width="80%" mx="auto" color="" p="2" />
-
+        <Divider width="100%" mx="auto" color="" p="2" />
         <Flex
           justifyContent="space-between"
           alignItems="center"
           width="100%"
           mt="2"
         >
-          <Text>Fuel type</Text>
-          <Text fontWeight="bold">Gasoline</Text>
+          <Text>Doors</Text>
+          <Text fontWeight="bold">4</Text>
         </Flex>
-        <Divider width="80%" mx="auto" color="" p="2" />
+        <Divider width="100%" mx="auto" color="" p="2" />
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          mt="2"
+        >
+          <Text>Passengers</Text>
+          <Text fontWeight="bold">5</Text>
+        </Flex>
+        <Divider width="100%" mx="auto" color="" p="2" />
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          mt="2"
+        >
+          <Text>Total Cost</Text>
+          <Text fontWeight="bold">$555,000</Text>
+        </Flex>
+        <Divider width="100%" mx="auto" color="" p="2" />
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          mt="2"
+        >
+          <Text>Down Payment </Text>
+          <Text fontWeight="bold">$50,000</Text>
+        </Flex>
+        <Divider width="100%" mx="auto" color="" p="2" />
       </Box>
 
       {/* second box start */}
@@ -120,17 +173,57 @@ function Description() {
         <Flex
           display="flex"
           //   justifyContent="center"
-          width="60%"
+          width="80%"
           mt="10"
+          flexDir="column"
 
           //   alignItems="flex-start"
         >
           <Heading as="h5" fontSize="md" width="10rem">
             Standard features include
           </Heading>
-          <Heading as="h5" fontSize="md" ml="2.5rem" width="10rem">
-            Available features include
-          </Heading>
+          <Box>
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              width="100%"
+              mt="2"
+            >
+              <Text>air condition</Text>
+              <Text fontWeight="bold">yes</Text>
+            </Flex>
+            <Divider width="100%" mx="auto" color="" p="2" />
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              width="100%"
+              mt="2"
+            >
+              <Text>Radio</Text>
+              <Text fontWeight="bold">No</Text>
+            </Flex>
+            <Divider width="100%" mx="auto" color="" p="2" />
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              width="100%"
+              mt="2"
+            >
+              <Text>Audio Inputs</Text>
+              <Text fontWeight="bold">yes</Text>
+            </Flex>
+            <Divider width="100%" mx="auto" color="" p="2" />
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              width="100%"
+              mt="2"
+            >
+              <Text>Fog Lights</Text>
+              <Text fontWeight="bold">yes</Text>
+            </Flex>
+            <Divider width="100%" mx="auto" color="" p="2" />
+          </Box>
         </Flex>
 
         <Box
@@ -149,7 +242,7 @@ function Description() {
             <Text>Fuel type</Text>
             <Text fontWeight="bold">Gasoline</Text>
           </Flex>
-          <Divider width="80%" mx="auto" color="" p="2" />
+          <Divider width="100%" mx="auto" color="" p="2" />
 
           <Flex
             justifyContent="space-between"
@@ -160,7 +253,7 @@ function Description() {
             <Text>Fuel type</Text>
             <Text fontWeight="bold">Gasoline</Text>
           </Flex>
-          <Divider width="80%" mx="auto" color="" p="2" />
+          <Divider width="100%" mx="auto" color="" p="2" />
 
           <Flex
             justifyContent="space-between"
@@ -171,7 +264,7 @@ function Description() {
             <Text>Fuel type</Text>
             <Text fontWeight="bold">Gasoline</Text>
           </Flex>
-          <Divider width="80%" mx="auto" color="" p="2" />
+          <Divider width="100%" mx="auto" color="" p="2" />
 
           <Flex
             justifyContent="space-between"
@@ -182,7 +275,7 @@ function Description() {
             <Text>Fuel type</Text>
             <Text fontWeight="bold">Gasoline</Text>
           </Flex>
-          <Divider width="80%" mx="auto" color="" p="2" />
+          <Divider width="100%" mx="auto" color="" p="2" />
 
           <Flex
             justifyContent="space-between"
@@ -193,7 +286,7 @@ function Description() {
             <Text>Fuel type</Text>
             <Text fontWeight="bold">Gasoline</Text>
           </Flex>
-          <Divider width="80%" mx="auto" color="" p="2" />
+          <Divider width="100%" mx="auto" color="" p="2" />
         </Box>
       </Box>
 

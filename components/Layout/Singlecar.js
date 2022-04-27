@@ -11,6 +11,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Productreview from "./Productreview";
 
 export default function SIngleCar() {
   return (
@@ -74,6 +75,7 @@ export default function SIngleCar() {
         </Button>
       </Stack>
       <Image src="/homecar.jpg" width={550} height={350} />I
+     
     </Flex>
   );
 }

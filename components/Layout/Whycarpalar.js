@@ -9,7 +9,7 @@ function Whycarpalar() {
         WHY CHOOSE CARPALAR
       </Heading>
       <Container
-        px="10"
+        px="8rem"
         py="5"
         pb="16rem"
         maxW="100%"
