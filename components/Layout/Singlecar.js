@@ -38,27 +38,27 @@ export default function SIngleCar() {
           $305,000
         </Text>
         <Flex justifyContent="space-between">
-          <Text fontWeight="medium">Mileage:`&nbsp;`</Text>
+          <Text fontWeight="medium">`Mileage:&nbsp;`</Text>
           <Text color="gray.600">25 000 km</Text>
         </Flex>{" "}
         <hr />
         <Flex justifyContent="space-between">
-          <Text fontWeight="medium">Transmission:`&nbsp;`</Text>
+          <Text fontWeight="medium">`Transmission:&nbsp;`</Text>
           <Text color="gray.600">Manual</Text>
         </Flex>
         <hr />
         <Flex justifyContent="space-between">
-          <Text fontWeight="medium">Color:`&nbsp;`</Text>
+          <Text fontWeight="medium">`Color:&nbsp;`</Text>
           <Text color="gray.600">Black</Text>
         </Flex>
         <hr />
         <Flex justifyContent="space-between">
-          <Text fontWeight="medium">Body:`&nbsp;`</Text>
+          <Text fontWeight="medium">`Body:&nbsp;`</Text>
           <Text color="gray.600">Hatchback</Text>
         </Flex>
         <hr />
         <Flex justifyContent="space-between">
-          <Text fontWeight="medium">Fuel:`&nbsp;`</Text>
+          <Text fontWeight="medium">`Fuel:&nbsp;`</Text>
           <Text color="gray.600">Gasoline</Text>
         </Flex>
         <Button
