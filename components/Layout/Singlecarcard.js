@@ -26,6 +26,7 @@ export default function Singlecarcard() {
           width={260}
           style={{ borderRadius: "15px" }}
           overflow="hidden"
+          alt="car"
         />
         <Text
           mt="2"
