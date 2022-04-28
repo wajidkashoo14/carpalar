@@ -40,7 +40,7 @@ export default function SIngleCar() {
         <Flex justifyContent="space-between">
           <Text fontWeight="medium">Mileage</Text>
           <Text color="gray.600">25 000 km</Text>
-        </Flex>{" "}
+        </Flex>
         <hr />
         <Flex justifyContent="space-between">
           <Text fontWeight="medium">Transmission</Text>
