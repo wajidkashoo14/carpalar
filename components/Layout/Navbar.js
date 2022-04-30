@@ -65,6 +65,22 @@ function Navbar() {
         >
           Contact us
         </Link>
+        <Link
+          fontSize="20px"
+          textDecoration="none"
+          _hover={{ color: "grey.700" }}
+          href="/signin"
+        >
+          Login
+        </Link>
+        <Link
+          fontSize="20px"
+          textDecoration="none"
+          _hover={{ color: "grey.700" }}
+          href="/signup"
+        >
+          Signup
+        </Link>
       </Flex>
     </Container>
   );
