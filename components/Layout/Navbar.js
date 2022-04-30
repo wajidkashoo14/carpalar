@@ -32,7 +32,7 @@ function Navbar() {
           Home
         </Link>
         <Link
-          href="/"
+          href="/explore"
           fontSize="20px"
           textDecoration="none"
           _hover={{ color: "grey.700" }}
