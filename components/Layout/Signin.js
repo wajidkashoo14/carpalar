@@ -57,7 +57,7 @@ function Signin() {
             bottom="0%"
             left="0"
           >
-            <Text color="#F8ECD1">You don't have an account</Text>
+            <Text color="#F8ECD1">{`You don't have an account`}</Text>
             <Button
               my={5}
               className="primaryButton"

@@ -57,7 +57,7 @@ function Signup() {
             bottom="0%"
             left="0"
           >
-            <Text color="#F8ECD1">Do you already have an account</Text>
+            <Text color="#F8ECD1">Do you already have an account?</Text>
             <Button
               my={5}
               className="primaryButton"
