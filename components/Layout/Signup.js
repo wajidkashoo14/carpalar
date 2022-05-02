@@ -74,8 +74,8 @@ function Signup() {
           </Box>
         </Box>
       </Flex>
-      <Flex>
-        <Box ml="3rem" pr="2rem" width="70%">
+      <Flex boxShadow="lg" borderRadius={10} margin="auto" width="40vw">
+        <Box margin="auto" px="2rem">
           <Heading my="1.5rem" textAlign="center">
             Sign Up to get started
           </Heading>

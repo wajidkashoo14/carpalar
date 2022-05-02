@@ -74,8 +74,8 @@ function Signin() {
           </Box>
         </Box>
       </Flex>
-      <Flex>
-        <Box ml="3rem" width="90%" textAlign="center">
+      <Flex boxShadow="lg" borderRadius={10} margin="auto" width="40vw">
+        <Box margin="auto" px="2rem">
           <Heading my="1.5rem" width="100%">
             Sign In to your account
           </Heading>
