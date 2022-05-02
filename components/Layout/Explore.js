@@ -17,7 +17,17 @@ import Singlecarcard from "./Singlecarcard";
 function Explore() {
   return (
     <Container maxW="100%" minH="100vh" p="5" display="flex" mb="10rem">
-      <Flex w="20%" minH="100vh" bg="#fff" mr="3" px="2" flexDir="column">
+      <Flex
+        w="20%"
+        h="80vh"
+        bg="#fff"
+        mr="3"
+        px="3"
+        flexDir="column"
+        boxShadow="2xl"
+        borderRadius="15px"
+        position="fixed"
+      >
         <Heading
           fontWeight="500"
           textTransform="uppercase"
@@ -81,16 +91,8 @@ function Explore() {
             <option value="option3">Option 3</option>
           </Select>
         </Box>
-
-        <RangeSlider aria-label={["min", "max"]} defaultValue={[10, 30]} my="5">
-          <RangeSliderTrack>
-            <RangeSliderFilledTrack />
-          </RangeSliderTrack>
-          <RangeSliderThumb index={0} />
-          <RangeSliderThumb index={1} />
-        </RangeSlider>
       </Flex>
-      <Flex w="80%" minH="100vh" bg="#fff" flexWrap="wrap" gap="10">
+      <Flex w="80%" minH="100vh" bg="#fff" flexWrap="wrap" gap="10" ml="20%">
         <Singlecarcard />
         <Singlecarcard />
         <Singlecarcard />
