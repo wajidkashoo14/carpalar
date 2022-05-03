@@ -6,9 +6,7 @@ import Footer from "../components/Layout/Footer";
 function signin() {
   return (
     <>
-      <Layout />
       <Signin />
-      <Footer />
     </>
   );
 }

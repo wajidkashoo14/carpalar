@@ -15,22 +15,25 @@ import Link from "next/link";
 
 function Accordian() {
   return (
-    <Box my="10rem" textAlign="center" w="100vw" minH="100vh" px="6rem">
-      <Heading mt="10">Frequently Asked Questions</Heading>
+    <Box minH="100vh" pt="17vh" mb="5rem">
       <Box
         display="flex"
-        justifyContent="space-between"
+        justifyContent="center"
+        flexDir="column"
         alignItems="center"
-        h="100vh"
-        gap="10"
-        mt="-5rem"
         bg="#F2F5FB"
-        mx="auto"
-        px="2rem"
         borderRadius="20"
+        w="80vw"
+        mx={"auto"}
+        mb="3rem"
+        py="10"
+        // mb="3rem"
       >
-        <Flex w="100%">
-          <Accordion allowToggle w="100%">
+        <Heading textAlign="center" mb="3rem">
+          Frequently Asked Questions
+        </Heading>
+        <Flex w="100%" justifyContent="space-between" alignItems="center">
+          <Accordion allowToggle w="46%">
             <AccordionItem py="3">
               <h2>
                 <AccordionButton>
@@ -99,9 +102,7 @@ function Accordian() {
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
-        </Flex>
-        <Flex w="100%">
-          <Accordion allowToggle w="100%">
+          <Accordion allowToggle w="46%">
             <AccordionItem py="3">
               <h2>
                 <AccordionButton>
@@ -171,20 +172,19 @@ function Accordian() {
             </AccordionItem>
           </Accordion>
         </Flex>
+        <Link href="/aboutus">
+          <Button
+            mt="10"
+            className="primaryButton"
+            backgroundColor="#4258EF"
+            _hover={{ backgroundColor: "#273edc" }}
+            _focus={{ outline: "none" }}
+            color="white"
+          >
+            Learn more
+          </Button>
+        </Link>
       </Box>
-
-      <Link href="/aboutus">
-        <Button
-          mt="-15rem"
-          className="primaryButton"
-          backgroundColor="#4258EF"
-          _hover={{ backgroundColor: "#273edc" }}
-          _focus={{ outline: "none" }}
-          color="white"
-        >
-          Learn more
-        </Button>
-      </Link>
     </Box>
   );
 }

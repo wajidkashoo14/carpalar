@@ -7,9 +7,7 @@ import Layout from "../components/Layout/Layout";
 function faq() {
   return (
     <>
-      <Layout />
       <Accordian />
-      <Footer />
     </>
   );
 }

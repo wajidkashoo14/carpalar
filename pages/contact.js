@@ -6,9 +6,7 @@ import Layout from "../components/Layout/Layout";
 function contact() {
   return (
     <>
-      <Layout />
       <Contact />
-      <Footer />
     </>
   );
 }

@@ -6,9 +6,7 @@ import Signup from "../components/Layout/Signup";
 function signup() {
   return (
     <>
-      <Layout />
       <Signup />
-      <Footer />
     </>
   );
 }

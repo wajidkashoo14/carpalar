@@ -7,10 +7,8 @@ import Footer from "../components/Layout/Footer";
 export default function singlecar() {
   return (
     <>
-      <Layout />
       <Singlecar />
       <Description />
-      <Footer />
     </>
   );
 }

@@ -1,20 +1,32 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../../styles/Navbar.module.css";
-import { Container, Flex } from "@chakra-ui/react";
+import { BsPersonFill } from "react-icons/bs";
+import {
+  Button,
+  Container,
+  Flex,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverTrigger,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 function Navbar() {
+  const router = useRouter();
   return (
     <Container
-      maxW="100%"
+      maxW="100vw"
       d="flex"
       alignItems="center"
       justifyContent="space-between"
       px="10"
-      height="5rem"
+      height="3.5rem"
       boxShadow="lg"
       bg="#fff"
-      z-Index="1000"
     >
       <Link
         href="/"
@@ -65,22 +77,53 @@ function Navbar() {
         >
           Contact us
         </Link>
-        <Link
-          fontSize="20px"
-          textDecoration="none"
-          _hover={{ color: "grey.700" }}
-          href="/signin"
-        >
-          Login
-        </Link>
-        <Link
-          fontSize="20px"
-          textDecoration="none"
-          _hover={{ color: "grey.700" }}
-          href="/signup"
-        >
-          Signup
-        </Link>
+
+        <Popover isLazy style={{ marginBottom: "2rem" }}>
+          <PopoverTrigger>
+            <Button
+              bg="none"
+              _hover={{ backgroundColor: "#4258ef" }}
+              outline="none"
+              _focus="none"
+            >
+              <BsPersonFill style={{ marginTop: "-12px" }} />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent w="120px" mr="5">
+            <PopoverArrow ml="3" />
+            <PopoverCloseButton />
+            <PopoverBody>
+              <Flex flexDir="column">
+                <Button
+                  mb="2"
+                  onClick={() => {
+                    router.push("/signin");
+                  }}
+                >
+                  Login
+                </Button>
+                <Button
+                  mb="2"
+                  onClick={() => {
+                    router.push("/signup");
+                  }}
+                >
+                  Signup
+                </Button>
+                <Button mb="2" onClick={() => {}}>
+                  Logout
+                </Button>
+                <Button
+                  onClick={() => {
+                    router.push("/dashboard");
+                  }}
+                >
+                  Dashboard
+                </Button>
+              </Flex>
+            </PopoverBody>
+          </PopoverContent>
+        </Popover>
       </Flex>
     </Container>
   );

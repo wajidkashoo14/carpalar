@@ -14,7 +14,6 @@ import Whycarpalar from "../components/Layout/Whycarpalar";
 export default function Home() {
   return (
     <>
-      <Layout />
       <Hero />
       <Carbanner />
       <Search />
@@ -24,7 +23,6 @@ export default function Home() {
       <Aboutcarpalar />
       <Reviews />
       <Whycarpalar />
-      <Footer />
     </>
   );
 }

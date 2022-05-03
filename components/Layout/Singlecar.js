@@ -15,7 +15,7 @@ import Productreview from "./Productreview";
 
 export default function SIngleCar() {
   return (
-    <Flex justifyContent="space-between" p="40">
+    <Flex pt="8vh" justifyContent="space-between" p="40">
       <Stack>
         <Heading
           as="h2"

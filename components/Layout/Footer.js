@@ -11,7 +11,7 @@ function Footer() {
       justifyContent="space-evenly"
       alignItems="center"
       p="5"
-      height="70vh"
+      height="50vh"
       maxW="100%"
       bg="#000"
       gap="5"

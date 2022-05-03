@@ -22,6 +22,7 @@ function Signin() {
       px="3rem"
       mb="8rem"
       mt="-2rem"
+      pt="8vh"
     >
       <Flex maxW="50%">
         <Box position="relative">
@@ -75,11 +76,11 @@ function Signin() {
         </Box>
       </Flex>
       <Flex boxShadow="lg" borderRadius={10} margin="auto" width="40vw">
-        <Box margin="auto" px="2rem">
+        <Box margin="auto" px="2rem" textAlign="center">
           <Heading my="1.5rem" width="100%">
             Sign In to your account
           </Heading>
-          <Text my="3" textAlign="center" opacity="0.5">
+          <Text my="3" opacity="0.5">
             Enter your details to proceed further
           </Text>
           <Input type="text" placeHolder="Email" my="2" />

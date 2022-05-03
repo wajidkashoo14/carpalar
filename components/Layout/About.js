@@ -27,7 +27,7 @@ export default function Aboutus() {
       .then((res) => setData(res));
   }, []);
   return (
-    <Box>
+    <Box pt="8vh">
       <Flex flexDir="column" alignItems="center" p="10" minH="40vh" mt="10">
         <Heading
           textAlign="center"

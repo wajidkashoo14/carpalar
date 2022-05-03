@@ -8,9 +8,7 @@ import Footer from "../components/Layout/Footer";
 function aboutus() {
   return (
     <>
-      <Layout />
       <Aboutus />
-      <Footer />
     </>
   );
 }

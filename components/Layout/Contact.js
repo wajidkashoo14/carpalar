@@ -17,7 +17,7 @@ import Link from "next/link";
 
 function Contact() {
   return (
-    <Container maxW="100%" minH="100vh" my="10" mb="15rem" px="4rem" pt="0rem">
+    <Container maxW="100%" minH="100vh" mb="15rem" px="4rem" pt="18vh">
       <Box display="flex" justifyContent="center" alignItems="center">
         <Flex flexDir="column" width="50%">
           <Heading fontSize="5xl" fontWeight="bold" my="10">

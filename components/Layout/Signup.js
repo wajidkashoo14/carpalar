@@ -22,6 +22,7 @@ function Signup() {
       px="3rem"
       mt="-2rem"
       mb="5rem"
+      pt="8vh"
     >
       <Flex maxW="50%">
         <Box position="relative">
