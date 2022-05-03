@@ -92,7 +92,14 @@ function Explore() {
           </Select>
         </Box>
       </Flex>
-      <Flex w="80%" minH="100vh" bg="#fff" flexWrap="wrap" gap="10" ml="20%">
+      <Flex
+        w="80%"
+        minH="100vh"
+        bg="#fff"
+        flexWrap="wrap"
+        ml="20%"
+        justifyContent="space-around"
+      >
         <Singlecarcard />
         <Singlecarcard />
         <Singlecarcard />

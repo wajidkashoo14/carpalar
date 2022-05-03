@@ -8,12 +8,12 @@ export default function Singlecarcard() {
   return (
     <Box
       zIndex="10"
-      m="10"
+      mx="2"
+      my="5"
       minH="35vh"
-      minW="20%"
+      minW="25%"
       // bgColor="red"
       borderRadius="10"
-      cursor="pointer"
       boxShadow="2xl"
       onClick={(e) => {
         router.push("/singlecar");
