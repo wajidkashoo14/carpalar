@@ -1,19 +1,10 @@
-import {
-  Box,
-  Flex,
-  Stack,
-  Text,
-  Tag,
-  Container,
-  Heading,
-  Button,
-  VStack,
-  HStack,
-} from "@chakra-ui/react";
+import { Flex, Stack, Text, Heading, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Productreview from "./Productreview";
+import { useRouter } from "next/router";
 
 export default function SIngleCar() {
+  const router = useRouter();
   return (
     <Flex pt="8vh" justifyContent="space-between" p="40">
       <Stack>
@@ -61,17 +52,38 @@ export default function SIngleCar() {
           <Text fontWeight="medium">Fuel</Text>
           <Text color="gray.600">Gasoline</Text>
         </Flex>
-        <Button
-          width="fit-content"
-          variant="solid"
-          className="primaryButton"
-          backgroundColor="#4258EF"
-          _hover={{ backgroundColor: "#273edc" }}
-          _focus={{ outline: "none" }}
-          color="white"
-        >
-          BUY NOW
-        </Button>
+        <Flex gap={10} mt="6">
+          <Button
+            mt="6"
+            width="fit-content"
+            variant="solid"
+            className="primaryButton"
+            backgroundColor="#4258EF"
+            _hover={{ backgroundColor: "#273edc" }}
+            _focus={{ outline: "none" }}
+            color="white"
+            onClick={(e) => {
+              router.push("/apply");
+            }}
+          >
+            BUY NOW
+          </Button>
+          <Button
+            mt="6"
+            width="fit-content"
+            variant="solid"
+            className="primaryButton"
+            backgroundColor="#4258EF"
+            _hover={{ backgroundColor: "#273edc" }}
+            _focus={{ outline: "none" }}
+            color="white"
+            onClick={(e) => {
+              router.push("/apply");
+            }}
+          >
+            Apply for finance
+          </Button>
+        </Flex>
       </Stack>
       <Image src="/homecar.jpg" width={550} height={350} />I
     </Flex>
