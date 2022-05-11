@@ -66,11 +66,11 @@ function Apply() {
         Apply Now
       </Heading>
       <Text color="black" width="80vw" textAlign="left">
-        To apply for a hire purchase car from us, you'll need to meet our
+        {`To apply for a hire purchase car from us, you'll need to meet our
         eligibility criteria, and we continue to review it on an ongoing basis
         to keep up with industry best practices. Our basic eligibility
         requirements are listed below, however our compliance team may request
-        for more information during the application process.
+        for more information during the application process.`}
       </Text>
       <Text fontWeight="500" my="3" fontSize="18px" textAlign="left">
         Minimum Requirement
