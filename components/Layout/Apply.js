@@ -343,7 +343,7 @@ function Apply() {
             Someone who is willing to vouch for your character and background
           </Text>
           <Flex>
-            <Box p={8} width="45%" p="5">
+            <Box p={8} width="45%">
               <Heading my={4}>Guarantor 1</Heading>
               <FormControl
                 variant="floating"
