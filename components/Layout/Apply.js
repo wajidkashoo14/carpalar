@@ -105,7 +105,7 @@ function Apply() {
               >
                 <Box my="">
                   <Input placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>First name</FormLabel>
                 </Box>
               </FormControl>
@@ -117,7 +117,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Other Name</FormLabel>
                 </Box>
               </FormControl>
@@ -143,7 +143,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Address</FormLabel>
                 </Box>
               </FormControl>
@@ -155,7 +155,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Mobile Number</FormLabel>
                 </Box>
               </FormControl>
@@ -167,7 +167,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Other Number</FormLabel>
                 </Box>
               </FormControl>
@@ -179,7 +179,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input type="email" placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Email</FormLabel>
                 </Box>
               </FormControl>
@@ -191,7 +191,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input type="date" placeholder=" " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Date of birth</FormLabel>
                 </Box>
               </FormControl>
@@ -203,7 +203,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Place of birth</FormLabel>
                 </Box>
               </FormControl>
@@ -330,7 +330,7 @@ function Apply() {
                   </Select>
                   <FormLabel>
                     Are you currently driving for any ride-hailing platforms?
-                    (eg. Uber or Taxify){" "}
+                    (eg. Uber or Taxify)
                   </FormLabel>
                 </Box>
               </FormControl>
@@ -353,7 +353,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Name " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Name </FormLabel>
                 </Box>
               </FormControl>
@@ -365,7 +365,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Relationship" />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel> Relationship</FormLabel>
                 </Box>
               </FormControl>
@@ -377,7 +377,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Phone" />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel> Phone</FormLabel>
                 </Box>
               </FormControl>
@@ -389,7 +389,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Home Address " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel> Home Address</FormLabel>
                 </Box>
               </FormControl>
@@ -401,7 +401,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Job Title " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel> Job Title</FormLabel>
                 </Box>
               </FormControl>
@@ -413,7 +413,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Email Address" />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Email Address</FormLabel>
                 </Box>
               </FormControl>
@@ -428,7 +428,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Name " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Name</FormLabel>
                 </Box>
               </FormControl>
@@ -440,7 +440,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Relationship" />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Relationship</FormLabel>
                 </Box>
               </FormControl>
@@ -452,7 +452,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Phone" />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Phone</FormLabel>
                 </Box>
               </FormControl>
@@ -464,7 +464,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Home Address " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Home Address</FormLabel>
                 </Box>
               </FormControl>
@@ -476,7 +476,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Job Title " />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Job Title</FormLabel>
                 </Box>
               </FormControl>
@@ -488,7 +488,7 @@ function Apply() {
               >
                 <Box my="5">
                   <Input placeholder="Email Address" />
-                  {/* It is important that the Label comes after the Control due to css selectors */}
+
                   <FormLabel>Email Address</FormLabel>
                 </Box>
               </FormControl>
