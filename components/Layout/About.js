@@ -65,12 +65,12 @@ export default function Aboutus() {
               though she said nothing.
             </Text>
             <Text px="10%" py="5" fontSize="18">
-              As for Passepartout, he thought Mr. Fogg’s manoeuvre simply
+              {`As for Passepartout, he thought Mr. Fogg’s manoeuvre simply
               glorious. The captain had said “between eleven and twelve knots,”
               and the Henrietta confirmed his prediction. How the adventure
               ended will be seen anon. Aouda was anxious, though she said
               nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre
-              simply glorious. The captain had said.
+              simply glorious. The captain had said.`}
             </Text>
             <Stack direction="row" h="50px" px="10%" py="1rem">
               <Divider orientation="vertical" w="10px" />
@@ -81,12 +81,12 @@ export default function Aboutus() {
               </Text>
             </Stack>
             <Text px="10%" py="3rem" fontSize="18">
-              As for Passepartout, he thought Mr. Fogg’s manoeuvre simply
+              {`As for Passepartout, he thought Mr. Fogg’s manoeuvre simply
               glorious. The captain had said “between eleven and twelve knots,”
               and the Henrietta confirmed his prediction. How the adventure
               ended will be seen anon. Aouda was anxious, though she said
               nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre
-              simply glorious. The captain had said.
+              simply glorious. The captain had said.`}
             </Text>
           </Box>
           <Image src="/homecar.jpg" width={550} height={350} />
@@ -175,26 +175,6 @@ export default function Aboutus() {
                       </Text>
                     </Box>
                   </VStack>
-
-                  {/* <Flex justifyContent="space-between">
-                  <HStack spacing={2}>
-                    <Tag size="sm" variant="outline" colorScheme="green">
-                      User: {post.userId}
-                    </Tag>
-                    <Tag size="sm" variant="outline" colorScheme="cyan">
-                      Post: {post.id - 5}
-                    </Tag>
-                  </HStack>
-                  <Button
-                    onClick={() => alert(`Post ${post.id - 5} clicked`)}
-                    colorScheme="green"
-                    fontWeight="bold"
-                    color="gray.900"
-                    size="sm"
-                  >
-                    More
-                  </Button>
-                </Flex> */}
                 </Flex>
               ))}
             </ChakraCarousel>
