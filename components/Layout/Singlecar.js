@@ -63,7 +63,7 @@ export default function SIngleCar() {
             _focus={{ outline: "none" }}
             color="white"
             onClick={(e) => {
-              router.push("/apply");
+              router.push("/dashboard");
             }}
           >
             BUY NOW

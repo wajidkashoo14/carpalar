@@ -95,7 +95,7 @@ function Apply() {
       </Box>
       <Box>
         <ChakraProvider theme={theme}>
-          <Box p={8} display="flex">
+          <Box p={8} display="flex" maxH="100vh">
             <Box width="45%" p="5">
               <FormControl
                 variant="floating"
@@ -142,9 +142,9 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder=" " />
+                  <Input placeholder=" " id="address" name="address" />
 
-                  <FormLabel>Address</FormLabel>
+                  <FormLabel htmlFor="address">Address</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -154,9 +154,13 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder=" " />
+                  <Input
+                    placeholder=" "
+                    id="mobile number"
+                    name="mobile number"
+                  />
 
-                  <FormLabel>Mobile Number</FormLabel>
+                  <FormLabel htmlFor="mobile number">Mobile Number</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -166,9 +170,13 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder=" " />
+                  <Input
+                    placeholder=" "
+                    id="other number"
+                    name="other number"
+                  />
 
-                  <FormLabel>Other Number</FormLabel>
+                  <FormLabel htmlFor="other number">Other Number</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -178,9 +186,9 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input type="email" placeholder=" " />
+                  <Input type="email" placeholder=" " id="email" name="email" />
 
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel htmlFor="email">Email</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -190,9 +198,9 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input type="date" placeholder=" " />
+                  <Input type="date" placeholder=" " id="dob" name="dob" />
 
-                  <FormLabel>Date of birth</FormLabel>
+                  <FormLabel htmlFor="dob">Date of birth</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -202,9 +210,13 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input />
+                  <Input
+                    placeholder=" "
+                    id="place of birth"
+                    name="place of birth"
+                  />
 
-                  <FormLabel>Place of birth</FormLabel>
+                  <FormLabel htmlFor="place of birth">Place of birth</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -242,8 +254,15 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input type="number" placeholder="eg 9" />
-                  <FormLabel>Years of Driving Experience</FormLabel>
+                  <Input
+                    type="number"
+                    placeholder="eg 9"
+                    id="years of experience"
+                    name="years of experience"
+                  />
+                  <FormLabel htmlFor="years of experience">
+                    Years of Driving Experience
+                  </FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -253,8 +272,8 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input />
-                  <FormLabel>Nationality</FormLabel>
+                  <Input id="nationality" name="nationality" />
+                  <FormLabel htmlFor="nationality">Nationality</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -280,8 +299,10 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input />
-                  <FormLabel>State of Origin</FormLabel>
+                  <Input id="state of origin" name="state of origin" />
+                  <FormLabel htmlFor="state of origin">
+                    State of Origin
+                  </FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -291,8 +312,8 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input />
-                  <FormLabel>LGA</FormLabel>
+                  <Input id="LGA" name="LGA" />
+                  <FormLabel htmlFor="lga">LGA</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -302,7 +323,7 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input />
+                  <Input id="Drivers license" name="Drivers license" />
                   <FormLabel>Drivers License </FormLabel>
                 </Box>
               </FormControl>
@@ -313,8 +334,10 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input />
-                  <FormLabel>Car Applied for </FormLabel>
+                  <Input id="car applied for" name="car applied for" />
+                  <FormLabel htmlFor="car applied for">
+                    Car Applied for{" "}
+                  </FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -324,7 +347,7 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Select variant="filled" placeholder="Gender">
+                  <Select variant="filled">
                     <option value="option1">Yes</option>
                     <option value="option2">No</option>
                   </Select>
@@ -332,6 +355,48 @@ function Apply() {
                     Are you currently driving for any ride-hailing platforms?
                     (eg. Uber or Taxify)
                   </FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="option1">Yes</option>
+                    <option value="option2">No</option>
+                  </Select>
+                  <FormLabel>Licence</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="option1">Yes</option>
+                    <option value="option2">No</option>
+                  </Select>
+                  <FormLabel>NIN</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
             </Box>
@@ -352,9 +417,9 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder="Name " />
+                  <Input placeholder="Name " id="Name" name="Name " />
 
-                  <FormLabel>Name </FormLabel>
+                  <FormLabel htmlFor="Name ">Name </FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -364,9 +429,13 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder="Relationship" />
+                  <Input
+                    placeholder="Relationship"
+                    id="Relationship"
+                    name="Relationship "
+                  />
 
-                  <FormLabel> Relationship</FormLabel>
+                  <FormLabel htmlFor="Relationship"> Relationship</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -376,9 +445,9 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder="Phone" />
+                  <Input placeholder="Phone" id="Phone" name="Phone " />
 
-                  <FormLabel> Phone</FormLabel>
+                  <FormLabel htmlFor="Phone"> Phone</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -388,9 +457,13 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder="Home Address " />
+                  <Input
+                    placeholder="Home Address "
+                    id="Home Address"
+                    name="Home Address "
+                  />
 
-                  <FormLabel> Home Address</FormLabel>
+                  <FormLabel htmlFor="Home Address"> Home Address</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -400,9 +473,13 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder="Job Title " />
+                  <Input
+                    placeholder="Job Title "
+                    id="Job Title"
+                    name="Job Title "
+                  />
 
-                  <FormLabel> Job Title</FormLabel>
+                  <FormLabel htmlFor="Job Title"> Job Title</FormLabel>
                 </Box>
               </FormControl>
               <FormControl
@@ -412,13 +489,46 @@ function Apply() {
                 isInvalid
               >
                 <Box my="5">
-                  <Input placeholder="Email Address" />
+                  <Input
+                    placeholder="Email Address"
+                    id="Email Address"
+                    name="Email Address "
+                  />
 
                   <FormLabel>Email Address</FormLabel>
                 </Box>
               </FormControl>
+
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>NIN</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>BVN</FormLabel>
+                </Box>
+              </FormControl>
             </Box>
-            <Box width="45%" p="5">
+            <Box width="45%" p="5" mt={3}>
               <Heading my={4}>Guarantor 2</Heading>
               <FormControl
                 variant="floating"
@@ -490,6 +600,34 @@ function Apply() {
                   <Input placeholder="Email Address" />
 
                   <FormLabel>Email Address</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>NIN</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl
+                variant="floating"
+                id="first-name"
+                isRequired
+                isInvalid
+              >
+                <Box my="5">
+                  <Select variant="filled">
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
             </Box>
