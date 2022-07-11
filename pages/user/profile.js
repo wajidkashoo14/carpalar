@@ -54,20 +54,23 @@ function profile() {
     },
   });
   return (
-    <Container minW="100%" height="100vh" mb="35rem" pt="6rem">
-      <Heading mb={10}>Profile settings</Heading>
+    <Container minW="100%" height="100vh" mb="45%" pt="6rem">
+      <Heading mb={10} ml="1rem">
+        Profile settings
+      </Heading>
 
       <Box position="relative">
         <Box
-          w="100%"
+          w="98%"
           h="180px"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
           borderRadius={10}
+          mx="auto"
         />
-        <Heading fontSize="1.8rem" position="absolute" top="10%" left="10%">
+        <Heading fontSize="1.8rem" position="absolute" top="15%" left="10%">
           Account Information
         </Heading>
-        <Box position="absolute" top="25%" left="10%">
+        <Box position="absolute" top="33%" left="10%">
           <span>Name </span>
           <span>Address </span>
           <span>Number </span>
@@ -76,7 +79,7 @@ function profile() {
       <ChakraProvider theme={theme}>
         <Button
           marginLeft="0"
-          my={4}
+          my={9}
           position="absolute"
           right="45%"
           backgroundColor="#4258EF"
@@ -86,7 +89,7 @@ function profile() {
         >
           <AiOutlineEdit />
         </Button>
-        <Box p={4} width="50%">
+        <Box p={4} width="50%" mt={5}>
           <FormControl variant="floating" id="first-name" isRequired>
             <Input placeholder=" " name="First Name" />
             <FormLabel>First name</FormLabel>
