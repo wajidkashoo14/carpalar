@@ -1,11 +1,8 @@
 import {
   Container,
   Heading,
-  Stack,
   ChakraProvider,
   FormControl,
-  FormErrorMessage,
-  FormHelperText,
   FormLabel,
   Input,
   extendTheme,
@@ -14,7 +11,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import { AiOutlineEdit } from "react-icons/Ai";
+import { AiOutlineEdit } from "react-icons/ai";
 
 function profile() {
   const activeLabelStyles = {
