@@ -1,6 +1,6 @@
 import { Box, Container, Img, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
-import { IoIosNotificationsOutline } from "react-icons/Io";
+import { IoIosNotificationsOutline } from "react-icons/io";
 import styles from "../../styles/dashboard.module.css";
 
 function Profile() {

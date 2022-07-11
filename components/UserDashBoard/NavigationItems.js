@@ -24,14 +24,14 @@ function NavigationItems() {
         <Button fontSize="1.2rem" my=".6rem" width="4.5rem">
           Sales
         </Button>
-        <Button fontSize="1.2rem" my=".6rem" width="6rem">
+        {/* <Button fontSize="1.2rem" my=".6rem" width="6rem">
           Reviews
         </Button>
         <Button fontSize="1.2rem" my=".6rem" width="8rem">
           Transactions
-        </Button>
+        </Button> */}
         <Button fontSize="1.2rem" my=".6rem" width="6rem">
-          Settings
+          Profile
         </Button>
         <Button fontSize="1.2rem" my=".6rem" width="6rem">
           Logout
