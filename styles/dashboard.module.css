@@ -30,3 +30,11 @@
   padding: 0.3rem 0;
   margin-top: 2rem;
 }
+.span__product {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.p__products {
+  font-size: 1.2rem;
+  font-weight: 700;
+}

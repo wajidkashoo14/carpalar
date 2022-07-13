@@ -110,16 +110,6 @@ function Navbar() {
                 >
                   Signup
                 </Button>
-                <Button mb="2" onClick={() => {}}>
-                  Logout
-                </Button>
-                <Button
-                  onClick={() => {
-                    router.push("/dashboard");
-                  }}
-                >
-                  Dashboard
-                </Button>
               </Flex>
             </PopoverBody>
           </PopoverContent>

@@ -5,7 +5,7 @@ const Info = () => {
   return (
     <Container
       maxW="65%"
-      p={3}
+      px={3}
       height="100vh"
       backgroundColor="#ffffff"
       marginTop="6%"

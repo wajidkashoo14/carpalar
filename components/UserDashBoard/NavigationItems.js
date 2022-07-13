@@ -1,7 +1,16 @@
 import React from "react";
-import { Container, Box, Button, Divider, Heading } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Box,
+  Button,
+  Divider,
+  Heading,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 function NavigationItems() {
+  const router = useRouter();
   return (
     <Container
       maxW="15%"
@@ -9,35 +18,55 @@ function NavigationItems() {
       p="3 O"
       flexDir="column"
       alignItems="flex-start"
+      justifyContent="space-between"
       backgroundColor="#E9F3FC"
-      height="100vh"
+      height="85vh"
       marginTop="6%"
       borderRight=".5px solid #DCDCDC"
     >
-      <Box display="flex" flexDir="column" maxWidth="20%" marginTop="1rem">
-        <Heading width="15rem" fontSize="1.5rem" textAlign="center" mb="1rem">
+      <Flex flexDir="column" marginTop="1rem" gap="3" alignItems={"flex-start"}>
+        <Heading fontSize="1.5rem" mb="1rem">
           Dashboard
         </Heading>
-        <Button fontSize="1.2rem" my=".6rem" width="8rem">
+        <Button
+          onClick={(e) => {
+            router.push("/user/Applications");
+          }}
+          textAlign="start"
+          fontSize="1.2rem"
+        >
           Applications
         </Button>
-        <Button fontSize="1.2rem" my=".6rem" width="4.5rem">
-          Sales
+        <Button
+          onClick={(e) => {
+            router.push("/user/myproducts");
+          }}
+          textAlign="start"
+          fontSize="1.2rem"
+        >
+          Orders
         </Button>
-        {/* <Button fontSize="1.2rem" my=".6rem" width="6rem">
-          Reviews
-        </Button>
-        <Button fontSize="1.2rem" my=".6rem" width="8rem">
-          Transactions
-        </Button> */}
-        <Button fontSize="1.2rem" my=".6rem" width="6rem">
+
+        <Button
+          onClick={(e) => {
+            router.push("/user/profile");
+          }}
+          textAlign="start"
+          fontSize="1.2rem"
+        >
           Profile
         </Button>
-        <Button fontSize="1.2rem" my=".6rem" width="6rem">
-          Logout
-        </Button>
-      </Box>
-      <Divider orientation="horizontal" />
+      </Flex>
+      <Button
+        onClick={(e) => {
+          router.push("/user/Applications");
+        }}
+        mb="4"
+        varaint="outline"
+        colorScheme="red"
+      >
+        Logout
+      </Button>
     </Container>
   );
 }
