@@ -2,8 +2,10 @@ import { Box, Button, Container, Flex, Heading, Img } from "@chakra-ui/react";
 import React from "react";
 import DashboardLayout from "../../../components/Layout/DashboardLayout";
 import styles from "../../../styles/dashboard.module.css";
+import { Router, useRouter } from "next/router";
 
 function index() {
+  const router = useRouter();
   return (
     <DashboardLayout>
       <Container
@@ -65,6 +67,9 @@ function index() {
               _hover={{ backgroundColor: "#273edc" }}
               _focus={{ outline: "none" }}
               color="#ffffff"
+              onClick={() => {
+                router.push("/applicationdetails");
+              }}
             >
               View Details
             </Button>
@@ -122,6 +127,9 @@ function index() {
               _hover={{ backgroundColor: "#273edc" }}
               _focus={{ outline: "none" }}
               color="#ffffff"
+              onClick={() => {
+                router.push("/applicationdetails");
+              }}
             >
               View Details
             </Button>
@@ -179,6 +187,9 @@ function index() {
               _hover={{ backgroundColor: "#273edc" }}
               _focus={{ outline: "none" }}
               color="#ffffff"
+              onClick={() => {
+                router.push("/applicationdetails");
+              }}
             >
               View Details
             </Button>

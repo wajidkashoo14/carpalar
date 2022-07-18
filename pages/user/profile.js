@@ -9,6 +9,7 @@ import {
   Box,
   Flex,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineEdit } from "react-icons/ai";
@@ -53,35 +54,34 @@ function profile() {
   });
   return (
     <DashboardLayout>
-      <Container minW="100%" maxHeight="100vh" mb="45%" pt="6rem">
-        <Heading mb={10} ml="1rem">
-          Profile settings
-        </Heading>
-
-        <Box position="relative">
-          <Box
-            w="98%"
-            h="180px"
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            borderRadius={10}
-            mx="auto"
-          />
-          <Heading fontSize="1.8rem" position="absolute" top="15%" left="10%">
+      <Flex
+        flexDir="column"
+        width="80vw"
+        maxHeight="100vh"
+        mb="45%"
+        pt="6rem"
+        px={5}
+      >
+        <Box bg="#030303" p="7" color="#fff" borderRadius={10}>
+          <Heading fontSize="1.5rem" width="inherit">
             Account Information
           </Heading>
-          <Box position="absolute" top="33%" left="10%">
-            <span>Name </span>
-            <span>Address </span>
-            <span>Number </span>
-          </Box>
+          <Flex>
+            <Text>Name </Text>&nbsp;
+            <Text>Address </Text>&nbsp;
+            <Text>Number </Text>&nbsp;
+          </Flex>
         </Box>
+        <Heading my={4} ml="1rem">
+          Update Profile
+        </Heading>
         <Box
           width={300}
           height={200}
           position="absolute"
           boxShadow="lg"
-          left="70%"
-          top="30%"
+          left="75%"
+          top="23%"
         >
           <Heading fontSize="1.5rem" mt={3} p={3} textAlign="center">
             General Information
@@ -185,10 +185,12 @@ function profile() {
           color="#ffffff"
           ml={7}
           px={5}
+          py={5}
+          width={"10vw"}
         >
           Update
         </Button>
-      </Container>
+      </Flex>
     </DashboardLayout>
   );
 }

@@ -6,16 +6,17 @@ import {
   Button,
   Divider,
   Heading,
+  Text,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 function NavigationItems() {
   const router = useRouter();
   return (
-    <Container
-      maxW="15%"
+    <Box
+      width="15vw"
       display="flex"
-      p="3 O"
+      p="1rem"
       flexDir="column"
       alignItems="flex-start"
       justifyContent="space-between"
@@ -25,9 +26,14 @@ function NavigationItems() {
       borderRight=".5px solid #DCDCDC"
     >
       <Flex flexDir="column" marginTop="1rem" gap="3" alignItems={"flex-start"}>
-        <Heading fontSize="1.5rem" mb="1rem">
+        <Text
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgClip="text"
+          fontSize="3xl"
+          fontWeight="extrabold"
+        >
           Dashboard
-        </Heading>
+        </Text>
         <Button
           onClick={(e) => {
             router.push("/user/Applications");
@@ -67,7 +73,7 @@ function NavigationItems() {
       >
         Logout
       </Button>
-    </Container>
+    </Box>
   );
 }
 

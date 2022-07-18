@@ -4,7 +4,7 @@ import NavigationItems from "../UserDashBoard/NavigationItems";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Flex pt="1vh" w="100vw">
+    <Flex pt="1vh" w="100vw" justifyContent="flex-start">
       <NavigationItems />
       {children}
     </Flex>

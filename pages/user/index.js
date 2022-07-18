@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 const User = () => {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   const router = useRouter();
   useEffect(() => {
     if (user) router.push("/user/dashboard");

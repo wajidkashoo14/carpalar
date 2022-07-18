@@ -1,9 +1,9 @@
 import { Box, Container, Img, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
-import { IoIosNotificationsOutline } from "react-icons/";
+import { IoIosNotificationsOutline } from "react-icons/io";
 import styles from "../../styles/dashboard.module.css";
 
-function Profile() {
+export default function Profile() {
   return (
     <Container
       maxW="20%"
@@ -89,5 +89,3 @@ function Profile() {
     </Container>
   );
 }
-
-export default Profile;

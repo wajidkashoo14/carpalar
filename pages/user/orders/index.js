@@ -60,6 +60,7 @@ function myproducts() {
               _hover={{ backgroundColor: "#273edc" }}
               _focus={{ outline: "none" }}
               color="#ffffff"
+              onClick={() => router.push("/user/orders/1212")}
             >
               View Details
             </Button>

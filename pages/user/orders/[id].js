@@ -14,6 +14,7 @@ import {
   Heading,
   Img,
   Box,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import DashboardLayout from "../../../components/Layout/DashboardLayout";
@@ -21,19 +22,27 @@ import DashboardLayout from "../../../components/Layout/DashboardLayout";
 const OrderDetails = () => {
   return (
     <DashboardLayout>
-      <Container maxW="80vw" height="100vh" pt="5rem" mb="35rem">
-        <Flex marginTop={5} flexDir="column">
-          <Flex justifyContent="space-between" minH="50vh" my="auto">
+      <Container maxW="80vw" height="100vh" pt="2rem" mb="35rem">
+        <Flex marginTop={7} flexDir="column">
+          <Flex
+            justifyContent="flex-start"
+            minH="40vh"
+            my="auto"
+            borderRadius="1rem"
+            mt="2.5rem"
+            px=".5rem"
+          >
             <Flex my="auto">
               <Img
                 src="/homecar.jpg"
-                height={250}
+                width={350}
+                height={300}
                 style={{ borderRadius: "15px" }}
                 overflow="hidden"
                 alt="car"
               />
             </Flex>
-            <Flex mr="10rem" mt="3rem">
+            <Flex mt="3rem">
               <Box px={5} py={5}>
                 <Box pb={5}>
                   <Heading fontSize="1.1rem">Body Type</Heading>
@@ -66,23 +75,60 @@ const OrderDetails = () => {
               </Box>
             </Flex>
             <Flex
-              m={3}
+              mt={2}
               backgroundColor="#E9F3FC"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
               boxShadow="lg"
-              p={10}
-            ></Flex>
+              p={5}
+              flexDir="column"
+              gap={10}
+            >
+              <Box>
+                <Text
+                  bgGradient="linear(to-l, #7928CA, #FF0080)"
+                  bgClip="text"
+                  fontSize="xl"
+                  fontWeight="extrabold"
+                  mt={5}
+                >
+                  Your Upcoming Transaction
+                </Text>
+              </Box>
+              <Box display="flex" gap={10}>
+                <Box>
+                  <Heading fontSize="1rem">Due Date</Heading>
+                  <p>28th August 2022</p>
+                </Box>
+                <Box>
+                  <Heading fontSize="1rem">Amount</Heading>
+                  <p>$500</p>
+                </Box>
+              </Box>
+              <Box>
+                <Button
+                  className="primaryButton"
+                  backgroundColor="#4258EF"
+                  _hover={{ backgroundColor: "#273edc" }}
+                  _focus={{ outline: "none" }}
+                  color="white"
+                  textAlign="center"
+                  mt={3}
+                >
+                  Pay now
+                </Button>
+              </Box>
+            </Flex>
           </Flex>
-          <Flex justifyContent="space-between" p={5}>
+          <Flex justifyContent="space-between" p={5} mt={5}>
             <Flex
               gap={5}
               width="25%"
               m={3}
-              backgroundColor="#E9F3FC"
+              bgColor="#9eeaab"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
-              boxShadow="lg"
+              boxShadow="xl"
               p={10}
             >
               <Box display="flex" gap={5} flexDir="column">
@@ -104,10 +150,10 @@ const OrderDetails = () => {
               gap={5}
               width="25%"
               m={3}
-              backgroundColor="#E9F3FC"
+              bgColor="#77bae5"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
-              boxShadow="lg"
+              boxShadow="xl"
               p={10}
             >
               <Box display="flex" gap={5} flexDir="column">
@@ -129,10 +175,10 @@ const OrderDetails = () => {
               gap={5}
               width="25%"
               m={3}
-              backgroundColor="#E9F3FC"
+              bgColor="#ffdf79"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
-              boxShadow="lg"
+              boxShadow="xl"
               p={10}
             >
               <Box display="flex" gap={5} flexDir="column">
@@ -157,11 +203,11 @@ const OrderDetails = () => {
             Transaction History
           </Heading>
           <TableContainer>
-            <Table variant="simple">
+            <Table variant="striped" colorScheme="teal">
               <Thead>
                 <Tr>
-                  <Th>S no.</Th>
-                  <Th>id</Th>
+                  <Th>S No.</Th>
+                  <Th>Id</Th>
                   <Th>Amount</Th>
                   <Th>Status</Th>
                 </Tr>
@@ -170,45 +216,26 @@ const OrderDetails = () => {
                 <Tr>
                   <Td>1</Td>
                   <Td>101</Td>
-
-                  <Td>$550</Td>
-                  <Td>Succed</Td>
+                  <Td>$500</Td>
+                  <Td>Approved</Td>
                 </Tr>
-              </Tbody>
-              <Tbody>
                 <Tr>
                   <Td>1</Td>
                   <Td>101</Td>
-
-                  <Td>$550</Td>
-                  <Td>Succed</Td>
+                  <Td>$500</Td>
+                  <Td>Approved</Td>
                 </Tr>
-              </Tbody>
-              <Tbody>
                 <Tr>
                   <Td>1</Td>
                   <Td>101</Td>
-
-                  <Td>$550</Td>
-                  <Td>Succed</Td>
+                  <Td>$500</Td>
+                  <Td>Approved</Td>
                 </Tr>
-              </Tbody>
-              <Tbody>
                 <Tr>
                   <Td>1</Td>
                   <Td>101</Td>
-
-                  <Td>$550</Td>
-                  <Td>Succed</Td>
-                </Tr>
-              </Tbody>
-              <Tbody>
-                <Tr>
-                  <Td>1</Td>
-                  <Td>101</Td>
-
-                  <Td>$550</Td>
-                  <Td>Succed</Td>
+                  <Td>$500</Td>
+                  <Td>Approved</Td>
                 </Tr>
               </Tbody>
             </Table>
