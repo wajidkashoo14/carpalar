@@ -27,7 +27,7 @@ function NavigationItems() {
     >
       <Flex flexDir="column" marginTop="1rem" gap="3" alignItems={"flex-start"}>
         <Text
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgColor="#8fa3e0"
           bgClip="text"
           fontSize="3xl"
           fontWeight="extrabold"
