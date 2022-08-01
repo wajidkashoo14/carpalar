@@ -4,7 +4,7 @@ import styles from "../../styles/dashboard.module.css";
 import DashboardLayout from "../../components/Layout/DashboardLayout";
 import { useRouter } from "next/router";
 
-function myproducts() {
+function Myproducts() {
   const router = useRouter();
   return (
     <DashboardLayout>
@@ -133,4 +133,4 @@ function myproducts() {
   );
 }
 
-export default myproducts;
+export default Myproducts;

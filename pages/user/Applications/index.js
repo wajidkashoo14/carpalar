@@ -4,7 +4,7 @@ import DashboardLayout from "../../../components/Layout/DashboardLayout";
 import styles from "../../../styles/dashboard.module.css";
 import { Router, useRouter } from "next/router";
 
-function index() {
+function Index() {
   const router = useRouter();
   return (
     <DashboardLayout>
@@ -200,4 +200,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
