@@ -27,7 +27,7 @@ function NavigationItems() {
     >
       <Flex flexDir="column" marginTop="1rem" gap="3" alignItems={"flex-start"}>
         <Text
-          bgColor="#8fa3e0"
+          bgColor="#4258EF"
           bgClip="text"
           fontSize="3xl"
           fontWeight="extrabold"
@@ -45,7 +45,7 @@ function NavigationItems() {
         </Button>
         <Button
           onClick={(e) => {
-            router.push("/user/myproducts");
+            router.push("/user/orders");
           }}
           textAlign="start"
           fontSize="1.2rem"

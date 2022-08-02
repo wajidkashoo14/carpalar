@@ -1,11 +1,14 @@
 import { Box, Flex, Heading, Text, Img, Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../styles/dashboard.module.css";
 import DashboardLayout from "../../../components/Layout/DashboardLayout";
+import Applicationcard from "./applicationcard";
+
 function applicationdetails() {
+  const [active, setActive] = useState("personaldetails");
   return (
     <DashboardLayout>
-      <Box maxW="83vw" height="100vh" mb="55%" pt="5rem" mx={"auto"}>
+      <Box maxW="83vw" height="100vh" mb="20%" pt="5rem" mx={"auto"}>
         <Box height="40vh" maxW="100vw" mt="2rem" mx={2} borderRadius="1rem">
           <Flex
             backgroundColor="#E9F3FC"
@@ -30,7 +33,7 @@ function applicationdetails() {
             <Flex flexDir="column" width="100%">
               <Box marginTop="3rem" marginLeft="3rem">
                 <Text
-                  bgColor="#8fa3e0"
+                  bgColor="#1A202C"
                   bgClip="text"
                   fontSize="3xl"
                   fontWeight="extrabold"
@@ -44,231 +47,190 @@ function applicationdetails() {
             </Flex>
             <Box
               backgroundColor="#FFF"
-              width="25vw"
+              width="20vw"
               boxShadow="lg"
               borderRadius="1rem"
-              height="32vh"
+              height="20vh"
               my={"auto"}
+              display="flex"
             >
-              <Heading textAlign="center" p={5} mt={10} color="#3f61ca">
+              <Heading
+                textAlign="center"
+                fontSize="1.5rem"
+                p={5}
+                color="#3f61ca"
+              >
                 Status
               </Heading>
-              <Heading fontSize="1.5rem" textAlign="center" color="#91b459">
+              <Heading
+                fontSize="1.5rem"
+                textAlign="center"
+                color="#91b459"
+                p={5}
+              >
                 Approved
               </Heading>
             </Box>
           </Flex>
         </Box>
-        <Flex gap={10} mt={10} height="70vh" mx={2}>
+        <Flex gap={10} height="40vh" mx={2}>
           <Box
-            backgroundColor="#E1F3F7"
+            backgroundColor="#ebf3f5"
             width="100%"
             boxShadow="lg"
             borderRadius="1rem"
             p={5}
             mx={3}
           >
-            <Heading ml={10}>Application Details</Heading>
-            <Box px={10}>
-              <Box display="flex" gap="6rem" py={6} mt={8}>
-                <Box>
-                  <Heading fontSize="1.1rem">First Name</Heading>
-                  <p>Shakir</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Last Name</Heading>
-                  <p>Khan</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Marital Status</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Gender</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Phone</Heading>
-                  <p>Shakir</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Experience</Heading>
-                  <p>Khan</p>
-                </Box>
-              </Box>
-              <Box display="flex" gap="6rem" py={6}>
-                <Box>
-                  <Heading fontSize="1.1rem">Nationality</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Address</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Qualifiation</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Alternate Number</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">State</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">IGA</Heading>
-                  <p>Male</p>
-                </Box>
-              </Box>
-              <Box display="flex" gap="6rem" py={6}>
-                <Box>
-                  <Heading fontSize="1.1rem">Email</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">License</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">DOB</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Nationality</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Applied Car Name</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Applied Car Id</Heading>
-                  <p>Male</p>
-                </Box>
-              </Box>
-              <Box display="flex" gap="3rem" py={6}>
-                <Box>
-                  <Heading fontSize="1.1rem">Birth Place</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Driving For</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Third Party Status</Heading>
-                  <p>Male</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Update Third Party Status</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Gurantor One</Heading>
-                  <p>Unmarried</p>
-                </Box>
-                <Box>
-                  <Heading fontSize="1.1rem">Gurantor Two</Heading>
-                  <p>Male</p>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Flex>
-        <Flex
-          width="75vw"
-          maxH="40vh"
-          m={8}
-          justifyContent="space-between"
-          mx="auto"
-        >
-          <Box
-            display="flex"
-            gap="2rem"
-            flexDirection="column"
-            backgroundColor="#E1F296"
-            p={10}
-            boxShadow="xl"
-            borderRadius="1rem"
-          >
-            <Heading>Gurantor One</Heading>
-            <Box display="flex" gap="3rem">
-              <Box>
-                <Heading fontSize="1.1rem">First Name</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Last Name</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Title</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Phone</Heading>
-                <p>Unmarried</p>
-              </Box>
-            </Box>
-            <Box display="flex" gap="3rem">
-              <Box>
-                <Heading fontSize="1.1rem">Job Title</Heading>
-                <p>Unmarried</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Email</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Relationship</Heading>
-                <p>Male</p>
-              </Box>
-            </Box>
-          </Box>
-          <Box
-            display="flex"
-            gap="2rem"
-            flexDirection="column"
-            backgroundColor="#5ABA8A"
-            p={10}
-            boxShadow="xl"
-            borderRadius="1rem"
-          >
-            <Heading>Gurantor Two</Heading>
-            <Box display="flex" gap="3rem">
-              <Box>
-                <Heading fontSize="1.1rem">First Name</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Last Name</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Title</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Phone</Heading>
-                <p>Unmarried</p>
-              </Box>
-            </Box>
-            <Box display="flex" gap="3rem">
-              <Box>
-                <Heading fontSize="1.1rem">Job Title</Heading>
-                <p>Unmarried</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Email</Heading>
-                <p>Male</p>
-              </Box>
-              <Box>
-                <Heading fontSize="1.1rem">Relationship</Heading>
-                <p>Male</p>
-              </Box>
-            </Box>
+            <Flex>
+              <Button
+                my={2}
+                className="primaryButton"
+                backgroundColor="#4258EF"
+                _hover={{ backgroundColor: "#273edc" }}
+                _focus={{ outline: "none" }}
+                color="white"
+                size="md"
+                mx="auto"
+                justifyContent="center"
+                alignItems="center"
+                onClick={() => setActive("personaldetails")}
+              >
+                Personal Details
+              </Button>
+              <Button
+                my={2}
+                className="primaryButton"
+                backgroundColor="#4258EF"
+                _hover={{ backgroundColor: "#273edc" }}
+                _focus={{ outline: "none" }}
+                color="white"
+                size="md"
+                mx="auto"
+                onClick={() => setActive("address")}
+              >
+                Address
+              </Button>
+              <Button
+                my={2}
+                className="primaryButton"
+                backgroundColor="#4258EF"
+                _hover={{ backgroundColor: "#273edc" }}
+                _focus={{ outline: "none" }}
+                color="white"
+                size="md"
+                mx="auto"
+                onClick={() => setActive("contact")}
+              >
+                Contact
+              </Button>
+              <Button
+                my={2}
+                className="primaryButton"
+                backgroundColor="#4258EF"
+                _hover={{ backgroundColor: "#273edc" }}
+                _focus={{ outline: "none" }}
+                color="white"
+                size="md"
+                mx="auto"
+                onClick={() => setActive("appliedfor")}
+              >
+                Applied For
+              </Button>
+              <Button
+                my={2}
+                className="primaryButton"
+                backgroundColor="#4258EF"
+                _hover={{ backgroundColor: "#273edc" }}
+                _focus={{ outline: "none" }}
+                color="white"
+                size="md"
+                mx="auto"
+                onClick={() => setActive("gurantorone")}
+              >
+                Gurantor one
+              </Button>
+
+              <Button
+                my={2}
+                className="primaryButton"
+                backgroundColor="#4258EF"
+                _hover={{ backgroundColor: "#273edc" }}
+                _focus={{ outline: "none" }}
+                color="white"
+                size="md"
+                mx="auto"
+                onClick={() => setActive("gurantortwo")}
+              >
+                Gurantor two
+              </Button>
+            </Flex>
+
+            {active === "personaldetails" && (
+              <Applicationcard
+                heading="Personal Details"
+                input={{ "First Name": "Wajid", "Last Name": "Kashoo" }}
+              />
+            )}
+
+            {active === "address" && (
+              <Applicationcard
+                heading="Address"
+                input={{
+                  Address: "JK",
+                  State: "Srinagar",
+                  Nationality: "Indian",
+                }}
+              />
+            )}
+            {active === "contact" && (
+              <Applicationcard
+                heading="Contact"
+                input={{
+                  "Phone Number": "+91 9596 10 3894",
+                  "ALternate Number": "+91 9596 10 3894",
+                  Email: "wkashoo@gmail.com",
+                }}
+              />
+            )}
+            {active === "appliedfor" && (
+              <Applicationcard
+                heading="Applied For"
+                input={{
+                  "Car Name": "Maybach",
+                  "Car Id": "JK01AD 7854",
+                  License: "Yes",
+                  "Third Party Status": "yes",
+                  "Update Third Party Status": "yes",
+                }}
+              />
+            )}
+            {active === "gurantorone" && (
+              <Applicationcard
+                heading="Gurantor One"
+                input={{
+                  "First Name": "Wajid",
+                  "Last Name": "Kashoo",
+                  Title: "kaaz",
+                  "Job Title": "Software Engineer",
+                  Email: "wkashoo@gmail.com",
+                  Relationship: "Father",
+                }}
+              />
+            )}
+            {active === "gurantortwo" && (
+              <Applicationcard
+                heading="Gurantor Two"
+                input={{
+                  "First Name": "Wajid",
+                  "Last Name": "Kashoo",
+                  Title: "kaaz",
+                  "Job Title": "Software Engineer",
+                  Email: "wkashoo@gmail.com",
+                  Relationship: "Father",
+                }}
+              />
+            )}
           </Box>
         </Flex>
       </Box>

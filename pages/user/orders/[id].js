@@ -42,7 +42,7 @@ const OrderDetails = () => {
                 alt="car"
               />
             </Flex>
-            <Flex mt="3rem">
+            <Flex mt="1.2rem">
               <Box px={5} py={5}>
                 <Box pb={5}>
                   <Heading fontSize="1.1rem">Body Type</Heading>
@@ -86,7 +86,7 @@ const OrderDetails = () => {
             >
               <Box>
                 <Text
-                  bgGradient="linear(to-l, #7928CA, #FF0080)"
+                  bgColor="#1A202C"
                   bgClip="text"
                   fontSize="xl"
                   fontWeight="extrabold"

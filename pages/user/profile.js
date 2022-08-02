@@ -81,7 +81,7 @@ function profile() {
           position="absolute"
           boxShadow="lg"
           left="75%"
-          top="23%"
+          top="18%"
         >
           <Heading fontSize="1.5rem" mt={3} p={3} textAlign="center">
             General Information
@@ -92,7 +92,7 @@ function profile() {
             marginLeft="0"
             my={9}
             position="absolute"
-            right="30%"
+            right="10%"
             backgroundColor="#4258EF"
             _hover={{ backgroundColor: "#273edc" }}
             _focus={{ outline: "none" }}
