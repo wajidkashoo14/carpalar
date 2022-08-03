@@ -97,62 +97,46 @@ function Apply() {
         <ChakraProvider theme={theme}>
           <Box p={8} display="flex" maxH="100vh">
             <Box width="45%" p="5">
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="">
                   <Input placeholder=" " />
 
                   <FormLabel>First name</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder=" " />
 
                   <FormLabel>Other Name</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled" placeholder="Gender">
+                  <Select placeholder="Gender">
                     <option value="option1">Male</option>
                     <option value="option2">Female</option>
                     <option value="option3">Other</option>
                   </Select>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
+                <Box my="5">
+                  <Select>
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>BVN</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder=" " id="address" name="address" />
 
                   <FormLabel htmlFor="address">Address</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder=" "
@@ -163,12 +147,7 @@ function Apply() {
                   <FormLabel htmlFor="mobile number">Mobile Number</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder=" "
@@ -179,36 +158,21 @@ function Apply() {
                   <FormLabel htmlFor="other number">Other Number</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input type="email" placeholder=" " id="email" name="email" />
 
                   <FormLabel htmlFor="email">Email</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input type="date" placeholder=" " id="dob" name="dob" />
 
                   <FormLabel htmlFor="dob">Date of birth</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder=" "
@@ -219,14 +183,9 @@ function Apply() {
                   <FormLabel htmlFor="place of birth">Place of birth</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled" placeholder="Gender">
+                  <Select placeholder="Gender">
                     <option value="option1">Male</option>
                     <option value="option2">Female</option>
                   </Select>
@@ -234,25 +193,15 @@ function Apply() {
               </FormControl>
             </Box>
             <Box width="45%" p="5" mt="-1.3rem">
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled" placeholder="Marital status">
+                  <Select placeholder="Marital status">
                     <option value="option1">Single</option>
                     <option value="option2">Married</option>
                   </Select>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     type="number"
@@ -265,25 +214,15 @@ function Apply() {
                   </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input id="nationality" name="nationality" />
                   <FormLabel htmlFor="nationality">Nationality</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="High school">High school</option>
                     <option value="Diploma">Diploma</option>
                     <option value="Bachelors">Bachelors</option>
@@ -292,12 +231,7 @@ function Apply() {
                   <FormLabel>Highest Academic Qualification</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input id="state of origin" name="state of origin" />
                   <FormLabel htmlFor="state of origin">
@@ -305,34 +239,19 @@ function Apply() {
                   </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input id="LGA" name="LGA" />
                   <FormLabel htmlFor="lga">LGA</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name">
                 <Box my="5">
                   <Input id="Drivers license" name="Drivers license" />
                   <FormLabel>Drivers License </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input id="car applied for" name="car applied for" />
                   <FormLabel htmlFor="car applied for">
@@ -340,14 +259,9 @@ function Apply() {
                   </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="option1">Yes</option>
                     <option value="option2">No</option>
                   </Select>
@@ -357,46 +271,22 @@ function Apply() {
                   </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="option1">Yes</option>
                     <option value="option2">No</option>
                   </Select>
                   <FormLabel>Licence</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="option1">Yes</option>
                     <option value="option2">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
-                </Box>
-              </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
-                <Box my="5">
-                  <Select variant="filled">
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
-                  </Select>
-                  <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
             </Box>
@@ -410,24 +300,14 @@ function Apply() {
           <Flex>
             <Box p={8} width="45%">
               <Heading my={4}>Guarantor 1</Heading>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Name " id="Name" name="Name " />
 
                   <FormLabel htmlFor="Name ">Name </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder="Relationship"
@@ -438,24 +318,14 @@ function Apply() {
                   <FormLabel htmlFor="Relationship"> Relationship</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Phone" id="Phone" name="Phone " />
 
                   <FormLabel htmlFor="Phone"> Phone</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder="Home Address "
@@ -466,12 +336,7 @@ function Apply() {
                   <FormLabel htmlFor="Home Address"> Home Address</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder="Job Title "
@@ -482,12 +347,7 @@ function Apply() {
                   <FormLabel htmlFor="Job Title"> Job Title</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
                     placeholder="Email Address"
@@ -499,28 +359,18 @@ function Apply() {
                 </Box>
               </FormControl>
 
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="High school">Yes</option>
                     <option value="Diploma">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="High school">Yes</option>
                     <option value="Diploma">No</option>
                   </Select>
@@ -530,100 +380,60 @@ function Apply() {
             </Box>
             <Box width="45%" p="5" mt={3}>
               <Heading my={4}>Guarantor 2</Heading>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Name " />
 
                   <FormLabel>Name</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Relationship" />
 
                   <FormLabel>Relationship</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Phone" />
 
                   <FormLabel>Phone</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Home Address " />
 
                   <FormLabel>Home Address</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder="Job Title " />
 
                   <FormLabel>Job Title</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name">
                 <Box my="5">
                   <Input placeholder="Email Address" />
 
                   <FormLabel>Email Address</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="High school">Yes</option>
                     <option value="Diploma">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl
-                variant="floating"
-                id="first-name"
-                isRequired
-                isInvalid
-              >
+              <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select variant="filled">
+                  <Select>
                     <option value="High school">Yes</option>
                     <option value="Diploma">No</option>
                   </Select>

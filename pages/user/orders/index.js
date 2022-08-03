@@ -49,7 +49,7 @@ function Myproducts() {
                 <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem"> Sale Amount </Heading>
+                <Heading fontSize="1.1rem"> Amount </Heading>
                 <p>$14,000</p>
               </Box>
             </Box>
@@ -107,7 +107,7 @@ function Myproducts() {
                 <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem"> Sale Amount </Heading>
+                <Heading fontSize="1.1rem"> Amount </Heading>
                 <p>$14,000</p>
               </Box>
             </Box>

@@ -55,7 +55,7 @@ export default function Howitworks() {
           >
             <Image
               mb="40"
-              src="/formfilling.jpg"
+              src="/formfilling.png"
               height={120}
               width={120}
               alt="salary"
@@ -87,8 +87,8 @@ export default function Howitworks() {
             <Image
               mb="40"
               src="/verified.jpg"
-              height={140}
-              width={140}
+              height={150}
+              width={150}
               alt="salary"
             />
             <Text fontWeight="medium" mt="10">
@@ -118,8 +118,8 @@ export default function Howitworks() {
             <Image
               mb="40"
               src="/pay.jpg"
-              height={140}
-              width={140}
+              height={170}
+              width={170}
               alt="salary"
             />
             <Text fontWeight="medium" mt="10">

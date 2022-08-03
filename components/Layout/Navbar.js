@@ -25,7 +25,8 @@ function Navbar() {
       alignItems="center"
       justifyContent="space-between"
       px="10"
-      height="3.5rem"
+      py="auto"
+      height="4rem"
       boxShadow="lg"
       bg="#fff"
     >
@@ -78,13 +79,19 @@ function Navbar() {
         >
           Contact us
         </Link>
-        <Link
-          fontSize="20px"
-          textDecoration="none"
-          _hover={{ color: "grey.700" }}
-          href="/signin"
-        >
-          Apply to drive
+        <Link href="#">
+          <Button
+            size={"sm"}
+            colorScheme={"blue"}
+            _focus={{ outline: "none" }}
+            onClick={() => router.push("/signin")}
+            display="grid"
+            placeItems="center"
+            variant="outline"
+            marginBottom={2}
+          >
+            Apply to drive
+          </Button>
         </Link>
       </Flex>
     </Container>

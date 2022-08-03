@@ -88,9 +88,9 @@ const OrderDetails = () => {
                 <Text
                   bgColor="#1A202C"
                   bgClip="text"
-                  fontSize="xl"
+                  fontSize="l"
                   fontWeight="extrabold"
-                  mt={5}
+                  mt={2}
                 >
                   Your Upcoming Transaction
                 </Text>

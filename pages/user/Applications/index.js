@@ -43,7 +43,7 @@ function Index() {
               <span className={styles.dashboard__span}>197</span>
             </Box>
             <Box display="flex" marginLeft="3rem" py={4}>
-            <Box>
+              <Box>
                 <Heading fontSize="1.1rem">Address</Heading>
                 <p>jk india</p>
               </Box>
@@ -56,7 +56,7 @@ function Index() {
                 <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">Amount Offered</Heading>
+                <Heading fontSize="1.1rem">Amount</Heading>
                 <p>$14,000</p>
               </Box>
             </Box>
@@ -116,7 +116,7 @@ function Index() {
                 <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">Amount Offered</Heading>
+                <Heading fontSize="1.1rem">Amount </Heading>
                 <p>$14,000</p>
               </Box>
             </Box>
@@ -163,7 +163,7 @@ function Index() {
               <span className={styles.dashboard__span}>197</span>
             </Box>
             <Box display="flex" marginLeft="3rem" py={4}>
-            <Box>
+              <Box>
                 <Heading fontSize="1.1rem">Address</Heading>
                 <p>jk india</p>
               </Box>
@@ -176,9 +176,10 @@ function Index() {
                 <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">Amount Offered</Heading>
+                <Heading fontSize="1.1rem">Amount </Heading>
                 <p>$14,000</p>
               </Box>
+            </Box>
             <Button
               width="8rem"
               marginLeft="3rem"
