@@ -4,7 +4,7 @@ import styles from "../../../styles/dashboard.module.css";
 import DashboardLayout from "../../../components/Layout/DashboardLayout";
 import Applicationcard from "./applicationcard";
 
-function applicationdetails() {
+function Applicationdetails() {
   const [active, setActive] = useState("personaldetails");
   return (
     <DashboardLayout>
@@ -238,4 +238,4 @@ function applicationdetails() {
   );
 }
 
-export default applicationdetails;
+export default Applicationdetails;
