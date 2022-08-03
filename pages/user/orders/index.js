@@ -37,20 +37,20 @@ function Myproducts() {
             </Box>
             <Box display="flex" marginLeft="3rem" py={4}>
               <Box>
-                <Heading fontSize="1.1rem">10d 12hrs</Heading>
-                <p>Time left</p>
+                <Heading fontSize="1.1rem">Address</Heading>
+                <p>jk india</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">Sunday, 9:54pm</Heading>
-                <p>Auction ending</p>
+                <Heading fontSize="1.1rem">Contact</Heading>
+                <p>9596103894</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">18</Heading>
-                <p>Active bids</p>
+                <Heading fontSize="1.1rem">Gender</Heading>
+                <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">$14,000</Heading>
-                <p>Current bid</p>
+                <Heading fontSize="1.1rem"> Sale Amount </Heading>
+                <p>$14,000</p>
               </Box>
             </Box>
             <Button
@@ -95,20 +95,20 @@ function Myproducts() {
             </Box>
             <Box display="flex" marginLeft="3rem" py={4}>
               <Box>
-                <Heading fontSize="1.1rem">10d 12hrs</Heading>
-                <p>Time left</p>
+                <Heading fontSize="1.1rem">Address</Heading>
+                <p>jk india</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">Sunday, 9:54pm</Heading>
-                <p>Auction ending</p>
+                <Heading fontSize="1.1rem">Contact</Heading>
+                <p>9596103894</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">18</Heading>
-                <p>Active bids</p>
+                <Heading fontSize="1.1rem">Gender</Heading>
+                <p>Male</p>
               </Box>
               <Box px={6}>
-                <Heading fontSize="1.1rem">$14,000</Heading>
-                <p>Current bid</p>
+                <Heading fontSize="1.1rem"> Sale Amount </Heading>
+                <p>$14,000</p>
               </Box>
             </Box>
             <Button

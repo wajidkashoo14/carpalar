@@ -76,6 +76,23 @@ function Carbanner() {
             Suv
           </Text>
         </Box>
+        <Box>
+          <Image
+            src="/cars/motorcycle.svg"
+            boxSize="120px"
+            style={{ transform: "rotate(360deg)" }}
+            color="#C2C2C2"
+          />
+          <Text
+            mt="-5"
+            fontSize="1xl"
+            textTransform="uppercase"
+            color="#C2C2C2"
+            mx="10"
+          >
+            Motorcycle
+          </Text>
+        </Box>
       </Flex>
     </Container>
   );

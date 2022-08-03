@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Image } from "@chakra-ui/react";
 import styles from "../../styles/Navbar.module.css";
 import { BsPersonFill } from "react-icons/bs";
 import {
@@ -28,15 +29,15 @@ function Navbar() {
       boxShadow="lg"
       bg="#fff"
     >
-      <Link
-        href="/"
-        // fontSize="25px"
-        // fontWeight="bold"
-        // _hover={{ color: "#273edc" }}
-        // color="#"
-        className={styles.navLink}
-      >
-        Carparlar
+      <Link href="/" className={styles.navLink}>
+        <Image
+          src="/logo.jpeg"
+          alt="logo"
+          height="3.5rem"
+          width="10rem"
+          objectFit="cover"
+          cursor="pointer"
+        />
       </Link>
 
       <Flex gap="5">
@@ -77,43 +78,14 @@ function Navbar() {
         >
           Contact us
         </Link>
-
-        <Popover isLazy style={{ marginBottom: "2rem" }}>
-          <PopoverTrigger>
-            <Button
-              bg="none"
-              _hover={{ backgroundColor: "#4258ef" }}
-              outline="none"
-              _focus="none"
-            >
-              <BsPersonFill style={{ marginTop: "-12px" }} />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent w="120px" mr="5">
-            <PopoverArrow ml="3" />
-            <PopoverCloseButton />
-            <PopoverBody>
-              <Flex flexDir="column">
-                <Button
-                  mb="2"
-                  onClick={() => {
-                    router.push("/signin");
-                  }}
-                >
-                  Login
-                </Button>
-                <Button
-                  mb="2"
-                  onClick={() => {
-                    router.push("/signup");
-                  }}
-                >
-                  Signup
-                </Button>
-              </Flex>
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
+        <Link
+          fontSize="20px"
+          textDecoration="none"
+          _hover={{ color: "grey.700" }}
+          href="/signin"
+        >
+          Apply to drive
+        </Link>
       </Flex>
     </Container>
   );
