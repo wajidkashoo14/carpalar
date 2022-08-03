@@ -31,6 +31,8 @@ function NavigationItems() {
           bgClip="text"
           fontSize="3xl"
           fontWeight="extrabold"
+          cursor={"pointer"}
+          onClick={() => router.push("/user/dashboard")}
         >
           Dashboard
         </Text>

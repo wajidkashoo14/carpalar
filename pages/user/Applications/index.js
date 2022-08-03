@@ -68,7 +68,7 @@ function Index() {
               _focus={{ outline: "none" }}
               color="#ffffff"
               onClick={() => {
-                router.push("/user/Applications/1212");
+                router.push("/user/Applications/applicationdetails");
               }}
             >
               View Details
@@ -128,7 +128,7 @@ function Index() {
               _focus={{ outline: "none" }}
               color="#ffffff"
               onClick={() => {
-                router.push("/applicationdetails");
+                router.push("/user/Applications/applicationdetails");
               }}
             >
               View Details

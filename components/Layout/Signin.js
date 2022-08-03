@@ -95,6 +95,9 @@ function Signin() {
             _focus={{ outline: "none" }}
             color="white"
             width="100%"
+            onClick={(e) => {
+              router.push("/user/dashboard");
+            }}
           >
             Sign in
           </Button>

@@ -66,24 +66,26 @@ export default function Profile() {
       <Flex marginTop={8} justifyContent="space-between">
         <Box>
           <Box pt={3}>
-            <Heading fontSize="1rem">Turnover</Heading>
-            <p className={styles.dashboard__p__second}>Amount of funds</p>
+            <Heading fontSize="1rem">Total Spend</Heading>
+            <p className={styles.dashboard__p__second}>
+              Amount spend on platform
+            </p>
           </Box>
           <Box pt={3}>
-            <Heading fontSize="1rem">Income</Heading>
+            {/* <Heading fontSize="1rem">Income</Heading>
             <p className={styles.dashboard__p__second}>Amount minus fee</p>
           </Box>
           <Box pt={3}>
             <Heading fontSize="1rem">Bids</Heading>
             <p className={styles.dashboard__p__second}>
               Amount of auction bids
-            </p>
+            </p> */}
           </Box>
         </Box>
         <Box pt={3} mr={5}>
           <p className={styles.dashboard__p__first}>$268,987</p>
-          <p className={styles.dashboard__p__sec}>$174,987</p>
-          <p className={styles.dashboard__p__third}>219</p>
+          {/* <p className={styles.dashboard__p__sec}>$174,987</p>
+          <p className={styles.dashboard__p__third}>219</p> */}
         </Box>
       </Flex>
     </Container>

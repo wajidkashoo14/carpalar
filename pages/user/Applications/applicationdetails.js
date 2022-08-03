@@ -31,7 +31,7 @@ function Applicationdetails() {
               />
             </Box>
             <Flex flexDir="column" width="100%">
-              <Box marginTop="3rem" marginLeft="3rem">
+              <Box marginLeft="3rem">
                 <Text
                   bgColor="#1A202C"
                   bgClip="text"
@@ -51,7 +51,6 @@ function Applicationdetails() {
               boxShadow="lg"
               borderRadius="1rem"
               height="20vh"
-              my={"auto"}
               display="flex"
             >
               <Heading
@@ -82,7 +81,7 @@ function Applicationdetails() {
             p={5}
             mx={3}
           >
-            <Flex>
+            <Flex justifyContent="flex-start">
               <Button
                 my={2}
                 className="primaryButton"
