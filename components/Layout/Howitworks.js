@@ -14,6 +14,7 @@ export default function Howitworks() {
       color="white"
       bg="black"
       id="howitworks"
+      scrollBehavior="smooth"
     >
       <Heading as="h5" textTransform="capitalize" size="2xl">
         How it works
@@ -86,7 +87,7 @@ export default function Howitworks() {
           >
             <Image
               mb="40"
-              src="/verified.jpg"
+              src="/verified.png"
               height={150}
               width={150}
               alt="salary"
@@ -117,9 +118,9 @@ export default function Howitworks() {
           >
             <Image
               mb="40"
-              src="/pay.jpg"
-              height={170}
-              width={170}
+              src="/pay.png"
+              height={200}
+              width={200}
               alt="salary"
             />
             <Text fontWeight="medium" mt="10">

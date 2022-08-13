@@ -9,9 +9,11 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React from "react";
+import { useRouter } from "next/router";
 // import Singlecardinfo from "./Singlecardinfo";
 
 function Info() {
+  const router = useRouter();
   const [notSmallerScreen] = useMediaQuery("(min-width:768px)");
   return (
     <Container maxW="100%" height="100vh" bgColor="white" mx="8">
@@ -23,17 +25,6 @@ function Info() {
           width="50%"
         >
           <Heading
-            bgGradient="linear(to right, #ffffff, #abbaab)"
-            bgClip="text"
-            fontSize="5xl"
-            textAlign="center"
-            fontWeight="900"
-            textTransform="uppercase"
-            letterSpacing="4px"
-          >
-            Carparlar
-          </Heading>
-          <Heading
             textAlign="center"
             fontSize="25"
             textTransform="uppercase"
@@ -42,6 +33,7 @@ function Info() {
             mx="auto"
             my="-2.7rem"
             letterSpacing="1px"
+            color="#4258EF"
           >
             easy finance facilities with carpalar
           </Heading>
@@ -78,6 +70,9 @@ function Info() {
             width="7rem"
             mx="auto"
             fontWeight="400"
+            onClick={(e) => {
+              router.push("/signup");
+            }}
           >
             Get now
           </Button>
@@ -111,14 +106,15 @@ function Info() {
                 textAlign="center"
                 bottom="0"
                 left="0"
-                color="white"
                 as="h4"
-                bgColor="blue"
+                bgColor="#273edc"
                 height="4rem"
                 borderBottomLeftRadius="10"
                 borderBottomRightRadius="10"
               >
-                <Text mt="4">Flexible weekly payment plan</Text>
+                <Text mt="4" color="white">
+                  Flexible weekly payment plan
+                </Text>
               </Box>
             </Box>
             <Box
@@ -149,7 +145,7 @@ function Info() {
                 left="0"
                 color="white"
                 as="h4"
-                bgColor="blue"
+                bgColor="#273edc"
                 height="4rem"
                 borderBottomLeftRadius="10"
                 borderBottomRightRadius="10"
@@ -186,7 +182,7 @@ function Info() {
                 left="0"
                 color="white"
                 as="h4"
-                bgColor="blue"
+                bgColor="#273edc"
                 height="4rem"
                 borderBottomLeftRadius="10"
                 borderBottomRightRadius="10"
@@ -221,7 +217,7 @@ function Info() {
                 left="0"
                 color="white"
                 as="h4"
-                bgColor="blue"
+                bgColor="#273edc"
                 height="4rem"
                 borderBottomLeftRadius="10"
                 borderBottomRightRadius="10"

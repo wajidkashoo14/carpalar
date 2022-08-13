@@ -67,7 +67,7 @@ function Navbar() {
           fontSize="20px"
           textDecoration="none"
           _hover={{ color: "grey.700" }}
-          href="/faq"
+          href="#howitworks"
         >
           How it works
         </Link>

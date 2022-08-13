@@ -75,7 +75,7 @@ function Apply() {
       <Text fontWeight="500" my="3" fontSize="18px" textAlign="left">
         Minimum Requirement
       </Text>
-      <Box textAlign="left">
+      {/* <Box textAlign="left">
         <Text>I have a smartphone</Text>
         <Text>I have a guarantor</Text>
         <Text>I have a valid drivers license</Text>
@@ -92,7 +92,7 @@ function Apply() {
           Are you able to pay the initial deposit that is 10% value of the total
           amount
         </Text>
-      </Box>
+      </Box> */}
       <Box>
         <ChakraProvider theme={theme}>
           <Box p={8} display="flex" maxH="100vh">
@@ -113,6 +113,13 @@ function Apply() {
               </FormControl>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
+                  <Input type="date" placeholder=" " id="dob" name="dob" />
+
+                  <FormLabel htmlFor="dob">Date of birth</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl variant="floating" id="first-name" isRequired>
+                <Box my="5">
                   <Select placeholder="Gender">
                     <option value="option1">Male</option>
                     <option value="option2">Female</option>
@@ -120,15 +127,7 @@ function Apply() {
                   </Select>
                 </Box>
               </FormControl>
-              <FormControl variant="floating" id="first-name" isRequired>
-                <Box my="5">
-                  <Select>
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
-                  </Select>
-                  <FormLabel>BVN</FormLabel>
-                </Box>
-              </FormControl>
+
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input placeholder=" " id="address" name="address" />
@@ -165,13 +164,7 @@ function Apply() {
                   <FormLabel htmlFor="email">Email</FormLabel>
                 </Box>
               </FormControl>
-              <FormControl variant="floating" id="first-name" isRequired>
-                <Box my="5">
-                  <Input type="date" placeholder=" " id="dob" name="dob" />
 
-                  <FormLabel htmlFor="dob">Date of birth</FormLabel>
-                </Box>
-              </FormControl>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input
@@ -287,6 +280,15 @@ function Apply() {
                     <option value="option2">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
+                </Box>
+              </FormControl>
+              <FormControl variant="floating" id="first-name" isRequired>
+                <Box my="5">
+                  <Select>
+                    <option value="High school">Yes</option>
+                    <option value="Diploma">No</option>
+                  </Select>
+                  <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
             </Box>
