@@ -1,4 +1,11 @@
-import { Flex, Stack, Text, Heading, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Stack,
+  Text,
+  Heading,
+  Button,
+  Container,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Productreview from "./Productreview";
 import { useRouter } from "next/router";
@@ -6,7 +13,13 @@ import { useRouter } from "next/router";
 export default function SIngleCar() {
   const router = useRouter();
   return (
-    <Flex pt="8vh" justifyContent="space-between" p="40">
+    <Container
+      display="flex"
+      justifyContent="space-between"
+      maxW="80vw"
+      px={10}
+      pt="9rem"
+    >
       <Stack>
         <Heading
           as="h2"
@@ -63,7 +76,7 @@ export default function SIngleCar() {
             _focus={{ outline: "none" }}
             color="white"
             onClick={(e) => {
-              router.push("/dashboard");
+              router.push("/buyform");
             }}
           >
             BUY NOW
@@ -86,6 +99,6 @@ export default function SIngleCar() {
         </Flex>
       </Stack>
       <Image src="/homecar.jpg" width={550} height={350} />I
-    </Flex>
+    </Container>
   );
 }
