@@ -82,7 +82,7 @@ function Signup() {
       <Flex boxShadow="lg" borderRadius={10} margin="auto" width="40vw">
         <Box margin="auto" px="2rem">
           <Heading my="1.5rem" textAlign="center">
-            Let's get started
+            {`Let's get started`}
           </Heading>
 
           <Box py={2} display="flex" justifyContent="space-between">
