@@ -19,8 +19,14 @@ function Contactstrip() {
 				<Flex alignItems="center" gap="5">
 					<HiOutlineMail size="25" color="teal" />
 					<Text fontSize="13px" color="gray.500">
-						<Link href="mailto: info@carpalar.com">
-							email: info@carpalar.com
+						email:&nbsp;
+						<Link
+							_hover={{ textDecoration: "none" }}
+							fontSize="15px"
+							_after={{ display: "none" }}
+							href="mailto:info@carpalar.com"
+						>
+							info@carpalar.com
 						</Link>
 					</Text>
 				</Flex>
@@ -28,7 +34,16 @@ function Contactstrip() {
 				<Flex alignItems="center" gap="5">
 					<BsWhatsapp size="25" color="green" />
 					<Text fontSize="13px" color="gray.500">
-						Whatsapp: +234 903000 9486
+						Whatsapp:&nbsp;
+						<Link
+							_hover={{ textDecoration: "none" }}
+							_after={{ display: "none" }}
+							fontSize="15px"
+							href="https://api.whatsapp.com/send?phone=2349030009486&text=Hello"
+							target="_blank"
+						>
+							+234 903000 9486
+						</Link>
 					</Text>
 				</Flex>
 			</Flex>
