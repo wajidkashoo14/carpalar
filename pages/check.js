@@ -257,6 +257,9 @@ function Signup() {
             _focus={{ outline: "none" }}
             color="white"
             width="100%"
+            onClick={(e) => {
+              router.push("/signup");
+            }}
           >
             Continue
           </Button>
