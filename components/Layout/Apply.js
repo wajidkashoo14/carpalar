@@ -14,12 +14,52 @@ import {
   Flex,
   Button,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 function Apply() {
+  const [license, setLicense] = useState("");
+  const [bvn, setBvn] = useState("");
+  const [nin, setNin] = useState("");
+  const [gurantorOneNin, setgurantorOneNin] = useState("No");
+  const [gurantorOneBvn, setgurantorOneBvn] = useState("No");
+  const [gurantorTwoNin, setgurantorTwoNin] = useState("No");
+  const [gurantorTwoBvn, setgurantorTwoBvn] = useState("No");
+
+  const handleLicense = (e) => {
+    const getLicense = e.target.value;
+    setLicense(getLicense);
+  };
+
+  const handleBvn = (e) => {
+    const getBvn = e.target.value;
+    setBvn(getBvn);
+  };
+  const handleNin = (e) => {
+    const getNin = e.target.value;
+    setNin(getNin);
+  };
+
+  const handleGurantorOneNin = (e) => {
+    const getNin = e.target.value;
+    setgurantorOneNin(getNin);
+  };
+  const handleGurantorOneBvn = (e) => {
+    const getBvn = e.target.value;
+    setgurantorOneBvn(getBvn);
+  };
+  const handleGurantorTwoNin = (e) => {
+    const getNin = e.target.value;
+    setgurantorTwoNin(getNin);
+  };
+  const handleGurantorTwoBvn = (e) => {
+    const getBvn = e.target.value;
+    setgurantorTwoBvn(getBvn);
+  };
+
   const activeLabelStyles = {
     transform: "scale(0.85) translateY(-24px)",
   };
+
   const theme = extendTheme({
     components: {
       Form: {
@@ -184,8 +224,6 @@ function Apply() {
                   </Select>
                 </Box>
               </FormControl>
-            </Box>
-            <Box width="45%" p="5" mt="-1.3rem">
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Select placeholder="Marital status">
@@ -207,6 +245,8 @@ function Apply() {
                   </FormLabel>
                 </Box>
               </FormControl>
+            </Box>
+            <Box width="45%" p="5" mt="-1.3rem">
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input id="nationality" name="nationality" />
@@ -240,9 +280,26 @@ function Apply() {
               </FormControl>
               <FormControl variant="floating" id="first-name">
                 <Box my="5">
-                  <Input id="Drivers license" name="Drivers license" />
+                  <Select
+                    onChange={(e) => {
+                      handleLicense(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </Select>
                   <FormLabel>Drivers License </FormLabel>
                 </Box>
+                {license === "Yes" && (
+                  <FormControl variant="floating" id="first-name" isRequired>
+                    <Box my="5">
+                      <Input id="Licence Number" name="Licence Number" />
+                      <FormLabel htmlFor="state of origin">
+                        Licence Number
+                      </FormLabel>
+                    </Box>
+                  </FormControl>
+                )}
               </FormControl>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
@@ -264,36 +321,51 @@ function Apply() {
                   </FormLabel>
                 </Box>
               </FormControl>
-              <FormControl variant="floating" id="first-name" isRequired>
+              <FormControl variant="floating" id="NIN" isRequired>
                 <Box my="5">
-                  <Select>
-                    <option value="option1">Yes</option>
-                    <option value="option2">No</option>
-                  </Select>
-                  <FormLabel>Licence</FormLabel>
-                </Box>
-              </FormControl>
-              <FormControl variant="floating" id="first-name" isRequired>
-                <Box my="5">
-                  <Select>
-                    <option value="option1">Yes</option>
-                    <option value="option2">No</option>
+                  <Select
+                    onChange={(e) => {
+                      handleNin(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
                 </Box>
               </FormControl>
+              {nin === "Yes" && (
+                <FormControl variant="floating" id="NIN" isRequired>
+                  <Box my="5">
+                    <Input id="NIN" name="NIN Number" />
+                    <FormLabel htmlFor="state of origin">NIN Number</FormLabel>
+                  </Box>
+                </FormControl>
+              )}
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select>
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
+                  <Select
+                    onChange={(e) => {
+                      handleBvn(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </Select>
                   <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
+              {bvn === "Yes" && (
+                <FormControl variant="floating" id="BVN Number" isRequired>
+                  <Box my="5">
+                    <Input id="BVN Number" name="Licence Number" />
+                    <FormLabel htmlFor="state of origin">BVN Number</FormLabel>
+                  </Box>
+                </FormControl>
+              )}
             </Box>
           </Box>
-          <Heading pl={8} my="5">
+          <Heading pl={8} mt="5rem">
             Guarantors
           </Heading>
           <Text pl={8}>
@@ -363,22 +435,46 @@ function Apply() {
 
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select>
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
+                  <Select
+                    onChange={(e) => {
+                      handleGurantorOneNin(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
                 </Box>
               </FormControl>
+              {gurantorOneNin === "Yes" && (
+                <FormControl variant="floating" id="NIN" isRequired>
+                  <Box my="5">
+                    <Input id="NIN" name="NIN Number" />
+                    <FormLabel htmlFor="state of origin">NIN Number</FormLabel>
+                  </Box>
+                </FormControl>
+              )}
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select>
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
+                  <Select
+                    onChange={(e) => {
+                      handleGurantorOneBvn(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </Select>
                   <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
+              {gurantorOneBvn === "Yes" && (
+                <FormControl variant="floating" id="BVN Number" isRequired>
+                  <Box my="5">
+                    <Input id="BVN Number" name="Licence Number" />
+                    <FormLabel htmlFor="state of origin">BVN Number</FormLabel>
+                  </Box>
+                </FormControl>
+              )}
             </Box>
             <Box width="45%" p="5" mt={3}>
               <Heading my={4}>Guarantor 2</Heading>
@@ -426,22 +522,46 @@ function Apply() {
               </FormControl>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select>
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
+                  <Select
+                    onChange={(e) => {
+                      handleGurantorTwoNin(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </Select>
                   <FormLabel>NIN</FormLabel>
                 </Box>
               </FormControl>
+              {gurantorTwoNin === "Yes" && (
+                <FormControl variant="floating" id="NIN" isRequired>
+                  <Box my="5">
+                    <Input id="NIN" name="NIN Number" />
+                    <FormLabel htmlFor="state of origin">NIN Number</FormLabel>
+                  </Box>
+                </FormControl>
+              )}
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
-                  <Select>
-                    <option value="High school">Yes</option>
-                    <option value="Diploma">No</option>
+                  <Select
+                    onChange={(e) => {
+                      handleGurantorTwoBvn(e);
+                    }}
+                  >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                   </Select>
                   <FormLabel>BVN</FormLabel>
                 </Box>
               </FormControl>
+              {gurantorTwoBvn === "Yes" && (
+                <FormControl variant="floating" id="BVN Number" isRequired>
+                  <Box my="5">
+                    <Input id="BVN Number" name="Licence Number" />
+                    <FormLabel htmlFor="state of origin">BVN Number</FormLabel>
+                  </Box>
+                </FormControl>
+              )}
             </Box>
           </Flex>
         </ChakraProvider>

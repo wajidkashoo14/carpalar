@@ -60,10 +60,10 @@ function Buyform() {
       display="flex"
       flexDir="column"
       width="50vw"
-      p="1rem 5rem"
+      p="0 5rem"
     >
-      <Heading pt="10rem"> Fill in your info</Heading>
-      <Box my={8} mWidth="50vw">
+      <Heading pt="8rem"> Fill in your info</Heading>
+      <Box my={6} mWidth="50vw">
         <FormControl my={4}>
           <FormLabel id="firstname">First Name</FormLabel>
           <Input id="firstname" type="Text" />
@@ -73,8 +73,12 @@ function Buyform() {
           <Input id="Lastname" type="text" />
         </FormControl>
         <FormControl my={4}>
-          <FormLabel>Email address</FormLabel>
+          <FormLabel id="email">Email address</FormLabel>
           <Input id="email" type="email" />
+        </FormControl>
+        <FormControl my={4}>
+          <FormLabel id="countrycode">Country Code</FormLabel>
+          <Input id="countrycode" type="text" />
         </FormControl>
         <FormControl my={4}>
           <FormLabel id="Mobilenumber">Mobile Number</FormLabel>
