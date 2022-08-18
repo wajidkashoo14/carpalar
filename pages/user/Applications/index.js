@@ -2,7 +2,7 @@ import { Box, Button, Container, Flex, Heading, Img } from "@chakra-ui/react";
 import React from "react";
 import DashboardLayout from "../../../components/Layout/DashboardLayout";
 import styles from "../../../styles/dashboard.module.css";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 function Index() {
   const router = useRouter();
