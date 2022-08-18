@@ -12,11 +12,13 @@ import {
   RadioGroup,
   Stack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 function Signup() {
   const router = useRouter();
+
+  const [disabled, setDisabled] = useState("false");
   return (
     <Container
       maxW="100%"
@@ -257,6 +259,7 @@ function Signup() {
             _focus={{ outline: "none" }}
             color="white"
             width="100%"
+            disabled={disabled}
             onClick={(e) => {
               router.push("/signup");
             }}

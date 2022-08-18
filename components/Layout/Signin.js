@@ -96,7 +96,7 @@ function Signin() {
             color="white"
             width="100%"
             onClick={(e) => {
-              router.push("/user/dashboard");
+              router.push("/verification");
             }}
           >
             Sign in

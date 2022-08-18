@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 
 function Signup() {
   const router = useRouter();
+
   return (
     <Container
       maxW="100%"
@@ -108,6 +109,9 @@ function Signup() {
             _focus={{ outline: "none" }}
             color="white"
             width="100%"
+            onClick={(e) => {
+              router.push("/payementsucess");
+            }}
           >
             Continue
           </Button>

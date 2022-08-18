@@ -14,9 +14,12 @@ import {
   Flex,
   Button,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 function Apply() {
+  const router = useRouter();
+
   const [license, setLicense] = useState("");
   const [bvn, setBvn] = useState("");
   const [nin, setNin] = useState("");
@@ -574,6 +577,9 @@ function Apply() {
         _focus={{ outline: "none" }}
         color="white"
         textAlign="center"
+        onClick={(e) => {
+          router.push("/applicationstatus");
+        }}
       >
         Submit Application
       </Button>
