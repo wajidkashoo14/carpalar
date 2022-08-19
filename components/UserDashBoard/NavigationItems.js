@@ -20,14 +20,14 @@ function NavigationItems() {
       flexDir="column"
       alignItems="flex-start"
       justifyContent="space-between"
-      backgroundColor="#E9F3FC"
+      backgroundColor="#2488F6"
       height="85vh"
       marginTop="6%"
       borderRight=".5px solid #DCDCDC"
     >
       <Flex flexDir="column" marginTop="1rem" gap="3" alignItems={"flex-start"}>
         <Text
-          bgColor="#4258EF"
+          bgColor="white"
           bgClip="text"
           fontSize="3xl"
           fontWeight="extrabold"
@@ -42,6 +42,8 @@ function NavigationItems() {
           }}
           textAlign="start"
           fontSize="1.2rem"
+          bgColor="white"
+          color="#2488F6"
         >
           Applications
         </Button>
@@ -51,6 +53,8 @@ function NavigationItems() {
           }}
           textAlign="start"
           fontSize="1.2rem"
+          bgColor="white"
+          color="#2488F6"
         >
           Orders
         </Button>
@@ -61,6 +65,8 @@ function NavigationItems() {
           }}
           textAlign="start"
           fontSize="1.2rem"
+          bgColor="white"
+          color="#2488F6"
         >
           Profile
         </Button>
