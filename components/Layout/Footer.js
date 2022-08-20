@@ -74,7 +74,11 @@ function Footer() {
 				</Heading>
 				<Flex gap="5" mb="20">
 					<Link href="https://www.instagram.com/carpalarhq" passHref>
-						<FaFacebook fontSize="26px" color="#FFFFFF" />
+						<FaFacebook
+							cursor="pointer"
+							fontSize="26px"
+							color="#FFFFFF"
+						/>
 					</Link>
 
 					<Link
@@ -82,7 +86,11 @@ function Footer() {
 						backgroundColor="black"
 						passHref
 					>
-						<FaInstagram fontSize="26px" color="#FFFFFF" />
+						<FaInstagram
+							cursor="pointer"
+							fontSize="26px"
+							color="#FFFFFF"
+						/>
 					</Link>
 
 					<Link
@@ -90,7 +98,11 @@ function Footer() {
 						target="_blank"
 						passHref
 					>
-						<FaWhatsapp fontSize="26px" color="#FFFFFF" />
+						<FaWhatsapp
+							cursor="pointer"
+							fontSize="26px"
+							color="#FFFFFF"
+						/>
 					</Link>
 				</Flex>
 			</Flex>
