@@ -40,6 +40,12 @@ export default function Howitworks() {
 					m="4"
 					width={notSmallerScreen ? "100%" : "35%"}
 					mb={notSmallerScreen ? "20" : "inherit"}
+					data-aos="zoom-in-left"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
 				>
 					<Image
 						mb="40"
@@ -75,6 +81,13 @@ export default function Howitworks() {
 					m="4"
 					width={notSmallerScreen ? "100%" : "35%"}
 					mb={notSmallerScreen ? "20" : "inherit"}
+					data-aos="zoom-in"
+					data-aos-delay="100"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
 				>
 					<Image
 						src="/number-2.png"
@@ -108,6 +121,13 @@ export default function Howitworks() {
 					m="4"
 					width={notSmallerScreen ? "100%" : "35%"}
 					mb={notSmallerScreen ? "20" : "inherit"}
+					data-aos="zoom-in-right"
+					data-aos-delay="200"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
 				>
 					<Image
 						mb="40"

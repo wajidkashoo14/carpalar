@@ -12,16 +12,31 @@ function Carbanner() {
 				color="white"
 				fontWeight="400"
 				textAlign="center"
+				data-aos="fade-up"
+				data-aos-offset="50"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+				data-aos-mirror="true"
+				data-aos-once="false"
 			>
 				Find your dream car
 			</Heading>
 
 			<Flex justifyContent="center" gap="5rem">
-				<Box>
+				<Box
+					data-aos="fade-up"
+					data-aos-offset="50"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-out"
+					data-aos-mirror="true"
+					data-aos-once="false"
+					data-aos-delay="100"
+				>
 					<Image
 						alt="car-icon"
-						src="/cars/coupe.svg"
+						src="/cars/saloon.svg"
 						boxSize="120px"
+						style={{ scale: "1.1" }}
 					/>
 					<Text
 						mt="-5"
@@ -32,7 +47,15 @@ function Carbanner() {
 						Saloon
 					</Text>
 				</Box>
-				<Box>
+				<Box
+					data-aos="fade-up"
+					data-aos-delay="100"
+					data-aos-offset="50"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-out"
+					data-aos-mirror="true"
+					data-aos-once="false"
+				>
 					<Image
 						alt="car-icon"
 						src="/cars/cabriolet.svg"
@@ -49,12 +72,20 @@ function Carbanner() {
 						Tri Cycle
 					</Text>
 				</Box>
-				<Box>
+				<Box
+					data-aos="fade-up"
+					data-aos-offset="50"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-out"
+					data-aos-mirror="true"
+					data-aos-once="false"
+					data-aos-delay="100"
+				>
 					<Image
 						alt="car-icon"
 						src="/cars/hatchback.svg"
 						boxSize="120px"
-						// style={{ transform: "rotate(270deg)" }}
+						style={{ transform: "scaleX(-1)" }}
 					/>
 					<Text
 						mt="-5"
@@ -66,7 +97,15 @@ function Carbanner() {
 					</Text>
 				</Box>
 
-				<Box>
+				<Box
+					data-aos="fade-up"
+					data-aos-offset="50"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-out"
+					data-aos-mirror="true"
+					data-aos-delay="100"
+					data-aos-once="false"
+				>
 					<Image
 						alt="car-icon"
 						src="/cars/suv.svg"
@@ -83,20 +122,26 @@ function Carbanner() {
 						Suv
 					</Text>
 				</Box>
-				<Box>
+				<Box
+					data-aos="fade-up"
+					data-aos-offset="50"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-out"
+					data-aos-delay="100"
+					data-aos-mirror="true"
+					data-aos-once="false"
+				>
 					<Image
+						mt="-2"
 						alt="car-icon"
-						src="/cars/motorcycle.svg"
+						src="/cars/motor.svg"
 						boxSize="120px"
-						style={{ transform: "rotate(360deg)" }}
-						color="#C2C2C2"
 					/>
 					<Text
-						mt="-5"
+						mt="-2"
 						fontSize="1xl"
 						textTransform="uppercase"
-						color="#C2C2C2"
-						mx="10"
+						color="#93a0be"
 					>
 						Motorcycle
 					</Text>

@@ -34,6 +34,12 @@ export default function Aboutus() {
 				p="10"
 				minH="40vh"
 				mt="10"
+				data-aos="fade-up"
+				data-aos-offset="50"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+				data-aos-mirror="true"
+				data-aos-once="false"
 			>
 				<Heading
 					textAlign="center"
@@ -57,6 +63,13 @@ export default function Aboutus() {
 				alignItems="center"
 				p="10"
 				justifyContent="center"
+				data-aos="fade-up"
+				data-aos-delay="700"
+				data-aos-offset="50"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+				data-aos-mirror="true"
+				data-aos-once="false"
 			>
 				<Text textTransform="uppercase" fontSize="40" px="6%">
 					About-Us
@@ -104,6 +117,13 @@ export default function Aboutus() {
 				p="10"
 				flexDir="column"
 				textAlign="center"
+				data-aos="fade-up"
+				data-aos-delay="700"
+				data-aos-offset="50"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+				data-aos-mirror="true"
+				data-aos-once="false"
 			>
 				<Text textTransform="uppercase" fontSize="40">
 					Drive-to-own
@@ -133,7 +153,19 @@ export default function Aboutus() {
 			</Flex>
 
 			{/* <Cards /> */}
-			<Flex gap="20" py="10" bg="#F2F5FB" flexDir="column">
+			<Flex
+				gap="20"
+				py="10"
+				bg="#F2F5FB"
+				flexDir="column"
+				data-aos="fade-up"
+				data-aos-delay="400"
+				data-aos-offset="50"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+				data-aos-mirror="true"
+				data-aos-once="false"
+			>
 				<Heading
 					textTransform="uppercase"
 					as="h2"
@@ -231,6 +263,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="300"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							objectFit="cover"
@@ -247,6 +286,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="400"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							alt="profile"
@@ -263,6 +309,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="500"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							alt="profile"
@@ -279,6 +332,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="600"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							alt="profile"
@@ -295,6 +355,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="700"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							alt="profile"
@@ -311,6 +378,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="800"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							alt="profile"
@@ -327,6 +401,13 @@ export default function Aboutus() {
 						borderRadius={20}
 						bg="tomato"
 						height="300px"
+						data-aos="fade-up"
+						data-aos-delay="900"
+						data-aos-offset="50"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						data-aos-mirror="true"
+						data-aos-once="false"
 					>
 						<Image
 							alt="profile"

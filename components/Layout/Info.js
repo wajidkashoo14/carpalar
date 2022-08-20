@@ -23,6 +23,12 @@ function Info() {
 					justifyContent="center"
 					gap="5"
 					width="50%"
+					data-aos="fade-right"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
 				>
 					<Heading
 						textAlign="center"
@@ -84,6 +90,12 @@ function Info() {
 					flexDir="row"
 					width="50vw"
 					gap="30"
+					data-aos="fade-left"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
 				>
 					<Flex w="100%" gap="5">
 						<Box

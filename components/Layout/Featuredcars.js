@@ -24,7 +24,7 @@ export default function Featuredcars() {
 	}, []);
 
 	return (
-		<Box pb="20" mWidth="100%" textAlign="center">
+		<Box pb="20" width="100%" textAlign="center">
 			<Flex
 				alignItems="center"
 				p="10"

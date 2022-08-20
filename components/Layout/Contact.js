@@ -56,25 +56,83 @@ function Contact() {
 	return (
 		<Container maxW="100%" minH="100vh" mb="15rem" px="4rem" pt="18vh">
 			<Box display="flex" justifyContent="center">
-				<Flex flexDir="column" width="50%">
-					<Heading fontSize="5xl" fontWeight="bold" my="10">
+				<Flex
+					flexDir="column"
+					width="50%"
+					data-aos="fade-right"
+					data-aos-offset="100"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
+				>
+					<Heading
+						fontSize="5xl"
+						fontWeight="bold"
+						my="10"
+						data-aos="fade-right"
+						data-aos-offset="100"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+						data-aos-mirror="true"
+						data-aos-once="false"
+						data-aos-delay="100"
+					>
 						Contact us
 					</Heading>
-					<Text fontWeight="bold" mb="4">
+					<Text
+						fontWeight="bold"
+						mb="4"
+						data-aos="fade-right"
+						data-aos-offset="100"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+						data-aos-mirror="true"
+						data-aos-once="false"
+						data-aos-delay="100"
+					>
 						We would love to hear from you
 					</Text>
-					<Text width="70%" fontSize="md">
+					<Text
+						width="70%"
+						fontSize="md"
+						data-aos="fade-right"
+						data-aos-offset="100"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+						data-aos-mirror="true"
+						data-aos-once="false"
+						data-aos-delay="100"
+					>
 						Carpalar is a genuine and notable digital car leasing
 						brand that aims at ensuring ownership of automobiles in
 						the most convenient way. Simply refer to Carpalar as a
 						financial technology brand that provides cars and buses
 						to interested individuals or brands via hire purchase.
 					</Text>
-					<Box my="10" fontSize="lg">
+					<Box
+						my="10"
+						fontSize="lg"
+						data-aos="fade-right"
+						data-aos-offset="100"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+						data-aos-mirror="true"
+						data-aos-once="false"
+						data-aos-delay="200"
+					>
 						<Text>2 Martins Street</Text>
 						<Text>Lagos Nigeria</Text>
 					</Box>
-					<Box>
+					<Box
+						data-aos="fade-right"
+						data-aos-offset="100"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+						data-aos-mirror="true"
+						data-aos-once="false"
+						data-aos-delay="500"
+					>
 						<Text> Call +234 903000 9458</Text>
 						<Text
 							display="flex"
@@ -92,7 +150,14 @@ function Contact() {
 							</Link>
 						</Text>
 					</Box>
-					<Box>
+					<Box
+						data-aos-offset="100"
+						data-aos-easing="ease-in-sine"
+						data-aos-duration="1000"
+						data-aos-mirror="true"
+						data-aos-once="false"
+						data-aos-delay="500"
+					>
 						<Flex gap="6">
 							<Heading fontSize="xl" mr="5">
 								Follow us
@@ -132,6 +197,12 @@ function Contact() {
 					minH="55vh"
 					bg="#EFF3FA"
 					rounded="10"
+					data-aos="fade-left"
+					data-aos-offset="300"
+					data-aos-easing="ease-in-sine"
+					data-aos-duration="1000"
+					data-aos-mirror="true"
+					data-aos-once="false"
 				>
 					<form onSubmit={onSubmitHandler} ref={formRef}>
 						<Flex

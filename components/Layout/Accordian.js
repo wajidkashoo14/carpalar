@@ -27,6 +27,13 @@ function Accordian() {
 				mx={"auto"}
 				mb="3rem"
 				py="10"
+				data-aos="fade-up"
+				data-aos-offset="50"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+				data-aos-mirror="true"
+				data-aos-delay="300"
+				data-aos-once="false"
 				// mb="3rem"
 			>
 				<Heading textAlign="center" mb="3rem">
