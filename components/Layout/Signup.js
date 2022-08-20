@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { createCustomer } from "../../utils/services/customers";
 import Cookies from "js-cookie";
 
