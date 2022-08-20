@@ -2,7 +2,7 @@ import { Container, Heading, Input, Box, Button } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 
-function verification() {
+function Verification() {
   const router = useRouter();
   return (
     <Container
@@ -58,4 +58,4 @@ function verification() {
   );
 }
 
-export default verification;
+export default Verification;
