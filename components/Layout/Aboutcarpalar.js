@@ -14,13 +14,13 @@ import React from "react";
 function Aboutcarpalar() {
   const router = useRouter();
   return (
-    <Container maxW="100%" h="70vh" px="10" textAlign="center">
+    <Container maxW="100%" h="70vh" px="10" textAlign="center" p="0 10%">
       <Flex>
         <Image
           style={{ borderRadius: "50px" }}
           src="/homecar.jpg"
           h="30rem"
-          w="50vw"
+          w="40vw"
           //   layout="fixed"
         />
         <Flex flexDir="column" px="5rem">
@@ -28,7 +28,7 @@ function Aboutcarpalar() {
             About Carpalar
           </Heading>
 
-          <Text textAlign="left" fontSize="lg" color="#1b171f">
+          <Text textAlign="justify" fontSize="lg" color="#1b171f">
             Carpalar is a genuine and notable digital car leasing brand that
             aims at ensuring ownership of automobiles in the most convenient
             way. Simply refer to Carpalar as a financial technology brand that

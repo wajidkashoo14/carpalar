@@ -15,8 +15,10 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
+import { useRouter } from "next/router";
 
 function Buyform() {
+  const router = useRouter();
   const activeLabelStyles = {
     transform: "scale(0.85) translateY(-24px)",
   };
@@ -93,6 +95,9 @@ function Buyform() {
         px={8}
         py={5}
         fontSize="lg"
+        onClick={(e) => {
+          router.push("/buystatus");
+        }}
       >
         Submit
       </Button>
