@@ -46,7 +46,7 @@ function Navbar() {
 			boxShadow="lg"
 			bg="#fff"
 		>
-			<Link href="/" className={styles.navLink}>
+			<Link href="/" className={styles.navLink} passHref>
 				<Image
 					src="/logo.jpeg"
 					alt="logo"

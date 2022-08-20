@@ -164,6 +164,7 @@ export default function Aboutus() {
 											src="/homecar.jpg"
 											height={200}
 											width={350}
+											alt="profile"
 											// layout="responsive"
 										/>
 										<Box p="5">
@@ -237,6 +238,7 @@ export default function Aboutus() {
 							layout="fixed"
 							height={"300px"}
 							width={"100%"}
+							alt="profile"
 						/>
 					</Box>
 					<Box
@@ -247,6 +249,7 @@ export default function Aboutus() {
 						height="300px"
 					>
 						<Image
+							alt="profile"
 							objectFit="cover"
 							src="/homecar.jpg"
 							layout="fixed"
@@ -262,6 +265,7 @@ export default function Aboutus() {
 						height="300px"
 					>
 						<Image
+							alt="profile"
 							objectFit="cover"
 							src="/homecar.jpg"
 							layout="fixed"
@@ -277,6 +281,7 @@ export default function Aboutus() {
 						height="300px"
 					>
 						<Image
+							alt="profile"
 							objectFit="cover"
 							src="/homecar.jpg"
 							layout="fixed"
@@ -292,6 +297,7 @@ export default function Aboutus() {
 						height="300px"
 					>
 						<Image
+							alt="profile"
 							objectFit="cover"
 							src="/homecar.jpg"
 							layout="fixed"
@@ -307,6 +313,7 @@ export default function Aboutus() {
 						height="300px"
 					>
 						<Image
+							alt="profile"
 							objectFit="cover"
 							src="/homecar.jpg"
 							layout="fixed"
@@ -322,6 +329,7 @@ export default function Aboutus() {
 						height="300px"
 					>
 						<Image
+							alt="profile"
 							objectFit="cover"
 							src="/homecar.jpg"
 							layout="fixed"

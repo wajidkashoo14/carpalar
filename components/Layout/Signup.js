@@ -48,7 +48,7 @@ function Signup() {
 		if (user && user._id && token) {
 			router.push("/user/dashboard");
 		}
-	}, []);
+	}, [router]);
 	const [title, setTitle] = useState("");
 	const [step, setStep] = useState(1);
 	const [error, setError] = useState(false);

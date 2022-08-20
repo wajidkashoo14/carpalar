@@ -17,6 +17,7 @@ function Aboutcarpalar() {
 		<Box width="100%" mt="20">
 			<Flex width="80vw" m="auto" h="70vh">
 				<Image
+					alt="car"
 					style={{ borderRadius: "50px" }}
 					src="/homecar.jpg"
 					h="30rem"

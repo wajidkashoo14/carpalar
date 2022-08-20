@@ -99,6 +99,7 @@ function Contact() {
 							</Heading>
 
 							<Link
+								passHref
 								href="https://www.instagram.com/carpalarhq"
 								target="_blank"
 							>
@@ -106,6 +107,7 @@ function Contact() {
 							</Link>
 
 							<Link
+								passHref
 								href="https://www.facebook.com/carpalarhq"
 								backgroundColor="black"
 								target="_blank"
@@ -114,6 +116,7 @@ function Contact() {
 							</Link>
 
 							<Link
+								passHref
 								href="https://api.whatsapp.com/send?phone=2349030009486&text=Hello"
 								target="_blank"
 							>
@@ -199,7 +202,7 @@ function Contact() {
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15857.05866297739!2d3.338797286933401!3d6.48813155790773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c035a006821%3A0x6108672e1d2b079e!2s2%20Martins%20St%2C%20Surulere%20101241%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sin!4v1660977590042!5m2!1sen!2sin"
 					width="600"
 					height="450"
-					allowfullscreen
+					allowFullScreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
 				></iframe>

@@ -18,7 +18,11 @@ function Carbanner() {
 
 			<Flex justifyContent="center" gap="5rem">
 				<Box>
-					<Image src="/cars/coupe.svg" boxSize="120px" />
+					<Image
+						alt="car-icon"
+						src="/cars/coupe.svg"
+						boxSize="120px"
+					/>
 					<Text
 						mt="-5"
 						fontSize="1xl"
@@ -30,6 +34,7 @@ function Carbanner() {
 				</Box>
 				<Box>
 					<Image
+						alt="car-icon"
 						src="/cars/cabriolet.svg"
 						boxSize="120px"
 						color="#8897b7"
@@ -46,6 +51,7 @@ function Carbanner() {
 				</Box>
 				<Box>
 					<Image
+						alt="car-icon"
 						src="/cars/hatchback.svg"
 						boxSize="120px"
 						// style={{ transform: "rotate(270deg)" }}
@@ -62,6 +68,7 @@ function Carbanner() {
 
 				<Box>
 					<Image
+						alt="car-icon"
 						src="/cars/suv.svg"
 						boxSize="120px"
 						style={{ transform: "rotate(360deg)" }}
@@ -78,6 +85,7 @@ function Carbanner() {
 				</Box>
 				<Box>
 					<Image
+						alt="car-icon"
 						src="/cars/motorcycle.svg"
 						boxSize="120px"
 						style={{ transform: "rotate(360deg)" }}

@@ -29,7 +29,7 @@ function Signin() {
 		if (user && user._id && token) {
 			router.push("/user/dashboard");
 		}
-	}, []);
+	}, [router]);
 
 	async function onSubmitHandler(e) {
 		e.preventDefault();

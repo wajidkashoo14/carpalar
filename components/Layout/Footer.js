@@ -44,24 +44,24 @@ function Footer() {
 			</Flex>
 			<Flex flexDir="column" color="#FFFFFF" gap="5">
 				<Heading fontSize="lg">Links</Heading>
-				<Link href="/">
+				<Link href="/" passHref>
 					<Text color="#bcb3c6" className={styles.text}>
 						Home
 					</Text>
 				</Link>
 
-				<Link href="/#howitworks">
+				<Link href="/#howitworks" passHref>
 					<Text color="#bcb3c6" className={styles.text}>
 						How it works
 					</Text>
 				</Link>
 
-				<Link href="/explore">
+				<Link href="/explore" passHref>
 					<Text color="#bcb3c6" className={styles.text}>
 						Explore cars
 					</Text>
 				</Link>
-				<Link href="/aboutus">
+				<Link href="/aboutus" passHref>
 					<Text color="#bcb3c6" className={styles.text}>
 						About us
 					</Text>
@@ -73,13 +73,14 @@ function Footer() {
 					Follow us
 				</Heading>
 				<Flex gap="5" mb="20">
-					<Link href="https://www.instagram.com/carpalarhq">
+					<Link href="https://www.instagram.com/carpalarhq" passHref>
 						<FaFacebook fontSize="26px" color="#FFFFFF" />
 					</Link>
 
 					<Link
 						href="https://www.facebook.com/carpalarhq"
 						backgroundColor="black"
+						passHref
 					>
 						<FaInstagram fontSize="26px" color="#FFFFFF" />
 					</Link>
@@ -87,6 +88,7 @@ function Footer() {
 					<Link
 						href="https://api.whatsapp.com/send?phone=2349030009486&text=Hello"
 						target="_blank"
+						passHref
 					>
 						<FaWhatsapp fontSize="26px" color="#FFFFFF" />
 					</Link>

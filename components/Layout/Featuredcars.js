@@ -64,8 +64,8 @@ export default function Featuredcars() {
 				margin="auto"
 			>
 				{vehicles?.length > 0 ? (
-					vehicles.map((vehicle) => (
-						<Singlecarcard vehicle={vehicle} />
+					vehicles.map((vehicle, idx) => (
+						<Singlecarcard key={idx} vehicle={vehicle} />
 					))
 				) : (
 					<Text
