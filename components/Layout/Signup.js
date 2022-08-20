@@ -14,7 +14,7 @@ import {
 	useToast,
 	Radio,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { useRef, useEffect } from "react";
 import { createCustomer } from "../../utils/services/customers";

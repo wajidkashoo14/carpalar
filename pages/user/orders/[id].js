@@ -45,38 +45,50 @@ const OrderDetails = () => {
             <Flex mt="1.2rem">
               <Box px={5} py={5}>
                 <Box pb={5}>
-                  <Heading fontSize="1.1rem">Body Type</Heading>
+                  <Heading fontSize="1.1rem" style={{ color: "#2488F6" }}>
+                    Body Type
+                  </Heading>
                   <p>Cab</p>
                 </Box>
                 <Box>
-                  <Heading fontSize="1.1rem">Color</Heading>
+                  <Heading fontSize="1.1rem" style={{ color: "#2488F6" }}>
+                    Color
+                  </Heading>
                   <p>White</p>
                 </Box>
               </Box>
               <Box px={5} py={5}>
                 <Box pb={5}>
-                  <Heading fontSize="1.1rem">Registration</Heading>
+                  <Heading fontSize="1.1rem" style={{ color: "#2488F6" }}>
+                    Registration
+                  </Heading>
                   <p>JK01M 4567</p>
                 </Box>
                 <Box>
-                  <Heading fontSize="1.1rem">Registration State</Heading>
+                  <Heading fontSize="1.1rem" style={{ color: "#2488F6" }}>
+                    Registration State
+                  </Heading>
                   <p>Kashmir</p>
                 </Box>
               </Box>
               <Box px={5} py={5}>
                 <Box pb={5}>
-                  <Heading fontSize="1.1rem">Registration Status</Heading>
+                  <Heading fontSize="1.1rem" style={{ color: "#2488F6" }}>
+                    Registration Status
+                  </Heading>
                   <p>Registered</p>
                 </Box>
                 <Box>
-                  <Heading fontSize="1.1rem">Year</Heading>
+                  <Heading fontSize="1.1rem" style={{ color: "#2488F6" }}>
+                    Year
+                  </Heading>
                   <p>2020</p>
                 </Box>
               </Box>
             </Flex>
             <Flex
               mt={2}
-              backgroundColor="#E9F3FC"
+              backgroundColor="#2488F6"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
               boxShadow="lg"
@@ -86,7 +98,7 @@ const OrderDetails = () => {
             >
               <Box>
                 <Text
-                  bgColor="#1A202C"
+                  bgColor="#FFF"
                   bgClip="text"
                   fontSize="l"
                   fontWeight="extrabold"
@@ -97,23 +109,25 @@ const OrderDetails = () => {
               </Box>
               <Box display="flex" gap={10}>
                 <Box>
-                  <Heading fontSize="1rem">Due Date</Heading>
-                  <p>28th August 2022</p>
+                  <Heading fontSize="1rem" color="#fff">
+                    Due Date
+                  </Heading>
+                  <p style={{ color: "#fff" }}>28th August 2022</p>
                 </Box>
                 <Box>
-                  <Heading fontSize="1rem">Amount</Heading>
-                  <p>$500</p>
+                  <Heading fontSize="1rem" color="#fff">
+                    Amount
+                  </Heading>
+                  <p style={{ color: "#fff", fontWeight: "bold" }}>$500</p>
                 </Box>
               </Box>
               <Box>
                 <Button
                   className="primaryButton"
-                  backgroundColor="#4258EF"
-                  _hover={{ backgroundColor: "#273edc" }}
-                  _focus={{ outline: "none" }}
-                  color="white"
                   textAlign="center"
                   mt={3}
+                  color="#2488F6"
+                  backgroundColor="white"
                 >
                   Pay now
                 </Button>
@@ -125,7 +139,6 @@ const OrderDetails = () => {
               gap={5}
               width="25%"
               m={3}
-              bgColor="#9eeaab"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
               boxShadow="xl"
@@ -150,7 +163,7 @@ const OrderDetails = () => {
               gap={5}
               width="25%"
               m={3}
-              bgColor="#77bae5"
+              bgColor="#2488F6"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
               boxShadow="xl"
@@ -158,16 +171,22 @@ const OrderDetails = () => {
             >
               <Box display="flex" gap={5} flexDir="column">
                 <Box>
-                  <Heading fontSize="1.1rem">Total Trasactions</Heading>
-                  <p>JK01M 4567</p>
+                  <Heading fontSize="1.1rem" color="#fff">
+                    Total Trasactions
+                  </Heading>
+                  <p style={{ color: "#fff" }}>JK01M 4567</p>
                 </Box>
                 <Box>
-                  <Heading fontSize="1.1rem">Paid Tranactions</Heading>
-                  <p>5</p>
+                  <Heading fontSize="1.1rem" color="#fff">
+                    Paid Tranactions
+                  </Heading>
+                  <p style={{ color: "#fff" }}>5</p>
                 </Box>
                 <Box>
-                  <Heading fontSize="1.1rem">Upfront fee </Heading>
-                  <p>5</p>
+                  <Heading fontSize="1.1rem" color="#fff">
+                    Upfront fee{" "}
+                  </Heading>
+                  <p style={{ color: "#fff" }}>5</p>
                 </Box>
               </Box>
             </Flex>
@@ -175,7 +194,6 @@ const OrderDetails = () => {
               gap={5}
               width="25%"
               m={3}
-              bgColor="#ffdf79"
               borderRadius="1rem"
               border="1px solid  #DCDCDC"
               boxShadow="xl"
