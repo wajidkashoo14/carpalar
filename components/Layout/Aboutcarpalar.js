@@ -29,7 +29,12 @@ function Aboutcarpalar() {
             About Carpalar
           </Heading>
 
-          <Text textAlign="justify" fontSize="lg" color="#1b171f">
+          <Text
+            textAlign="justify"
+            fontSize="lg"
+            color="#1b171f"
+            fontWeight="500"
+          >
             Carpalar is a genuine and notable digital car leasing brand that
             aims at ensuring ownership of automobiles in the most convenient
             way. Simply refer to Carpalar as a financial technology brand that
