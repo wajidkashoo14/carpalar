@@ -2,8 +2,10 @@ import { Container, Button, Heading, Box } from "@chakra-ui/react";
 import React from "react";
 import styles from "../../styles/hero.module.css";
 import { FaArrowRight } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 function Hero() {
+	const router = useRouter();
 	return (
 		<Container className={styles.hero} maxW="100%" pt="5vh">
 			<Heading
@@ -27,6 +29,7 @@ function Hero() {
 				_hover={{ backgroundColor: "#273edc" }}
 				_focus={{ outline: "none" }}
 				color="white"
+				onClick={() => router.push("/explore")}
 			>
 				Explore Cars &nbsp; <FaArrowRight color="white" />
 			</Button>
