@@ -23,7 +23,7 @@ function Aboutcarpalar() {
           w="40vw"
           //   layout="fixed"
         />
-        <Flex flexDir="column" px="5rem">
+        <Flex flexDir="column" px="2rem">
           <Heading mb="7" textTransform="uppercase" textAlign="left">
             About Carpalar
           </Heading>
