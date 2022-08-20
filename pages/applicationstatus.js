@@ -1,7 +1,7 @@
 import { Container, Heading, Text, Image } from "@chakra-ui/react";
 import React from "react";
 
-function applicationstatus() {
+function Applicationstatus() {
   return (
     <Container
       minW="100vw"
@@ -21,4 +21,4 @@ function applicationstatus() {
   );
 }
 
-export default applicationstatus;
+export default Applicationstatus;
