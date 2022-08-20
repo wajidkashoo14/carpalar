@@ -20,16 +20,12 @@ function Footer() {
 			mt="-8rem"
 		>
 			<Flex flexDir="column" gap="5">
-				<Link href="/">
-					<Heading fontSize="lg" fontWeight="bold" color="#FFFFFF">
-						Carparlar
-					</Heading>
-				</Link>
+				<Heading fontSize="lg" fontWeight="bold" color="#FFFFFF">
+					Carparlar
+				</Heading>
+
 				<Text fontSize="sm" color="#FFFFFF" width="20rem">
-					{` Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book`}
+					{` Carpalar is a genuine and notable digital car leasing brand that aims at ensuring ownership of automobiles in the most convenient way. Simply refer to Carpalar as a financial technology brand that provides cars and buses to interested individuals or brands via hire purchase`}
 				</Text>
 			</Flex>
 
@@ -54,35 +50,30 @@ function Footer() {
 					</Text>
 				</Link>
 
-				<Link href="/">
+				<Link href="/#howitworks">
 					<Text color="#bcb3c6" className={styles.text}>
 						How it works
 					</Text>
 				</Link>
 
-				<Link href="/">
+				<Link href="/explore">
 					<Text color="#bcb3c6" className={styles.text}>
 						Explore cars
 					</Text>
 				</Link>
-				<Link href="/">
+				<Link href="/aboutus">
 					<Text color="#bcb3c6" className={styles.text}>
 						About us
 					</Text>
 				</Link>
 			</Flex>
 
-			<Flex flexDir="column" gap="8">
-				<Heading fontSize="lg" color="#FFFFFF">
-					News Letter
+			<Flex flexDir="column" gap="5">
+				<Heading mt="-10" fontSize="lg" color="#FFFFFF">
+					Follow us
 				</Heading>
-				<Input placeholder="Enter your emial" size="sm" />
-				<Flex gap="3">
-					<Heading fontSize="xl" mr="5" color="#bcb3c6">
-						Follow us
-					</Heading>
-
-					<Link href="/https://www.instagram.com/carpalarhq">
+				<Flex gap="5" mb="20">
+					<Link href="https://www.instagram.com/carpalarhq">
 						<FaFacebook fontSize="26px" color="#FFFFFF" />
 					</Link>
 
@@ -93,7 +84,10 @@ function Footer() {
 						<FaInstagram fontSize="26px" color="#FFFFFF" />
 					</Link>
 
-					<Link href="">
+					<Link
+						href="https://api.whatsapp.com/send?phone=2349030009486&text=Hello"
+						target="_blank"
+					>
 						<FaWhatsapp fontSize="26px" color="#FFFFFF" />
 					</Link>
 				</Flex>

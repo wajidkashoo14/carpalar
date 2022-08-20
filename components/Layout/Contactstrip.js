@@ -11,7 +11,7 @@ function Contactstrip() {
 			height="2.2rem"
 			bg="white"
 			d="flex"
-			px="20"
+			px="12"
 			justifyContent="space-between"
 			boxShadow="xs"
 		>
@@ -25,6 +25,7 @@ function Contactstrip() {
 							fontSize="15px"
 							_after={{ display: "none" }}
 							href="mailto:info@carpalar.com"
+							target="_blank"
 						>
 							info@carpalar.com
 						</Link>
@@ -53,15 +54,14 @@ function Contactstrip() {
 					href="https://www.facebook.com/carpalarhq"
 					mx="2"
 					id="social"
+					target="_blank"
 				>
 					<FaFacebook size="20" color="blue" />
 				</Link>
-				<Link mx="2" id="social">
-					<FaWhatsapp size="20" color="green" />
-				</Link>
+
 				<Link
+					target="_blank"
 					href="https://www.instagram.com/carpalarhq"
-					mx="2"
 					id="social"
 				>
 					<FaInstagram size="20" color="red" />

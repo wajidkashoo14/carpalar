@@ -15,9 +15,25 @@ import {
 	PopoverTrigger,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import Cookies from "js-cookie";
 
 function Navbar() {
 	const router = useRouter();
+
+	const onClickHandler = () => {
+		const user = Cookies.get("user")
+			? JSON.parse(Cookies.get("user"))
+			: null;
+		const token = Cookies.get("token")
+			? JSON.parse(Cookies.get("token"))
+			: null;
+		console.log("dd", user, token);
+		if (user && user._id && token) {
+			router.push("/user/dashboard");
+		} else {
+			router.push("/signin");
+		}
+	};
 	return (
 		<Container
 			maxW="100vw"
@@ -79,12 +95,25 @@ function Navbar() {
 				>
 					Contact us
 				</Link>
-				<Link href="#">
+				{Cookies.get("user") && Cookies.get("token") ? (
 					<Button
+						onClick={() => router.push("/user/dashboard")}
 						size={"sm"}
 						colorScheme={"blue"}
 						_focus={{ outline: "none" }}
-						onClick={() => router.push("/signin")}
+						display="grid"
+						placeItems="center"
+						variant="outline"
+						marginBottom={2}
+					>
+						Dashboard
+					</Button>
+				) : (
+					<Button
+						onClick={onClickHandler}
+						size={"sm"}
+						colorScheme={"blue"}
+						_focus={{ outline: "none" }}
 						display="grid"
 						placeItems="center"
 						variant="outline"
@@ -92,7 +121,7 @@ function Navbar() {
 					>
 						Apply to drive
 					</Button>
-				</Link>
+				)}
 			</Flex>
 		</Container>
 	);

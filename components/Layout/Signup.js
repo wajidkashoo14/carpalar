@@ -10,14 +10,98 @@ import {
 	Checkbox,
 	RadioGroup,
 	Stack,
+	Select,
+	useToast,
 	Radio,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { useRef, useEffect } from "react";
+import { createCustomer } from "../../utils/services/customers";
+import Cookies from "js-cookie";
 
 function Signup() {
+	const Toast = useToast();
+
+	const formRef = useRef(null);
 	const router = useRouter();
+	const [values, setValues] = useState({
+		smartphone: false,
+		guarantor: false,
+		license: false,
+		age: false,
+		bvn: false,
+		eligible: false,
+		bank: false,
+		nin: false,
+		fee: false,
+		bill: false,
+	});
+	useEffect(() => {
+		const user = Cookies.get("user")
+			? JSON.parse(Cookies.get("user"))
+			: null;
+		const token = Cookies.get("token")
+			? JSON.parse(Cookies.get("token"))
+			: null;
+		console.log("dd", user, token);
+		if (user && user._id && token) {
+			router.push("/user/dashboard");
+		}
+	}, []);
+	const [title, setTitle] = useState("");
 	const [step, setStep] = useState(1);
+	const [error, setError] = useState(false);
+	const [passwordMismatch, setPasswordMismatch] = useState(false);
+
+	function checkValues() {
+		let checker = Object.values(values).every((val) => val === true);
+		console.log("checker", checker);
+		if (checker) {
+			setStep(2);
+		} else {
+			setError(true);
+		}
+	}
+	async function onSubmitHandler(e) {
+		e.preventDefault();
+		console.log("in submit", formRef.current[1]);
+		const inputValues = {};
+		const s2 = formRef.current[5].value;
+		const s1 = formRef.current[6].value;
+		const match = s1.normalize() === s2.normalize();
+		if (!match) {
+			setPasswordMismatch(true);
+			return;
+		}
+
+		for (let index = 0; index < formRef.current.length; index++) {
+			const name = formRef.current[index].name;
+			const value = formRef.current[index].value;
+			inputValues[name] = value;
+		}
+		console.log("in submit", inputValues);
+
+		try {
+			const resp = await createCustomer(inputValues);
+			if (resp.status === 200) {
+				Toast({
+					title: "Registered successfully!, Please login",
+					status: "success",
+					duration: 2000,
+					isClosable: true,
+				});
+				router.push("/signin");
+			}
+		} catch (error) {
+			Toast({
+				title: error.message,
+				status: "error",
+				duration: 2000,
+				isClosable: true,
+			});
+		}
+	}
 	return (
 		<Container
 			maxW="100%"
@@ -83,218 +167,180 @@ function Signup() {
 				</Box>
 			</Flex>
 			{step === 1 && (
-				<Flex
-					boxShadow="lg"
-					borderRadius={10}
-					margin="auto"
-					width="40vw"
-				>
+				<Flex boxShadow="lg" borderRadius={10} mt={10} width="40vw">
 					<Box margin="auto" px="2rem">
 						<Heading
-							mb="1.5rem"
+							mb="3.5rem"
 							textAlign="center"
 							textTransform="uppercase"
 						>
 							{`Let's get started`}
 						</Heading>
 
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have a smartphone">
+						<Stack spacing={2} direction="column">
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.smartphone}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										smartphone: !prev.smartphone,
+									}));
+								}}
+							>
 								I have a smartphone
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have a guarantor">
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.guarantor}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										guarantor: !prev.guarantor,
+									}));
+								}}
+							>
 								I have a guarantor
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have a valid drivers license">
-								I have a valid drivers license
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I am 25 or Older">
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.license}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										license: !prev.license,
+									}));
+								}}
+							>
+								I have a license
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.age}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										age: !prev.age,
+									}));
+								}}
+							>
 								I am 25 or Older
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I am eligible on ride-hailing platforms (e.g: uber, taxify, etc)">
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.eligible}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										eligible: !prev.eligible,
+									}));
+								}}
+							>
 								I am eligible on ride-hailing platforms (uber,
 								taxify, etc)
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have my BVN">I have my BVN</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have a bank statement">
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.bvn}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										bvn: !prev.bvn,
+									}));
+								}}
+							>
+								I have my BVN
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.bank}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										bank: !prev.bank,
+									}));
+								}}
+							>
 								I have a bank statement
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have my NIN">I have my NIN</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have application fee (N10,000.00)">
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.nin}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										nin: !prev.nin,
+									}));
+								}}
+							>
+								I have my NIN
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.fee}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										fee: !prev.fee,
+									}));
+								}}
+							>
 								I have application fee (N10,000.00)
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
-						<Box
-							py={2}
-							display="flex"
-							justifyContent="space-between"
-						>
-							<label id="I have my electricity bill/prove of residence">
+							</Checkbox>
+							<Checkbox
+								colorScheme="green"
+								isChecked={values.bill}
+								onChange={(e) => {
+									if (error) {
+										setError(false);
+									}
+									setValues((prev) => ({
+										...prev,
+										bill: !prev.bill,
+									}));
+								}}
+							>
 								I have my electricity bill/prove of residence
-							</label>
-							<RadioGroup defaultValue="2">
-								<Stack spacing={3} direction="row">
-									<Radio colorScheme="blue" value="Yes">
-										Yes
-									</Radio>
-									<Radio colorScheme="blue" value="No">
-										No
-									</Radio>
-								</Stack>
-							</RadioGroup>
-						</Box>
-
+							</Checkbox>
+						</Stack>
+						{error && (
+							<Text
+								border="1px solid red"
+								borderRadius="5px"
+								p="1"
+								my="2"
+								color="red"
+							>
+								{`You don't meet minimum eligibiity criteria`}
+							</Text>
+						)}
 						<Button
 							my={5}
 							className="primaryButton"
@@ -303,9 +349,7 @@ function Signup() {
 							_focus={{ outline: "none" }}
 							color="white"
 							width="100%"
-							onClick={(e) => {
-								setStep(2);
-							}}
+							onClick={checkValues}
 						>
 							Continue
 						</Button>
@@ -322,55 +366,111 @@ function Signup() {
 				>
 					<Box margin="auto" px="2rem">
 						<Heading
-							mb="1.5rem"
+							mb="1rem"
 							textAlign="center"
 							textTransform="uppercase"
 						>
 							Sign Up to get started
 						</Heading>
-						<Text my="3" textAlign="center" opacity="0.5">
+						<Text my="1" textAlign="center" opacity="0.5">
 							Enter your details to proceed further
 						</Text>
-						<Input type="text" placeHolder="Email" my="1" />
-						<Flex>
-							<Input
-								type="text"
-								placeHolder="First name"
-								my="1"
-								width="50%"
-								mr="1"
-							/>
-							<Input
-								type="text"
-								placeHolder="Last name"
-								my="1"
-								width="50%"
-							/>
-						</Flex>
-						<Input
-							type="number"
-							placeHolder="Mobile number"
-							my="1"
-						/>
-
-						<Input type="text" placeHolder="Password" />
-						<Input
-							type="password"
-							placeHolder="Confirm password"
-							my="1"
-						/>
-
-						<Button
-							my={5}
-							className="primaryButton"
-							backgroundColor="#4258EF"
-							_hover={{ backgroundColor: "#273edc" }}
-							_focus={{ outline: "none" }}
-							color="white"
+						{passwordMismatch && (
+							<Text
+								cole="red"
+								p="1"
+								my="2"
+								mx="0"
+								color="red"
+								borderRadius="5px"
+								border="1px solid red"
+							>
+								Passwords do not match
+							</Text>
+						)}
+						<form
 							width="100%"
+							ref={formRef}
+							onSubmit={onSubmitHandler}
 						>
-							Continue
-						</Button>
+							<Input
+								name="email"
+								required
+								type="email"
+								placeHolder="Email"
+								my="1"
+							/>
+							<Flex>
+								<Select
+									required
+									name="title"
+									value={title}
+									onChange={(e) => {
+										setTitle(e.target.value);
+									}}
+								>
+									<option value="" disabled>
+										Pick title
+									</option>
+									<option value="Mr">Mr</option>
+									<option value="Mrs">Mrs</option>
+									<option value="Miss">Miss</option>
+								</Select>
+								<Input
+									name="firstName"
+									required
+									type="text"
+									placeHolder="First name"
+									my="1"
+									width="50%"
+									mr="1"
+								/>
+								<Input
+									name="lastName"
+									required
+									type="text"
+									placeHolder="Last name"
+									my="1"
+									width="50%"
+								/>
+							</Flex>
+							<Input
+								name="mobile"
+								required
+								type="number"
+								placeHolder="Mobile number"
+								my="1"
+							/>
+							<Input
+								name="password"
+								required
+								type="password"
+								placeHolder="Password"
+								isInvalid={passwordMismatch}
+								my="1"
+							/>
+							<Input
+								name="confirmPassword"
+								required
+								type="password"
+								placeHolder="Confirm password"
+								my="1"
+								isInvalid={passwordMismatch}
+							/>
+
+							<Button
+								type="submit"
+								my={5}
+								className="primaryButton"
+								backgroundColor="#4258EF"
+								_hover={{ backgroundColor: "#273edc" }}
+								_focus={{ outline: "none" }}
+								color="white"
+								width="100%"
+							>
+								Register
+							</Button>
+						</form>
 					</Box>
 				</Flex>
 			) : null}

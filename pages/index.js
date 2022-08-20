@@ -12,17 +12,17 @@ import Footer from "../components/Layout/Footer";
 import Aboutcarpalar from "../components/Layout/Aboutcarpalar";
 import Whycarpalar from "../components/Layout/Whycarpalar";
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Carbanner />
-      <Search />
-      <Info />
-      <Howitworks />
-      <Featuredcars />
-      <Aboutcarpalar />
-      <Reviews />
-      <Whycarpalar />
-    </>
-  );
+	return (
+		<>
+			<Hero />
+			<Carbanner />
+			<Search />
+			<Info />
+			<Howitworks />
+			<Featuredcars />
+			<Reviews />
+			<Aboutcarpalar />
+			<Whycarpalar />
+		</>
+	);
 }

@@ -71,7 +71,7 @@ function Info() {
 						mx="auto"
 						fontWeight="400"
 						onClick={(e) => {
-							router.push("/signup");
+							router.push("/explore");
 						}}
 					>
 						Get now
