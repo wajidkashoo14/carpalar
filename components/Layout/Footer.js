@@ -24,7 +24,11 @@ function Footer() {
           Carparlar
         </Heading>
 
-        <Text fontSize="sm" color="#FFFFFF" width="20rem">
+        <Text
+          fontSize="sm"
+          color="#FFFFFF"
+          width={{ base: "100%", md: "100%", lg: "20rem" }}
+        >
           {` Carpalar is a genuine and notable digital car leasing brand that aims at ensuring ownership of automobiles in the most convenient way. Simply refer to Carpalar as a financial technology brand that provides cars and buses to interested individuals or brands via hire purchase`}
         </Text>
       </Flex>
