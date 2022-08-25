@@ -10,15 +10,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
-// import Singlecardinfo from "./Singlecardinfo";
 
 function Info() {
   const router = useRouter();
-  const [notSmallerScreen] = useMediaQuery("(min-width:768px)");
+
   return (
     <Container
       maxW="100%"
-      height={{ base: "220vh", md: "100vh" }}
+      height={{ base: "250vh", md: "100vh" }}
       bgColor="white"
       mx={{ base: "2", md: "5", lg: "8" }}
     >
@@ -67,7 +66,7 @@ function Info() {
           </Text>
           <Text
             mt="6"
-            width="80%"
+            width={{ base: "90%", md: "80%" }}
             fontSize="20"
             mx="auto"
             letterSpacing="1px"
@@ -105,22 +104,18 @@ function Info() {
           data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
-          mx={{ base: "4" }}
         >
           <Flex
             w={{ base: "90%", md: "100%", lg: "100%" }}
-            gap="5"
+            gap={{ base: "5rem", md: "5" }}
             flexDir={{ base: "column", md: "row" }}
+            mb={{ base: "5rem", md: "0" }}
           >
             <Box
               position="relative"
-              // boxSize="20%"
               minH="30vh"
               w={{ base: "90%", md: "100%" }}
-              // m="5"
-              boxShadow="lg"
-              // mb="5"
-              // mt="5"
+              boxShadow={{ base: "2xl", md: "lg" }}
               padding="5"
               borderRadius="10"
             >
@@ -152,14 +147,9 @@ function Info() {
             </Box>
             <Box
               position="relative"
-              // boxSize=""
-              // minW={notSmallerScreen ? "45%" : "100%"}
               w={{ base: "90%", md: "100%" }}
               minH="30vh"
-              // mr="5"
-              // mt="5"
-              boxShadow="lg"
-              // mb="5"
+              boxShadow={{ base: "2xl", md: "lg" }}
               padding="5"
               borderRadius="10"
             >
@@ -189,18 +179,14 @@ function Info() {
           </Flex>
           <Flex
             w={{ base: "90%", md: "100%" }}
-            gap="5"
+            gap={{ base: "5rem", md: "5" }}
             mt="2xl"
             flexDir={{ base: "column", md: "row" }}
           >
             <Box
               position="relative"
-              // boxSize="280px"
               w={{ base: "90%", md: "100%" }}
-              // mr="5"
-              // mt="5"
-              boxShadow="lg"
-              // mb="5"
+              boxShadow={{ base: "2xl", md: "lg" }}
               minH="30vh"
               padding="5"
               borderRadius="10"
@@ -230,13 +216,9 @@ function Info() {
             </Box>
             <Box
               position="relative"
-              // boxSize="280px"
               w={{ base: "90%", md: "100%" }}
-              // mr="5"
-              // mt="5"
-              boxShadow="lg"
+              boxShadow={{ base: "2xl", md: "lg" }}
               minH="30vh"
-              // mb="5"
               padding="5"
               borderRadius="10"
             >
