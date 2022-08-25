@@ -15,12 +15,12 @@ function Hero() {
         textAlign="center"
         color="#4268E3"
         fontSize={{ base: "1.2rem", md: "3xl" }}
-        maxW="60%"
-        mt="10rem"
+        maxW={{ base: "90%", md: "60%" }}
+        mt={{ base: "6rem", md: "10rem" }}
         fontWeight="bolder"
         data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-delay="50"
+        data-aos-offset="100"
+        data-aos-delay="40"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
@@ -37,7 +37,8 @@ function Hero() {
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"
-        my={5}
+        my={"5"}
+        mt={{ base: "15rem" }}
         className="primaryButton"
         backgroundColor="#4258EF"
         _hover={{ backgroundColor: "#273edc" }}
