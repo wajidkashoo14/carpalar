@@ -20,7 +20,7 @@ function Whycarpalar() {
         WHY CHOOSE CARPALAR
       </Heading>
       <Container
-        px={{ base: "1rem", md: "8rem" }}
+        px={{ base: "0", md: "8rem" }}
         py="5"
         pb="16rem"
         maxW="100%"

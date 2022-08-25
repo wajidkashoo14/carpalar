@@ -32,8 +32,8 @@ function Aboutcarpalar() {
         <Flex flexDir="column" px={{ base: "1rem", md: "2rem", lg: "5rem" }}>
           <Heading
             fontSize={{ base: "2xl", md: "2xl", lg: "4xl" }}
-            mb={{ base: "2", md: "3", lg: "7" }}
-            py={{ base: "3", md: "5", lg: "3" }}
+            mb={{ base: "0", md: "3", lg: "7" }}
+            py={{ base: "6", md: "5", lg: "3" }}
             textTransform="uppercase"
             textAlign="left"
           >
