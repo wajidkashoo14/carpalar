@@ -119,7 +119,7 @@ function Info() {
               position="relative"
               minH="30vh"
               w={{ base: "90%", md: "100%" }}
-              boxShadow={{ base: "2xl", md: "lg" }}
+              boxShadow={{ base: "xl", md: "lg" }}
               padding="5"
               borderRadius="10"
             >
@@ -153,7 +153,7 @@ function Info() {
               position="relative"
               w={{ base: "90%", md: "100%" }}
               minH="30vh"
-              boxShadow={{ base: "2xl", md: "lg" }}
+              boxShadow={{ base: "xl", md: "lg" }}
               padding="5"
               borderRadius="10"
             >
@@ -190,7 +190,7 @@ function Info() {
             <Box
               position="relative"
               w={{ base: "90%", md: "100%" }}
-              boxShadow={{ base: "2xl", md: "lg" }}
+              boxShadow={{ base: "xl", md: "lg" }}
               minH="30vh"
               padding="5"
               borderRadius="10"
@@ -221,7 +221,7 @@ function Info() {
             <Box
               position="relative"
               w={{ base: "90%", md: "100%" }}
-              boxShadow={{ base: "2xl", md: "lg" }}
+              boxShadow={{ base: "xl", md: "lg" }}
               minH="30vh"
               padding="5"
               borderRadius="10"

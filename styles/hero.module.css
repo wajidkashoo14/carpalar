@@ -3,10 +3,20 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 350px) {
+  .hero {
+    max-width: 100vw;
+    background-image: url("/homecar.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
