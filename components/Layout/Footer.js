@@ -75,7 +75,7 @@ function Footer() {
         </Link>
       </Flex>
 
-      <Flex flexDir="column" gap="5" marginTop={{ base: "1rem" }}>
+      <Flex flexDir="column" gap="5" marginTop={{ base: "3rem" }}>
         <Heading mt="-10" fontSize="lg" color="#FFFFFF">
           Follow us
         </Heading>
