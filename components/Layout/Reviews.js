@@ -9,7 +9,7 @@ export default function Reviews() {
   return (
     <Box
       mt="5%"
-      display="flex"
+      display={{ base: "block", md: "flex" }}
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
