@@ -218,7 +218,7 @@ function Signup() {
       px={{ base: "1rem", md: "3rem" }}
       mt="-2rem"
       mb="15rem"
-      pt={{ base: "5vh", md: "15vh" }}
+      pt="15vh"
     >
       <Flex maxW="50%" display={{ base: "none", md: "flex" }}>
         <Box position="relative" mt={10}>
