@@ -40,7 +40,7 @@ export default function Reviews() {
         maxW="80vw"
         color="black"
         // justifyContent="space-evenly"
-        flexDir={notSmallerScreen ? "column" : "row"}
+        flexDir={{ base: "column", md: "row" }}
       >
         <Flex
           width={notSmallerScreen ? "100%" : "25vw"}
