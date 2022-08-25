@@ -43,8 +43,8 @@ export default function Reviews() {
         flexDir={{ base: "column", md: "row" }}
       >
         <Flex
-          width={{ base: "95vw", md: "25vw" }}
-          height={{ base: "fit-content", md: "40vw" }}
+          width={{ base: "98%", md: "25vw" }}
+          height={{ base: "fit-content", md: "40vh" }}
           mt="10"
           bg="white"
           borderRadius="5"
@@ -77,8 +77,8 @@ export default function Reviews() {
           </Text>
         </Flex>
         <Flex
-          width={{ base: "95vw", md: "25vw" }}
-          height={{ base: "fit-content", md: "40vw" }}
+          width={{ base: "98%", md: "25vw" }}
+          height={{ base: "fit-content", md: "40vh" }}
           data-aos="fade-right"
           data-aos-offset="100"
           data-aos-easing="ease-in-sine"
@@ -110,8 +110,8 @@ export default function Reviews() {
           </Text>
         </Flex>
         <Flex
-          width={{ base: "95vw", md: "25vw" }}
-          height={{ base: "fit-content", md: "40vw" }}
+          width={{ base: "98%", md: "25vw" }}
+          height={{ base: "fit-content", md: "40vh" }}
           data-aos="fade-right"
           data-aos-offset="100"
           data-aos-easing="ease-in-sine"
