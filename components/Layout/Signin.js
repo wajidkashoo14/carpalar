@@ -150,10 +150,10 @@ function Signin() {
       px={{ base: "1rem", md: "3rem" }}
       mt="-2rem"
       mb="15rem"
-      pt="15vh"
+      pt={{ base: "10vh", md: "15vh" }}
     >
       <Flex maxW="50%" display={{ base: "none", md: "flex" }}>
-        <Box position="relative" mt={10}>
+        <Box position="relative" mt={{ base: "5", md: "10" }}>
           <Image
             src="./homecar.jpg"
             alt="signup"
@@ -206,7 +206,7 @@ function Signin() {
       <Flex
         boxShadow="lg"
         borderRadius={10}
-        mt={10}
+        mt={{ base: "3", md: "10" }}
         width={{ base: "100%", md: "40vw" }}
         minH={{ base: "80vh", md: "50vh" }}
       >
