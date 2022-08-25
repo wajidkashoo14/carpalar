@@ -96,7 +96,7 @@ function Info() {
           px={{ base: "0", md: "20" }}
           flexWrap="wrap"
           flexDir={{ base: "column", md: "row" }}
-          width={{ base: "98vw", md: "50vw" }}
+          width={{ base: "90vw", md: "50vw" }}
           gap="30"
           data-aos="fade-left"
           data-aos-offset="300"
@@ -104,6 +104,8 @@ function Info() {
           data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
+          mt={{ base: "8" }}
+          mx={{ base: "5" }}
         >
           <Flex
             w={{ base: "90%", md: "100%", lg: "100%" }}
