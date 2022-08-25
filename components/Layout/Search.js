@@ -8,30 +8,50 @@ function Search() {
       borderRadius="5"
       mt="-16"
       minw="50vw"
-      maxW="60vw"
+      maxW={{ base: "90vw", md: "60vw" }}
       bg="white"
       minH="20vh"
-      maxH="20vh"
+      maxH={{ base: "90vh", md: "20vh" }}
       boxShadow="lg"
       centerContent
-      display="flex"
+      display={{ base: "block", md: "flex" }}
       flexDirection="row"
       justifyContent="space-evenly"
       alignItems="center"
       mb="20"
       bgColor="white"
+      gap={{ base: "10" }}
+      py={{ base: "8" }}
     >
-      <Select maxW="25%" variant="filled" placeholder="Select Make">
+      <Select
+        maxW={{ base: "100%", md: "25%" }}
+        variant="filled"
+        placeholder="Select Make"
+        my={{ base: "5" }}
+        py={{ base: "2" }}
+      >
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
       </Select>
 
-      <Select maxW="25%" variant="filled" placeholder="Select Model">
+      <Select
+        maxW={{ base: "100%", md: "25%" }}
+        variant="filled"
+        placeholder="Select Model"
+        my={{ base: "5" }}
+        py={{ base: "2" }}
+      >
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
       </Select>
 
-      <Select maxW="25%" variant="filled" placeholder="Select Type">
+      <Select
+        maxW={{ base: "100%", md: "25%" }}
+        variant="filled"
+        placeholder="Select Type"
+        my={{ base: "5" }}
+        py={{ base: "2" }}
+      >
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
       </Select>
