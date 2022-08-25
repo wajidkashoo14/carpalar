@@ -54,7 +54,7 @@ function Info() {
           </Heading>
           <Text
             mt="10"
-            width="80%"
+            width={{ base: "90%", md: "80%" }}
             fontSize="20"
             mx="auto"
             letterSpacing="1px"
@@ -94,7 +94,7 @@ function Info() {
         </Flex>
 
         <Flex
-          px={{ base: "5", md: "20" }}
+          px={{ base: "0", md: "20" }}
           flexWrap="wrap"
           flexDir={{ base: "column", md: "row" }}
           width={{ base: "98vw", md: "50vw" }}
@@ -105,9 +105,10 @@ function Info() {
           data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
+          mx={{ base: "4" }}
         >
           <Flex
-            w={{ base: "95%", md: "100%", lg: "100%" }}
+            w={{ base: "90%", md: "100%", lg: "100%" }}
             gap="5"
             flexDir={{ base: "column", md: "row" }}
           >
@@ -115,6 +116,7 @@ function Info() {
               position="relative"
               // boxSize="20%"
               minH="30vh"
+              w={{ base: "90%", md: "100%" }}
               // m="5"
               boxShadow="lg"
               // mb="5"
@@ -141,6 +143,7 @@ function Info() {
                 height="4rem"
                 borderBottomLeftRadius="10"
                 borderBottomRightRadius="10"
+                w={{ base: "100%", md: "100%" }}
               >
                 <Text mt="4" color="white">
                   Flexible weekly payment plan
@@ -151,7 +154,7 @@ function Info() {
               position="relative"
               // boxSize=""
               // minW={notSmallerScreen ? "45%" : "100%"}
-              w={notSmallerScreen ? "50%" : "100%"}
+              w={{ base: "90%", md: "100%" }}
               minH="30vh"
               // mr="5"
               // mt="5"
@@ -185,7 +188,7 @@ function Info() {
             </Box>
           </Flex>
           <Flex
-            w={{ base: "95%", md: "100%" }}
+            w={{ base: "90%", md: "100%" }}
             gap="5"
             mt="2xl"
             flexDir={{ base: "column", md: "row" }}
@@ -193,7 +196,7 @@ function Info() {
             <Box
               position="relative"
               // boxSize="280px"
-              w={notSmallerScreen ? "50%" : "100%"}
+              w={{ base: "90%", md: "100%" }}
               // mr="5"
               // mt="5"
               boxShadow="lg"
@@ -228,7 +231,7 @@ function Info() {
             <Box
               position="relative"
               // boxSize="280px"
-              w={notSmallerScreen ? "50%" : "100%"}
+              w={{ base: "90%", md: "100%" }}
               // mr="5"
               // mt="5"
               boxShadow="lg"
