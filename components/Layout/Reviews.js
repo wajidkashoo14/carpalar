@@ -43,8 +43,8 @@ export default function Reviews() {
         flexDir={{ base: "column", md: "row" }}
       >
         <Flex
-          width={notSmallerScreen ? "100%" : "25vw"}
-          height={notSmallerScreen ? "fit-content" : "40vh"}
+          width={{ base: "100vw", md: "25vw" }}
+          height={{ base: "fit-content", md: "40vw" }}
           mt="10"
           bg="white"
           borderRadius="5"
