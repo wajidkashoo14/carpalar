@@ -35,7 +35,7 @@ export default function Featuredcars() {
         <Heading
           as="h1"
           textTransform="uppercase"
-          fontSize={{ base: "xl", md: "5xl" }}
+          fontSize={{ base: "2xl", md: "5xl" }}
         >
           EXPLORE CARS
         </Heading>
@@ -49,7 +49,7 @@ export default function Featuredcars() {
         <Text
           px={notSmallerScreen ? "20%" : "5%"}
           py="5"
-          fontSize={{ base: "17", md: "20" }}
+          fontSize={{ base: "18", md: "20" }}
         >
           With Carpalar, a variety of luxurious cars are assured! Our customers
           enjoy the opportunity to select from a wide range of car brands,
