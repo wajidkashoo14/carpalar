@@ -40,10 +40,11 @@ export default function Howitworks() {
         textAlign="center"
         flexDir={{ base: "column", md: "row" }}
         mt="8"
+        mr={{ base: "5" }}
       >
         <Box
           m="4"
-          width={notSmallerScreen ? "100%" : "35%"}
+          width={{ base: "100%", md: "35%" }}
           mb={notSmallerScreen ? "20" : "inherit"}
           data-aos="zoom-in-left"
           data-aos-offset="300"
@@ -84,7 +85,7 @@ export default function Howitworks() {
         </Box>
         <Box
           m="4"
-          width={notSmallerScreen ? "100%" : "35%"}
+          width={{ base: "100%", md: "35%" }}
           mb={notSmallerScreen ? "20" : "inherit"}
           data-aos="zoom-in"
           data-aos-delay="100"
@@ -119,7 +120,7 @@ export default function Howitworks() {
         </Box>
         <Box
           m="4"
-          width={notSmallerScreen ? "100%" : "35%"}
+          width={{ base: "100%", md: "35%" }}
           mb={notSmallerScreen ? "20" : "inherit"}
           data-aos="zoom-in-right"
           data-aos-delay="200"

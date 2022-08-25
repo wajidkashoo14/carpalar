@@ -64,6 +64,7 @@ function Search() {
         backgroundColor="#4258EF"
         _hover={{ backgroundColor: "#273edc" }}
         _focus={{ outline: "none" }}
+        width={{ base: "100%" }}
       >
         <BiSearchAlt /> &nbsp; SEARCH
       </Button>

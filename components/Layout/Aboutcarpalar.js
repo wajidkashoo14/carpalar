@@ -18,7 +18,7 @@ function Aboutcarpalar() {
       <Flex
         width={{ base: "95vw", md: "80vw" }}
         m="auto"
-        h={{ base: "100vh", md: "100vh", lg: "70vh" }}
+        h={{ base: "100vh", md: "100vh", lg: "75vh" }}
         display={{ base: "block", md: "block", lg: "flex" }}
       >
         <Image
