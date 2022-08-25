@@ -8,16 +8,28 @@ import {
 	useToast,
 	Image,
 	Text,
+	FormLabel,
 } from "@chakra-ui/react";
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { signinCustomer } from "../../utils/services/customers";
 import Cookies from "js-cookie";
+import firebaseApp from "../../utils/firebase";
+import {
+	getAuth,
+	RecaptchaVerifier,
+	signInWithPhoneNumber,
+} from "firebase/auth";
+const auth = getAuth(firebaseApp);
 
 function Signin() {
 	const Toast = useToast();
+	const [otp, setOtp] = useState(null);
 	const formRef = useRef(null);
 	const router = useRouter();
+	const [step, setStep] = useState(1);
+	const [data, setData] = useState(null);
+	const [disableForm, setDisableForm] = useState(false);
 	useEffect(() => {
 		const user = Cookies.get("user")
 			? JSON.parse(Cookies.get("user"))
@@ -41,20 +53,13 @@ function Signin() {
 			const value = formRef.current[index].value;
 			inputValues[name] = value;
 		}
-		console.log("in submit", inputValues);
 
 		try {
 			const resp = await signinCustomer(inputValues);
 			if (resp.status === 200) {
-				Toast({
-					title: "Login successful!, Please wait",
-					status: "success",
-					duration: 2000,
-					isClosable: true,
-				});
-				Cookies.set("token", JSON.stringify(resp.data.token));
-				Cookies.set("user", JSON.stringify(resp.data.user));
-				router.push("/user/dashboard");
+				setData(resp.data);
+				setDisableForm(true);
+				onCaptchaVerify(resp.data);
 			}
 		} catch (error) {
 			Toast({
@@ -64,6 +69,79 @@ function Signin() {
 				isClosable: true,
 			});
 		}
+	}
+	function onSignInSubmit(data) {
+		console.log("in onSignInSubmit");
+		const captchaVerifier = window.recaptchaVerifier;
+		const number =
+			data.user.country_code.toString() + data.user.mobile.toString();
+		console.log("number", number);
+		signInWithPhoneNumber(auth, number, captchaVerifier)
+			.then((result) => {
+				window.confirmationCode = result;
+				setStep(3);
+			})
+			.catch((err) => {
+				Toast({
+					title: "Service down, Please try again later!",
+					status: "error",
+					duration: 2000,
+					isClosable: true,
+				});
+				console.log("sigin fail code no", err);
+				// window.location.reload();
+			});
+	}
+	function onCaptchaVerify(data) {
+		console.log("in captach");
+
+		window.recaptchaVerifier = new RecaptchaVerifier(
+			"recaptcha-container",
+			{
+				size: "normal",
+				callback: (response) => {
+					console.log("captach sol", response);
+					// reCAPTCHA solved, allow signInWithPhoneNumber.
+					// setStep(3);
+					onSignInSubmit(data);
+				},
+				"expired-callback": () => {
+					// Response expired. Ask user to solve reCAPTCHA again.
+					// ...
+					console.log("captcha expired");
+				},
+			},
+			auth
+		);
+		console.log("in  return");
+		window.recaptchaVerifier.render();
+	}
+
+	function verifyCode(resp) {
+		console.log("verifyCode res", resp);
+		window.confirmationCode
+			.confirm(otp)
+			.then((resp) => {
+				console.log("OTP confirmed", resp);
+				Toast({
+					title: "Login successful!, redirecting Please wait",
+					status: "success",
+					duration: 2000,
+					isClosable: true,
+				});
+				Cookies.set("token", JSON.stringify(data.token));
+				Cookies.set("user", JSON.stringify(data.user));
+				router.push("/user/dashboard");
+			})
+			.catch((err) => {
+				console.log("OTP CONFIRM ERR", err);
+				Toast({
+					title: "Wrong OPT, Please try again!",
+					status: "error",
+					duration: 2000,
+					isClosable: true,
+				});
+			});
 	}
 	return (
 		<Container
@@ -127,43 +205,110 @@ function Signin() {
 					</Box>
 				</Box>
 			</Flex>
-			<Flex boxShadow="lg" borderRadius={10} margin="auto" width="40vw">
-				<Box margin="auto" px="2rem" textAlign="center">
-					<Heading my="1rem" width="100%" textTransform="uppercase">
-						Sign In to your account
-					</Heading>
-					<Text my="1" opacity="0.5">
-						Enter your details to proceed further
-					</Text>
-					<form onSubmit={onSubmitHandler} ref={formRef}>
-						<Input
-							required
-							name="email"
-							type="email"
-							placeHolder="Email"
-							my="2"
-						/>
-						<Input
-							required
-							name="password"
-							type="password"
-							placeHolder="Password"
-							my="2"
-						/>
-						<Button
-							my={5}
-							className="primaryButton"
-							backgroundColor="#4258EF"
-							_hover={{ backgroundColor: "#273edc" }}
-							_focus={{ outline: "none" }}
-							color="white"
+			<Flex
+				boxShadow="lg"
+				borderRadius={10}
+				mt={10}
+				width="40vw"
+				minH={"50vh"}
+			>
+				{step === 1 && (
+					<Box margin="auto" px="2rem" textAlign="center">
+						<Heading
+							my="1rem"
 							width="100%"
-							type="submit"
+							textTransform="uppercase"
 						>
-							Sign in
-						</Button>
-					</form>
-				</Box>
+							Sign In to your account
+						</Heading>
+						<Text my="2" opacity="0.5">
+							{!disableForm
+								? "Enter your details to proceed further"
+								: "Verify to continue"}
+						</Text>
+						<form onSubmit={onSubmitHandler} ref={formRef}>
+							<Input
+								required
+								name="email"
+								type="email"
+								placeHolder="Email"
+								my="2"
+								isDisabled={disableForm}
+							/>
+							<Input
+								required
+								name="password"
+								type="password"
+								placeHolder="Password"
+								my="2"
+								isDisabled={disableForm}
+							/>
+							<Button
+								my={5}
+								className="primaryButton"
+								backgroundColor="#4258EF"
+								_hover={{ backgroundColor: "#273edc" }}
+								_focus={{ outline: "none" }}
+								color="white"
+								width="100%"
+								type="submit"
+								isDisabled={disableForm}
+							>
+								Sign in
+							</Button>
+
+							<div id="recaptcha-container"></div>
+						</form>
+					</Box>
+				)}
+
+				{step === 3 ? (
+					<Flex
+						width="100%"
+						flexDir="column"
+						// justifyContent="center"
+						alignItems="center"
+						p="4"
+					>
+						<Text>
+							{`One Time Password (OTP) has been send to you registered mobie number`}
+						</Text>
+						<Flex boxShadow="md" flexDir="column" w="100%" p="6">
+							<Input
+								placeholder="Enter OTP"
+								type="number"
+								value={otp}
+								onChange={(e) => setOtp(e.target.value)}
+							/>
+							<Button
+								my={5}
+								className="primaryButton"
+								backgroundColor="#4258EF"
+								_hover={{ backgroundColor: "#273edc" }}
+								_focus={{ outline: "none" }}
+								color="white"
+								width="100%"
+								onClick={verifyCode}
+							>
+								Verify
+							</Button>
+							<Button
+								my={5}
+								className="primaryButton"
+								backgroundColor="#4258EF"
+								_hover={{ backgroundColor: "#273edc" }}
+								_focus={{ outline: "none" }}
+								color="white"
+								onClick={(e) => {
+									setStep(1);
+									setDisableForm(false);
+								}}
+							>
+								Go back
+							</Button>
+						</Flex>
+					</Flex>
+				) : null}
 			</Flex>
 		</Container>
 	);

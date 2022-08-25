@@ -20,6 +20,13 @@ import { useRef, useEffect, useState } from "react";
 import { createCustomer } from "../../utils/services/customers";
 import Cookies from "js-cookie";
 
+import firebaseApp from "../../utils/firebase";
+import {
+	getAuth,
+	RecaptchaVerifier,
+	signInWithPhoneNumber,
+} from "firebase/auth";
+const auth = getAuth(firebaseApp);
 function Signup() {
 	const Toast = useToast();
 
@@ -51,6 +58,7 @@ function Signup() {
 	}, [router]);
 	const [title, setTitle] = useState("");
 	const [step, setStep] = useState(1);
+	const [otp, setOtp] = useState(null);
 	const [error, setError] = useState(false);
 	const [passwordMismatch, setPasswordMismatch] = useState(false);
 
@@ -63,13 +71,112 @@ function Signup() {
 			setError(true);
 		}
 	}
+	// async function onSubmitHandler(e) {
+	// 	e.preventDefault();
+	// 	console.log("in captacha");
+	// 	const inputValues = {};
+	// 	const s2 = formRef.current[5].value;
+	// 	const s1 = formRef.current[6].value;
+	// 	const match = s1.normalize() === s2.normalize();
+	// 	if (!match) {
+	// 		setPasswordMismatch(true);
+	// 		return;
+	// 	}
+
+	// 	for (let index = 0; index < formRef.current.length; index++) {
+	// 		const name = formRef.current[index].name;
+	// 		const value = formRef.current[index].value;
+	// 		inputValues[name] = value;
+	// 	}
+	// 	console.log(auth);
+
+	// 	window.recaptchaVerifier = new RecaptchaVerifier(
+	// 		"recaptcha-container",
+	// 		{
+	// 			size: "invisible",
+	// 			callback: (response) => {
+	// 				// reCAPTCHA solved, allow signInWithPhoneNumber.
+	// 				//   onSignInSubmit();
+	// 				console.log("verify", response);
+	// 				signInWithPhoneNumber(
+	// 					auth,
+	// 					`+91${inputValues.mobile}`,
+	// 					window.recaptchaVerifier
+	// 				)
+	// 					.then((result) => {
+	// 						// setfinal(result);
+	// 						alert("code sent");
+	// 						// setshow(true);
+	// 						console.log("result", result);
+	// 					})
+	// 					.catch((err) => {
+	// 						alert(err);
+	// 						window.location.reload();
+	// 					});
+	// 			},
+	// 		},
+	// 		auth
+	// 	);
+	// }
+	function onSignUpSubmit() {
+		console.log("in onSignUpSubmit");
+		const captchaVerifier = window.recaptchaVerifier;
+		signInWithPhoneNumber(auth, `+917006078236`, captchaVerifier)
+			.then((result) => {
+				// setfinal(result);
+				alert("code sent");
+				window.confirmationCode = result;
+				// setshow(true);
+				console.log("result", result);
+			})
+			.catch((err) => {
+				alert(err);
+				console.log("sigin fail code no", err);
+				// window.location.reload();
+			});
+	}
+	function onCaptchaVerify() {
+		console.log("in captach");
+
+		window.recaptchaVerifier = new RecaptchaVerifier(
+			"recaptcha-container",
+			{
+				size: "normal",
+				callback: (response) => {
+					console.log("captach sol", response);
+					// reCAPTCHA solved, allow signInWithPhoneNumber.
+					setStep(3);
+					onSignUpSubmit();
+				},
+				"expired-callback": () => {
+					// Response expired. Ask user to solve reCAPTCHA again.
+					// ...
+					console.log("captcha expired");
+				},
+			},
+			auth
+		);
+		console.log("in  return");
+		window.recaptchaVerifier.render();
+		// console.log("recaptchaVerifier", window.recaptchaVerifier);
+	}
+
+	function verifyCode(resp) {
+		console.log("verifyCode res", resp);
+		window.confirmationCode
+			.confirm(otp)
+			.then((resp) => console.log("OTP confirmed", resp))
+			.catch((err) => console.log("OTP CONFIRM ERR", err));
+	}
 	async function onSubmitHandler(e) {
 		e.preventDefault();
-		console.log("in submit", formRef.current[1]);
+
 		const inputValues = {};
 		const s2 = formRef.current[5].value;
 		const s1 = formRef.current[6].value;
 		const match = s1.normalize() === s2.normalize();
+		console.log("pass", s1);
+		console.log("pass", s2);
 		if (!match) {
 			setPasswordMismatch(true);
 			return;
@@ -78,9 +185,11 @@ function Signup() {
 		for (let index = 0; index < formRef.current.length; index++) {
 			const name = formRef.current[index].name;
 			const value = formRef.current[index].value;
-			inputValues[name] = value;
+			if (name && value) {
+				inputValues[name] = value;
+			}
 		}
-		console.log("in submit", inputValues);
+		console.log("in submit inputValues", inputValues);
 
 		try {
 			const resp = await createCustomer(inputValues);
@@ -394,6 +503,13 @@ function Signup() {
 							onSubmit={onSubmitHandler}
 						>
 							<Input
+								name="mobile"
+								required
+								type="number"
+								placeHolder="Mobile Number"
+								my="1"
+							/>
+							<Input
 								name="email"
 								required
 								type="email"
@@ -434,13 +550,7 @@ function Signup() {
 									width="50%"
 								/>
 							</Flex>
-							<Input
-								name="mobile"
-								required
-								type="number"
-								placeHolder="Mobile number"
-								my="1"
-							/>
+
 							<Input
 								name="password"
 								required
@@ -459,6 +569,7 @@ function Signup() {
 							/>
 
 							<Button
+								id="register"
 								type="submit"
 								my={5}
 								className="primaryButton"
@@ -473,6 +584,27 @@ function Signup() {
 						</form>
 					</Box>
 				</Flex>
+			) : null}
+			{step === 3 ? (
+				<>
+					<Input
+						type="number"
+						value={otp}
+						onChange={(e) => setOtp(e.target.value)}
+					/>
+					<Button
+						my={5}
+						className="primaryButton"
+						backgroundColor="#4258EF"
+						_hover={{ backgroundColor: "#273edc" }}
+						_focus={{ outline: "none" }}
+						color="white"
+						width="100%"
+						onClick={verifyCode}
+					>
+						Verify
+					</Button>
+				</>
 			) : null}
 		</Container>
 	);

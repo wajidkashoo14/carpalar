@@ -6,17 +6,18 @@ export async function signinCustomer(body) {
 		console.log("crete", resp);
 		return resp;
 	} catch (e) {
-		console.log("first", e.response.data);
+		console.log("firs signinCustomer", e.response.data);
 		throw new Error(e.response.data);
 	}
 }
 export async function createCustomer(body) {
+	console.log("createCustomer", body);
 	try {
 		const resp = await axiosInstance.post("/api/customers", body);
 		console.log("crete", resp);
 		return resp;
 	} catch (e) {
-		console.log("first", e.response.data);
+		console.log("createCustomer", e);
 		throw new Error(e.response.data);
 	}
 }
