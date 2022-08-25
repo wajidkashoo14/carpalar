@@ -15,7 +15,7 @@ function Description() {
       maxW="80vw"
       minH="100vh"
       textAlign="left"
-      p="10"
+      p={{ base: "0", md: "10" }}
       display="flex"
       alignItems="flex-start"
       flexDirection="column"

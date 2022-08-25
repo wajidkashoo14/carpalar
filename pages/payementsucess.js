@@ -21,9 +21,16 @@ function Payementsucess() {
       justifyContent="center"
       alignItems="center"
     >
-      <Image src="/sucess.png" alt="signup" width={200} height={200} />
-      <Heading color="#4fb526">Payement Successful !</Heading>
-      <Text fontSize="1.3rem" my={5}>
+      <Image
+        src="/sucess.png"
+        alt="signup"
+        width={{ base: "150", md: "200" }}
+        height={{ base: "150", md: "200" }}
+      />
+      <Heading color="#4fb526" textAlign={{ base: "center" }}>
+        Payement Successful !
+      </Heading>
+      <Text fontSize="1.3rem" my={5} textAlign={{ base: "center" }}>
         Your order is confirmed. You will recieve an order confirmation
         email/SMS shortly.
       </Text>

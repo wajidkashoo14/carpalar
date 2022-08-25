@@ -12,7 +12,12 @@ function buystatus() {
       alignItems="center"
       mb="30%"
     >
-      <Image src="/sucess.png" alt="signup" width={200} height={200} />
+      <Image
+        src="/sucess.png"
+        alt="signup"
+        width={{ base: "150", md: "200" }}
+        height={{ base: "150", md: "200" }}
+      />
       <Heading color="#4fb526" my={3}>
         Thank you for choosing us!
       </Heading>

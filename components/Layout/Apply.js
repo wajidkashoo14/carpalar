@@ -99,16 +99,16 @@ function Apply() {
   return (
     <Container
       maxW="100%"
-      minH="100vh"
+      minH={{ base: "300vh", md: "100vh" }}
       pt="18vh"
-      px="8rem"
+      px={{ base: "1rem", md: "8rem" }}
       mb="15rem"
       textAlign="center"
     >
       <Heading color="black" my="5" textAlign="left">
         Apply Now
       </Heading>
-      <Text color="black" width="80vw" textAlign="left">
+      <Text color="black" width={{ base: "100%", md: "80vw" }} textAlign="left">
         {`To apply for a hire purchase car from us, you'll need to meet our
         eligibility criteria, and we continue to review it on an ongoing basis
         to keep up with industry best practices. Our basic eligibility
@@ -138,8 +138,12 @@ function Apply() {
       </Box> */}
       <Box>
         <ChakraProvider theme={theme}>
-          <Box p={8} display="flex" maxH="100vh">
-            <Box width="45%" p="5">
+          <Box
+            p={{ base: "4", md: "8" }}
+            display={{ base: "block", md: "flex" }}
+            maxH="100vh"
+          >
+            <Box width={{ base: "100%", md: "45%" }} p={{ base: "2", md: "5" }}>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="">
                   <Input placeholder=" " />
@@ -249,7 +253,11 @@ function Apply() {
                 </Box>
               </FormControl>
             </Box>
-            <Box width="45%" p="5" mt="-1.3rem">
+            <Box
+              width={{ base: "100%", md: "45%" }}
+              p={{ base: "2", md: "5" }}
+              mt="-1.3rem"
+            >
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
                   <Input id="nationality" name="nationality" />
@@ -368,14 +376,15 @@ function Apply() {
               )}
             </Box>
           </Box>
-          <Heading pl={8} mt="5rem">
+
+          <Heading pl={8} mt={{ base: "200%", md: "5rem" }}>
             Guarantors
           </Heading>
           <Text pl={8}>
             Someone who is willing to vouch for your character and background
           </Text>
-          <Flex>
-            <Box p={8} width="45%">
+          <Flex flexDir={{ base: "column", md: "row" }}>
+            <Box p={8} width={{ base: "100%", md: "45%" }}>
               <Heading my={4}>Guarantor 1</Heading>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
@@ -479,7 +488,8 @@ function Apply() {
                 </FormControl>
               )}
             </Box>
-            <Box width="45%" p="5" mt={3}>
+
+            <Box p={8} width={{ base: "100%", md: "45%" }} mt={3}>
               <Heading my={4}>Guarantor 2</Heading>
               <FormControl variant="floating" id="first-name" isRequired>
                 <Box my="5">
