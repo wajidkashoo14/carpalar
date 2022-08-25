@@ -11,7 +11,7 @@ function Search() {
       maxW={{ base: "90vw", md: "60vw" }}
       bg="white"
       minH="20vh"
-      maxH={{ base: "80vh", md: "20vh" }}
+      maxH={{ base: "90vh", md: "20vh" }}
       boxShadow="lg"
       centerContent
       display={{ base: "block", md: "flex" }}
@@ -28,6 +28,7 @@ function Search() {
         variant="filled"
         placeholder="Select Make"
         my={{ base: "5" }}
+        py={{ base: "2" }}
       >
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -38,6 +39,7 @@ function Search() {
         variant="filled"
         placeholder="Select Model"
         my={{ base: "5" }}
+        py={{ base: "2" }}
       >
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -48,6 +50,7 @@ function Search() {
         variant="filled"
         placeholder="Select Type"
         my={{ base: "5" }}
+        py={{ base: "2" }}
       >
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>

@@ -38,7 +38,7 @@ function Hero() {
         data-aos-mirror="true"
         data-aos-once="false"
         my={"5"}
-        mt={{ base: "15rem" }}
+        mt={{ base: "20rem" }}
         className="primaryButton"
         backgroundColor="#4258EF"
         _hover={{ backgroundColor: "#273edc" }}

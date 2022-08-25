@@ -96,16 +96,18 @@ function Info() {
           px={{ base: "0", md: "20" }}
           flexWrap="wrap"
           flexDir={{ base: "column", md: "row" }}
-          width={{ base: "90vw", md: "50vw" }}
+          mWidth={{ base: "90vw", md: "50vw" }}
           gap="30"
+          mt={{ base: "8" }}
+          justifyContent="center"
+          alignItems="center"
           data-aos="fade-left"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
           data-aos-mirror="true"
           data-aos-once="false"
-          mt={{ base: "8" }}
-          mx={{ base: "5" }}
+          mx={{ base: "8" }}
         >
           <Flex
             w={{ base: "90%", md: "100%", lg: "100%" }}

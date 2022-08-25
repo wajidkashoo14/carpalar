@@ -5,7 +5,7 @@ function Carbanner() {
   return (
     <Container
       maxW="100%"
-      height={{ base: "180vh", md: "60vh" }}
+      height={{ base: "160vh", md: "60vh" }}
       bg="#1E1E1E"
       my="0"
     >
