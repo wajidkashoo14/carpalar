@@ -15,25 +15,36 @@ function Aboutcarpalar() {
   const router = useRouter();
   return (
     <Box width="100%" mt="20">
-      <Flex width="80vw" m="auto" h="70vh">
+      <Flex
+        width={{ base: "95vw", md: "80vw" }}
+        m="auto"
+        h={{ base: "100vh", md: "100vh", lg: "70vh" }}
+        display={{ base: "block", md: "block", lg: "flex" }}
+      >
         <Image
           alt="car"
           style={{ borderRadius: "50px" }}
           src="/homecar.jpg"
-          h="30rem"
-          w="40vw"
+          h={{ base: "20rem", md: "30rem" }}
+          w={{ base: "100%", md: "100%", lg: "40vw" }}
           //   layout="fixed"
         />
-        <Flex flexDir="column" px="5rem">
-          <Heading mb="7" textTransform="uppercase" textAlign="left">
+        <Flex flexDir="column" px={{ base: "1rem", md: "2rem", lg: "5rem" }}>
+          <Heading
+            fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
+            mb={{ base: "2", md: "3", lg: "7" }}
+            py={{ base: "5", md: "5", lg: "3" }}
+            textTransform="uppercase"
+            textAlign="left"
+          >
             About Carpalar
           </Heading>
 
           <Text
             textAlign="justify"
-            fontSize="lg"
+            fontSize={{ base: "md", md: "lg" }}
             color="#1b171f"
-            fontWeight="500"
+            fontWeight={{ base: "400", md: "500" }}
           >
             Carpalar is a genuine and notable digital car leasing brand that
             aims at ensuring ownership of automobiles in the most convenient
