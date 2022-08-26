@@ -41,11 +41,22 @@ export async function getSingleCustomer(id) {
 		throw new Error(e.message);
 	}
 }
-// export async function updateUser(id, payload) {
-//   try {
-//     const { data } = await axiosInstance.patch('/api/customers/' + id, payload);
-//     return data;
-//   } catch (e) {
-//     throw new Error(e.message);
-//   }
-// }
+export async function updateUser(token, id, payload) {
+	try {
+		const { data } = await axiosInstance.patch(
+			"/api/customers/" + id,
+			payload,
+			{
+				headers: {
+					"Content-Type": "application/json",
+					accept: "application/json",
+					"Access-Control-Allow-Origin": "*",
+					Authorization: token,
+				},
+			}
+		);
+		return data;
+	} catch (e) {
+		throw new Error(e.message);
+	}
+}

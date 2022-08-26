@@ -8,7 +8,7 @@ function Contactstrip() {
 	return (
 		<Container
 			maxW="l00vw"
-			height="2.2rem"
+			height="30px"
 			bg="white"
 			d="flex"
 			px="12"

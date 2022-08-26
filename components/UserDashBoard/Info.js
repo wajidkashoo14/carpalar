@@ -1,30 +1,32 @@
-import { Container, Heading, Img } from "@chakra-ui/react";
+import { Flex, Box, Heading, Img } from "@chakra-ui/react";
 import React from "react";
 
 const Info = () => {
-  return (
-    <Container
-      maxW="65%"
-      px={3}
-      height="100vh"
-      backgroundColor="#ffffff"
-      marginTop="6%"
-      borderRight=".5px solid #DCDCDC"
-    >
-      <Heading marginLeft="1rem">Dashboard</Heading>
-
-      <Img
-        src="/homecar.jpg"
-        height={400}
-        width={700}
-        style={{ borderRadius: "15px" }}
-        overflow="hidden"
-        alt="car"
-        margin="auto"
-        marginTop={10}
-      />
-    </Container>
-  );
+	return (
+		<Box w="85%" height="100vh" borderRight=".5px solid #DCDCDC">
+			<Heading marginLeft="1rem">Dashboard</Heading>
+			<Flex
+				height="100%"
+				wrap={"wrap"}
+				p="2"
+				justifyContent="space-around"
+				alignItems="flex-start"
+			>
+				<Flex boxShadow="lg" height="30vh" w="45%">
+					1
+				</Flex>
+				<Flex boxShadow="lg" height="30vh" w="45%">
+					2
+				</Flex>
+				<Flex boxShadow="lg" height="30vh" w="45%">
+					3
+				</Flex>
+				<Flex boxShadow="lg" height="30vh" w="45%">
+					4
+				</Flex>
+			</Flex>
+		</Box>
+	);
 };
 
 export default Info;

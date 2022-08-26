@@ -30,14 +30,12 @@ export default function Profile(props) {
 		}
 	}, [setUser]);
 
-	console.log(user);
 	return (
-		<Container
-			maxW="20%"
-			p="3 O"
+		<Box
+			padding={4}
+			w="15vw"
 			height="100vh"
-			backgroundColor="#E9F3FC"
-			marginTop="6%"
+			boxShadow="lg"
 			position="relative"
 		>
 			<Box
@@ -122,6 +120,6 @@ export default function Profile(props) {
           <p className={styles.dashboard__p__third}>219</p> */}
 				</Box>
 			</Flex>
-		</Container>
+		</Box>
 	);
 }
