@@ -127,9 +127,9 @@ function Index() {
 										justifyContent="space-between"
 									>
 										<Box>
-											<Heading fontSize="1rem">
+											<Text fontSize="1rem">
 												Applied On
-											</Heading>
+											</Text>
 										</Box>
 										<Text>2022-12-12</Text>
 									</Flex>
@@ -142,9 +142,9 @@ function Index() {
 										justifyContent="space-between"
 									>
 										<Box>
-											<Heading fontSize="1rem">
+											<Text fontSize="1rem">
 												Last Updated
-											</Heading>
+											</Text>
 										</Box>
 										<Text>2022-12-12</Text>
 									</Flex>
@@ -157,9 +157,9 @@ function Index() {
 										justifyContent="space-between"
 									>
 										<Box>
-											<Heading fontSize="1rem">
+											<Text fontSize="1rem">
 												Application Fee
-											</Heading>
+											</Text>
 										</Box>
 										<Text>
 											$200{" "}

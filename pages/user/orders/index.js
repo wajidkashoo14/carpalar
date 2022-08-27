@@ -75,160 +75,41 @@ function Myproducts() {
 								bg: "#7a98ff33",
 							}}
 						>
-							<Image
-								transition="transform .2s"
-								_groupHover={{
-									transition: "transform .3s",
-									transform: "scale(1.06)",
-								}}
-								src="/homecar.jpg"
-								boxSize="180px"
-								objectFit="cover"
-							/>
-
 							<Flex
-								flexDir="column"
+								position="relative"
+								justifyContent="center"
 								alignItems="flex-end"
-								width="100%"
 							>
-								<Flex
-									mx="2"
-									justifyContent="space-between"
-									alignItems="flex-start"
+								<Image
+									transition="transform .2s"
+									_groupHover={{
+										transition: "transform .3s",
+										transform: "scale(1.06)",
+									}}
+									src="/homecar.jpg"
+									boxSize="180px"
+									objectFit="cover"
+								/>
+								<Button
+									m="2"
+									color="gray.600"
+									position="absolute"
+									variant="solid"
+									size="sm"
 								>
-									<Heading w="70%" fontSize="1rem">
-										2013 Sabaru Sorester Premium Plus
-									</Heading>
-									<Heading fontSize="1.5rem" ml="3">
-										$3434.00
-									</Heading>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="green.50"
-									color="green"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Paid
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="red.50"
-									color="red"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Pending
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="1"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Installments
-										</Heading>
-									</Box>
-									<Text fontSize="1.3rem">
-										17
-										<span
-											style={{
-												padding: "3px",
-												backgroundColor: "#fff5f5",
-												color: "red",
-												marginLeft: "5px",
-												fontSize: "1rem",
-											}}
-										>
-											33
-										</span>
-									</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="3"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Last Updated
-										</Heading>
-									</Box>
-									<Text>2022-12-12</Text>
-								</Flex>
+									$12312.00
+								</Button>
 							</Flex>
-						</Flex>
-						<Flex
-							onClick={() => {
-								router.push("orders/121212");
-							}}
-							width="45%"
-							m="15px"
-							boxShadow="md"
-							p="2"
-							pl="0"
-							role="group"
-							cursor="pointer"
-							transition="transform .2s"
-							overflow="hidden"
-							_hover={{
-								transform: "scale(1.03)",
-								transition: "transform .3s",
-								bg: "#7a98ff33",
-							}}
-						>
-							<Image
-								transition="transform .2s"
-								_groupHover={{
-									transition: "transform .3s",
-									transform: "scale(1.06)",
-								}}
-								src="/homecar.jpg"
-								boxSize="180px"
-								objectFit="cover"
-							/>
 
 							<Flex
 								flexDir="column"
-								alignItems="flex-end"
+								alignItems="flex-start"
 								width="100%"
 							>
-								<Flex
-									mx="2"
-									justifyContent="space-between"
-									alignItems="flex-start"
-								>
-									<Heading w="70%" fontSize="1rem">
-										2013 Sabaru Sorester Premium Plus
-									</Heading>
-									<Heading fontSize="1.5rem" ml="3">
-										$3434.00
-									</Heading>
-								</Flex>
+								<Heading fontSize="1rem" p="2">
+									2013 Sabaru Sorester Premium Plus
+								</Heading>
+
 								<Flex
 									justifyContent="space-between"
 									borderRadius="5"
@@ -241,9 +122,7 @@ function Myproducts() {
 									boxShadow="inner"
 									w="100%"
 								>
-									<Heading fontSize="1rem">
-										Amount Paid
-									</Heading>
+									<Text fontSize="1rem">Amount Paid</Text>
 									<Text>$2498.00</Text>
 								</Flex>
 								<Flex
@@ -258,9 +137,7 @@ function Myproducts() {
 									boxShadow="inner"
 									w="100%"
 								>
-									<Heading fontSize="1rem">
-										Amount Pending
-									</Heading>
+									<Text fontSize="1rem">Amount Pending</Text>
 									<Text>$2498.00</Text>
 								</Flex>
 								<Flex
@@ -272,9 +149,9 @@ function Myproducts() {
 									justifyContent="space-between"
 								>
 									<Box>
-										<Heading fontSize="1rem">
+										<Text fontSize="1rem">
 											Installments
-										</Heading>
+										</Text>
 									</Box>
 									<Text fontSize="1.3rem">
 										17
@@ -300,387 +177,9 @@ function Myproducts() {
 									justifyContent="space-between"
 								>
 									<Box>
-										<Heading fontSize="1rem">
+										<Text fontSize="1rem">
 											Last Updated
-										</Heading>
-									</Box>
-									<Text>2022-12-12</Text>
-								</Flex>
-							</Flex>
-						</Flex>
-						<Flex
-							onClick={() => {
-								router.push("orders/121212");
-							}}
-							width="45%"
-							m="15px"
-							boxShadow="md"
-							p="2"
-							pl="0"
-							role="group"
-							cursor="pointer"
-							transition="transform .2s"
-							overflow="hidden"
-							_hover={{
-								transform: "scale(1.03)",
-								transition: "transform .3s",
-								bg: "#7a98ff33",
-							}}
-						>
-							<Image
-								transition="transform .2s"
-								_groupHover={{
-									transition: "transform .3s",
-									transform: "scale(1.06)",
-								}}
-								src="/homecar.jpg"
-								boxSize="180px"
-								objectFit="cover"
-							/>
-
-							<Flex
-								flexDir="column"
-								alignItems="flex-end"
-								width="100%"
-							>
-								<Flex
-									mx="2"
-									justifyContent="space-between"
-									alignItems="flex-start"
-								>
-									<Heading w="70%" fontSize="1rem">
-										2013 Sabaru Sorester Premium Plus
-									</Heading>
-									<Heading fontSize="1.5rem" ml="3">
-										$3434.00
-									</Heading>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="green.50"
-									color="green"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Paid
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="red.50"
-									color="red"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Pending
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="1"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Installments
-										</Heading>
-									</Box>
-									<Text fontSize="1.3rem">
-										17
-										<span
-											style={{
-												padding: "3px",
-												backgroundColor: "#fff5f5",
-												color: "red",
-												marginLeft: "5px",
-												fontSize: "1rem",
-											}}
-										>
-											33
-										</span>
-									</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="3"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Last Updated
-										</Heading>
-									</Box>
-									<Text>2022-12-12</Text>
-								</Flex>
-							</Flex>
-						</Flex>
-						<Flex
-							onClick={() => {
-								router.push("orders/121212");
-							}}
-							width="45%"
-							m="15px"
-							boxShadow="md"
-							p="2"
-							pl="0"
-							role="group"
-							cursor="pointer"
-							transition="transform .2s"
-							overflow="hidden"
-							_hover={{
-								transform: "scale(1.03)",
-								transition: "transform .3s",
-								bg: "#7a98ff33",
-							}}
-						>
-							<Image
-								transition="transform .2s"
-								_groupHover={{
-									transition: "transform .3s",
-									transform: "scale(1.06)",
-								}}
-								src="/homecar.jpg"
-								boxSize="180px"
-								objectFit="cover"
-							/>
-
-							<Flex
-								flexDir="column"
-								alignItems="flex-end"
-								width="100%"
-							>
-								<Flex
-									mx="2"
-									justifyContent="space-between"
-									alignItems="flex-start"
-								>
-									<Heading w="70%" fontSize="1rem">
-										2013 Sabaru Sorester Premium Plus
-									</Heading>
-									<Heading fontSize="1.5rem" ml="3">
-										$3434.00
-									</Heading>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="green.50"
-									color="green"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Paid
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="red.50"
-									color="red"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Pending
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="1"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Installments
-										</Heading>
-									</Box>
-									<Text fontSize="1.3rem">
-										17
-										<span
-											style={{
-												padding: "3px",
-												backgroundColor: "#fff5f5",
-												color: "red",
-												marginLeft: "5px",
-												fontSize: "1rem",
-											}}
-										>
-											33
-										</span>
-									</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="3"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Last Updated
-										</Heading>
-									</Box>
-									<Text>2022-12-12</Text>
-								</Flex>
-							</Flex>
-						</Flex>
-						<Flex
-							onClick={() => {
-								router.push("orders/121212");
-							}}
-							width="45%"
-							m="15px"
-							boxShadow="md"
-							p="2"
-							pl="0"
-							role="group"
-							cursor="pointer"
-							transition="transform .2s"
-							overflow="hidden"
-							_hover={{
-								transform: "scale(1.03)",
-								transition: "transform .3s",
-								bg: "#7a98ff33",
-							}}
-						>
-							<Image
-								transition="transform .2s"
-								_groupHover={{
-									transition: "transform .3s",
-									transform: "scale(1.06)",
-								}}
-								src="/homecar.jpg"
-								boxSize="180px"
-								objectFit="cover"
-							/>
-
-							<Flex
-								flexDir="column"
-								alignItems="flex-end"
-								width="100%"
-							>
-								<Flex
-									mx="2"
-									justifyContent="space-between"
-									alignItems="flex-start"
-								>
-									<Heading w="70%" fontSize="1rem">
-										2013 Sabaru Sorester Premium Plus
-									</Heading>
-									<Heading fontSize="1.5rem" ml="3">
-										$3434.00
-									</Heading>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="green.50"
-									color="green"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Paid
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									justifyContent="space-between"
-									borderRadius="5"
-									py="1"
-									px="2"
-									my="1"
-									fontWeight="medium"
-									bg="red.50"
-									color="red"
-									boxShadow="inner"
-									w="100%"
-								>
-									<Heading fontSize="1rem">
-										Amount Pending
-									</Heading>
-									<Text>$2498.00</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="1"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Installments
-										</Heading>
-									</Box>
-									<Text fontSize="1.3rem">
-										17
-										<span
-											style={{
-												padding: "3px",
-												backgroundColor: "#fff5f5",
-												color: "red",
-												marginLeft: "5px",
-												fontSize: "1rem",
-											}}
-										>
-											33
-										</span>
-									</Text>
-								</Flex>
-								<Flex
-									alignItems="flex-start"
-									w="100%"
-									fontWeight="medium"
-									mb="3"
-									px="2"
-									justifyContent="space-between"
-								>
-									<Box>
-										<Heading fontSize="1rem">
-											Last Updated
-										</Heading>
+										</Text>
 									</Box>
 									<Text>2022-12-12</Text>
 								</Flex>
