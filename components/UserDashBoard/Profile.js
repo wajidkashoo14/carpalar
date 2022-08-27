@@ -1,4 +1,13 @@
-import { Box, Container, Img, Flex, Text, Heading } from "@chakra-ui/react";
+import {
+	Box,
+	Container,
+	Img,
+	Flex,
+	Text,
+	Image,
+	Divider,
+	Heading,
+} from "@chakra-ui/react";
 import Cookies from "js-cookie";
 import React from "react";
 import { useState } from "react";
@@ -31,95 +40,133 @@ export default function Profile(props) {
 	}, [setUser]);
 
 	return (
-		<Box
-			padding={4}
-			w="15vw"
-			height="100vh"
-			boxShadow="lg"
-			position="relative"
-		>
-			<Box
-				height="3rem"
-				width="8rem"
-				position="absolute"
-				right="-5%"
-				top="-3%"
-				display="flex"
-			>
-				<Box marginTop="3.2rem" marginLeft=".5rem">
-					<IoIosNotificationsOutline fontSize="1.5rem" />
-				</Box>
-
-				<Img
-					src={profile}
-					height={10}
-					width={10}
-					borderRadius="50%"
-					style={{ borderRadius: "15px" }}
-					overflow="hidden"
-					alt="car"
-					margin="auto"
-					marginTop={10}
-				/>
-			</Box>
+		<Box padding={4} w="25vw" height="85vh" boxShadow="lg">
 			<Flex
 				display="flex"
 				flexDir="column"
-				alignItems="flex-start"
-				marginTop={10}
-				marginLeft="0"
+				alignItems="center"
 				width="100%"
 			>
-				<Img
+				<Image
 					src={profile}
-					height={100}
-					width={100}
-					borderRadius="1rem"
-					style={{ borderRadius: "15px" }}
+					height={"80px"}
+					width={"80px"}
 					overflow="hidden"
 					alt="car"
-					marginTop={10}
 					marginBottom={2}
 				/>
-				<p className={styles.dashboard__p}>Welcome,</p>
-				<Heading fontSize="1.4rem">
+
+				<Heading fontSize="1.2rem">
 					{user &&
 						user.title + " " + user.firstName + " " + user.lastName}
 				</Heading>
 
-				<Text mt="2" color="gray.500" fontSize="14">
+				<Text mt="2" color="gray.500" fontSize="14px">
 					{user && user.email}
 				</Text>
-				<Text color="gray.500" fontSize="14">
+				<Text color="gray.500" fontSize="14px">
+					{user && user.country_code}
 					{user && user.mobile}
 				</Text>
 			</Flex>
 
-			<Flex marginTop={8} justifyContent="space-between">
-				<Box>
-					<Box pt={3}>
-						<Heading fontSize="1rem">Total Spend</Heading>
-						<p className={styles.dashboard__p__second}>
+			<Box w="100%" boxShadow="" py="4" px="3" mt="4" borderRadius="3">
+				<Flex
+					alignItems="flex-start"
+					boxShadow="inner"
+					mb="5"
+					p="2"
+					justifyContent="space-between"
+				>
+					<Box>
+						<Heading fontSize="1rem" color="green.500">
+							Total Spend
+						</Heading>
+						<Text
+							fontWeight="light"
+							color="gray.500"
+							fontSize="14px"
+						>
 							Amount spend on platform
-						</p>
+						</Text>
 					</Box>
-					<Box pt={3}>
-						{/* <Heading fontSize="1rem">Income</Heading>
-            <p className={styles.dashboard__p__second}>Amount minus fee</p>
-          </Box>
-          <Box pt={3}>
-            <Heading fontSize="1rem">Bids</Heading>
-            <p className={styles.dashboard__p__second}>
-              Amount of auction bids
-            </p> */}
+					<Text fontWeight="medium" color="green.500">
+						$21212.00
+					</Text>
+				</Flex>
+				{/* <Divider my="3" /> */}
+				<Flex
+					alignItems="flex-start"
+					boxShadow="inner"
+					mb="5"
+					p="2"
+					justifyContent="space-between"
+				>
+					<Box>
+						<Heading fontSize="1rem" color="red.500">
+							Amount Pending
+						</Heading>
+						<Text
+							fontWeight="light"
+							color="gray.500"
+							fontSize="14px"
+						>
+							Amount owed to platform
+						</Text>
 					</Box>
-				</Box>
-				<Box pt={3} mr={5}>
-					<p className={styles.dashboard__p__first}>$268,987</p>
-					{/* <p className={styles.dashboard__p__sec}>$174,987</p>
-          <p className={styles.dashboard__p__third}>219</p> */}
-				</Box>
-			</Flex>
+					<Text fontWeight="medium" color="red.500">
+						$21212.00
+					</Text>
+				</Flex>
+				{/* <Divider my="3" /> */}
+				<Flex
+					alignItems="flex-start"
+					boxShadow="inner"
+					mb="5"
+					p="2"
+					justifyContent="space-between"
+				>
+					<Box>
+						<Heading fontSize="1rem" color="green.500">
+							Successfull Transactions
+						</Heading>
+						<Text
+							fontWeight="light"
+							color="gray.500"
+							fontSize="14px"
+						>
+							Successfull transactions on platform
+						</Text>
+					</Box>
+					<Text fontWeight="medium" color="green">
+						59
+					</Text>
+				</Flex>
+				{/* <Divider my="3" /> */}
+				<Flex
+					alignItems="flex-start"
+					boxShadow="inner"
+					p="2"
+					justifyContent="space-between"
+				>
+					<Box>
+						<Heading fontSize="1rem" color="orange">
+							Pending Transactions
+						</Heading>
+						<Text
+							fontWeight="light"
+							color="gray.500"
+							fontSize="14px"
+						>
+							Pending transactions on platform
+						</Text>
+					</Box>
+					<Text fontWeight="medium" color="orange">
+						12
+					</Text>
+				</Flex>
+			</Box>
+			{/* </Flex> */}
 		</Box>
 	);
 }

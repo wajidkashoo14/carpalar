@@ -43,89 +43,148 @@ function Index() {
 
 	return (
 		<DashboardLayout>
-			<Container
-				mb="20rem"
-				pt="5rem"
-				marginRight="auto"
-				maxWidth="100%"
-				height="100vh"
-			>
-				{Applications && Applications.length > 0 ? (
-					<Flex
-						backgroundColor="#E9F3FC"
-						borderRadius="1rem"
-						marginTop={5}
-						border="1px solid  #DCDCDC"
-						boxShadow="lg"
-					>
-						<Box>
-							<Img
-								src="/homecar.jpg"
-								height={250}
-								width={400}
-								style={{ borderRadius: "15px" }}
-								overflow="hidden"
-								alt="car"
-								margin="auto"
-							/>
-						</Box>
-						<Flex flexDir="column" width="100%">
-							<Box marginTop="3rem" marginLeft="3rem">
-								<Heading fontSize="1.4rem">
-									2013 Sabaru Sorester Premium Plus
-								</Heading>
-								<span className={styles.dashboard__span}>
-									wajid
-								</span>
-								<span className={styles.dashboard__span}>
-									kashoo
-								</span>
-								<span className={styles.dashboard__span}>
-									197
-								</span>
-							</Box>
-							<Box display="flex" marginLeft="3rem" py={4}>
-								<Box>
-									<Heading fontSize="1.1rem">Address</Heading>
-									<p>jk india</p>
-								</Box>
-								<Box px={6}>
-									<Heading fontSize="1.1rem">Contact</Heading>
-									<p>9596103894</p>
-								</Box>
-								<Box px={6}>
-									<Heading fontSize="1.1rem">Gender</Heading>
-									<p>Male</p>
-								</Box>
-								<Box px={6}>
-									<Heading fontSize="1.1rem">Amount</Heading>
-									<p>$14,000</p>
-								</Box>
-							</Box>
-							<Button
-								width="8rem"
-								marginLeft="3rem"
-								backgroundColor="#4258EF"
-								_hover={{ backgroundColor: "#273edc" }}
-								_focus={{ outline: "none" }}
-								color="#ffffff"
+			<Box p="2" w="100%" mb="8rem">
+				{Applications && Applications.length > -1 ? (
+					<>
+						<Heading as="h1" my="3" textAlign="center">
+							Applications
+						</Heading>
+						<Flex
+							minHeight="100vh"
+							justifyContent="flex-start"
+							alignItems="flex-start"
+							my="5"
+							w="100%"
+							flexWrap="wrap"
+						>
+							<Flex
 								onClick={() => {
-									router.push(
-										"/user/Applications/applicationdetails"
-									);
+									router.push("Applications/121212");
+								}}
+								width="45%"
+								m="15px"
+								boxShadow="md"
+								p="2"
+								pl="0"
+								role="group"
+								cursor="pointer"
+								transition="transform .2s"
+								overflow="hidden"
+								_hover={{
+									transform: "scale(1.03)",
+									transition: "transform .3s",
+									bg: "#7a98ff33",
 								}}
 							>
-								View Details
-							</Button>
+								<Image
+									transition="transform .2s"
+									_groupHover={{
+										transition: "transform .3s",
+										transform: "scale(1.06)",
+									}}
+									src="/homecar.jpg"
+									boxSize="180px"
+									objectFit="cover"
+								/>
+
+								<Flex
+									flexDir="column"
+									alignItems="flex-end"
+									width="100%"
+								>
+									<Flex
+										mx="2"
+										justifyContent="space-between"
+										alignItems="flex-start"
+									>
+										<Heading w="70%" fontSize="1rem">
+											2013 Sabaru Sorester Premium Plus
+										</Heading>
+										<Heading fontSize="1.5rem" ml="3">
+											$3434.00
+										</Heading>
+									</Flex>
+									<Flex
+										justifyContent="space-between"
+										borderRadius="5"
+										px="2"
+										my="2"
+										fontWeight="medium"
+										bg="red.50"
+										color="red"
+										boxShadow="inner"
+										w="100%"
+									>
+										<Text fontSize="1rem">Status</Text>
+										<Text>Pending</Text>
+									</Flex>
+									<Flex
+										alignItems="flex-start"
+										w="100%"
+										fontWeight="medium"
+										mb="3"
+										px="2"
+										justifyContent="space-between"
+									>
+										<Box>
+											<Heading fontSize="1rem">
+												Applied On
+											</Heading>
+										</Box>
+										<Text>2022-12-12</Text>
+									</Flex>
+									<Flex
+										alignItems="flex-start"
+										w="100%"
+										fontWeight="medium"
+										mb="3"
+										px="2"
+										justifyContent="space-between"
+									>
+										<Box>
+											<Heading fontSize="1rem">
+												Last Updated
+											</Heading>
+										</Box>
+										<Text>2022-12-12</Text>
+									</Flex>
+									<Flex
+										alignItems="flex-start"
+										w="100%"
+										fontWeight="medium"
+										mb="3"
+										px="2"
+										justifyContent="space-between"
+									>
+										<Box>
+											<Heading fontSize="1rem">
+												Application Fee
+											</Heading>
+										</Box>
+										<Text>
+											$200{" "}
+											<span
+												style={{
+													padding: "3px",
+													backgroundColor: "#fff5f5",
+													color: "red",
+												}}
+											>
+												Not paid
+											</span>
+										</Text>
+									</Flex>
+								</Flex>
+							</Flex>
 						</Flex>
-					</Flex>
+					</>
 				) : (
 					<Empty
 						title="No Applications Found"
 						message="You have not Applied for any Vehicles"
 					/>
 				)}
-			</Container>
+			</Box>
 		</DashboardLayout>
 	);
 }

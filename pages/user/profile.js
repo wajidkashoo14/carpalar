@@ -134,7 +134,7 @@ function profile() {
 				<ChakraProvider theme={theme}>
 					<Box
 						p={4}
-						width="50%"
+						width="70%"
 						mt={5}
 						pointerEvents={editMode ? "" : "none"}
 					>
@@ -155,7 +155,7 @@ function profile() {
 					</Box>
 					<Box
 						p={4}
-						width="50%"
+						width="70%"
 						pointerEvents={editMode ? "" : "none"}
 					>
 						<FormControl
@@ -164,9 +164,7 @@ function profile() {
 							isRequired
 						>
 							<Input
-								onChange={(e) =>
-									setData({ ...data, user: data.user })
-								}
+								onChange={onChangeHandler}
 								value={data ? data.user.lastName : ""}
 								name="lastName"
 							/>
@@ -176,13 +174,15 @@ function profile() {
 					<Box
 						p={4}
 						pointerEvents={editMode ? "" : "none"}
-						width="50%"
+						width="70%"
 					>
 						<FormControl variant="floating" id="Gender" isRequired>
 							<Select
 								variant="flushed"
 								placeholder="Select Gender"
 								p="4"
+								onChange={onChangeHandler}
+								name="gender"
 								value={data ? data.user.gender : ""}
 							>
 								<option value="male">Male</option>
@@ -195,13 +195,11 @@ function profile() {
 					<Box
 						p={4}
 						pointerEvents={editMode ? "" : "none"}
-						width="50%"
+						width="70%"
 					>
 						<FormControl variant="floating" id="DOB" isRequired>
 							<Input
-								onChange={(e) =>
-									setData({ ...data, user: data.user })
-								}
+								onChange={onChangeHandler}
 								value={data ? data.user.dob : ""}
 								name="dob"
 								type="date"
@@ -212,7 +210,7 @@ function profile() {
 					<Box
 						p={4}
 						pointerEvents={editMode ? "" : "none"}
-						width="50%"
+						width="70%"
 					>
 						<FormControl
 							variant="floating"
@@ -220,9 +218,7 @@ function profile() {
 							isRequired
 						>
 							<Input
-								onChange={(e) =>
-									setData({ ...data, user: data.user })
-								}
+								onChange={onChangeHandler}
 								value={data ? data.user.email : ""}
 								name="email"
 								type="email"
@@ -233,7 +229,7 @@ function profile() {
 					<Box
 						p={4}
 						pointerEvents={editMode ? "" : "none"}
-						width="50%"
+						width="70%"
 					>
 						<FormControl
 							variant="floating"
@@ -241,9 +237,26 @@ function profile() {
 							isRequired
 						>
 							<Input
-								onChange={(e) =>
-									setData({ ...data, user: data.user })
-								}
+								onChange={onChangeHandler}
+								value={data ? data.user.country_code : ""}
+								name="country_code"
+								type="text"
+							/>
+							<FormLabel>Country Code</FormLabel>
+						</FormControl>
+					</Box>
+					<Box
+						p={4}
+						pointerEvents={editMode ? "" : "none"}
+						width="70%"
+					>
+						<FormControl
+							variant="floating"
+							id="mobile number"
+							isRequired
+						>
+							<Input
+								onChange={onChangeHandler}
 								value={data ? data.user.mobile : ""}
 								name="mobile"
 								type="number"
@@ -251,7 +264,7 @@ function profile() {
 							<FormLabel>Mobile Number</FormLabel>
 						</FormControl>
 					</Box>
-					<Flex width="50%" p={4} flexDir="column">
+					<Flex width="70%" p={4} flexDir="column">
 						<Heading fontSize="1.2rem" p={4}>
 							Address
 						</Heading>
@@ -259,7 +272,7 @@ function profile() {
 							<Box
 								p={4}
 								pointerEvents={editMode ? "" : "none"}
-								width="50%"
+								width="70%"
 							>
 								<FormControl
 									variant="floating"
@@ -267,12 +280,7 @@ function profile() {
 									isRequired
 								>
 									<Input
-										onChange={(e) =>
-											setData({
-												...data,
-												user: data.user,
-											})
-										}
+										onChange={onChangeHandler}
 										value={data ? data.user.street : ""}
 										name="street"
 										type="text"
@@ -283,7 +291,7 @@ function profile() {
 							<Box
 								p={4}
 								pointerEvents={editMode ? "" : "none"}
-								width="50%"
+								width="70%"
 							>
 								<FormControl
 									variant="floating"
@@ -291,12 +299,7 @@ function profile() {
 									isRequired
 								>
 									<Input
-										onChange={(e) =>
-											setData({
-												...data,
-												user: data.user,
-											})
-										}
+										onChange={onChangeHandler}
 										value={data ? data.user.area : ""}
 										name="area"
 										type="text"
@@ -309,7 +312,7 @@ function profile() {
 							<Box
 								p={4}
 								pointerEvents={editMode ? "" : "none"}
-								width="50%"
+								width="70%"
 							>
 								<FormControl
 									variant="floating"
@@ -317,12 +320,7 @@ function profile() {
 									isRequired
 								>
 									<Input
-										onChange={(e) =>
-											setData({
-												...data,
-												user: data.user,
-											})
-										}
+										onChange={onChangeHandler}
 										value={data ? data.user.country : ""}
 										name="country"
 										type="text"
@@ -333,7 +331,7 @@ function profile() {
 							<Box
 								p={4}
 								pointerEvents={editMode ? "" : "none"}
-								width="50%"
+								width="70%"
 							>
 								<FormControl
 									variant="floating"
@@ -341,12 +339,7 @@ function profile() {
 									isRequired
 								>
 									<Input
-										onChange={(e) =>
-											setData({
-												...data,
-												user: data.user,
-											})
-										}
+										onChange={onChangeHandler}
 										value={data ? data.user.state : ""}
 										name="state"
 										type="text"
@@ -359,7 +352,7 @@ function profile() {
 							<Box
 								p={4}
 								pointerEvents={editMode ? "" : "none"}
-								width="50%"
+								width="70%"
 							>
 								<FormControl
 									variant="floating"
@@ -367,12 +360,7 @@ function profile() {
 									isRequired
 								>
 									<Input
-										onChange={(e) =>
-											setData({
-												...data,
-												user: data.user,
-											})
-										}
+										onChange={onChangeHandler}
 										value={data ? data.user.zipcode : ""}
 										name="zipcode"
 									/>

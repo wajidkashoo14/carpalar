@@ -6,6 +6,42 @@ import "../styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
+import "@fontsource/montserrat/100.css";
+import "@fontsource/montserrat/200.css";
+import "@fontsource/montserrat/300.css";
+import "@fontsource/montserrat";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/800.css";
+import "@fontsource/montserrat/900.css";
+import "@fontsource/montserrat/900-italic.css";
+import "@fontsource/montserrat/800-italic.css";
+import "@fontsource/montserrat/700-italic.css";
+import "@fontsource/montserrat/500-italic.css";
+import "@fontsource/montserrat/400-italic.css";
+import "@fontsource/montserrat/200-italic.css";
+import "@fontsource/montserrat/100-italic.css";
+import "@fontsource/source-sans-pro/200.css";
+import "@fontsource/source-sans-pro/300.css";
+import "@fontsource/source-sans-pro";
+import "@fontsource/source-sans-pro/600.css";
+import "@fontsource/source-sans-pro/700.css";
+import "@fontsource/source-sans-pro/900.css";
+import "@fontsource/source-sans-pro/900-italic.css";
+import "@fontsource/source-sans-pro/700-italic.css";
+import "@fontsource/source-sans-pro/400-italic.css";
+import "@fontsource/source-sans-pro/200-italic.css";
+import "@fontsource/source-sans-pro";
+
+import { extendTheme } from "@chakra-ui/react";
+
+const theme = extendTheme({
+	fonts: {
+		heading: `Montserrat`,
+		body: `'Source Sans Pro', sans-serif`,
+	},
+});
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {
@@ -35,7 +71,7 @@ function MyApp({ Component, pageProps }) {
 		});
 	}, []);
 	return (
-		<ChakraProvider>
+		<ChakraProvider theme={theme}>
 			<Layout />
 			<Component {...pageProps} />
 			<Footer />

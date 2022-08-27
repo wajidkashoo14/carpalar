@@ -68,7 +68,7 @@ function Navbar() {
 
 			<Flex gap="5">
 				{router?.route.includes("user") ? (
-					<>
+					<Flex gap="8" alignItems="flex-start">
 						<Flex alignItems={"center"}>
 							<RiDashboardFill color="#3856b9" fontSize="20" />
 							<Link href="dashboard">Dashboard</Link>
@@ -85,7 +85,7 @@ function Navbar() {
 							<FaUserAlt color="#3856b9" fontSize="15" />
 							<Link href="profile">Profile</Link>
 						</Flex>
-					</>
+					</Flex>
 				) : (
 					<>
 						<Link

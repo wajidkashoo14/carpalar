@@ -4,21 +4,10 @@ import { useRouter } from "next/router";
 const Empty = ({ title, message }) => {
 	const router = useRouter();
 	return (
-		<Flex
-			mt="2rem"
-			justifyContent="center"
-			alignItems="center"
-			minH="50vh"
-			flexDir="column"
-		>
-			{/* <FaWpforms
-        fontSize="100"
-        color="#4258EF"
-        opacity={0.8}
-    /> */}
+		<Flex alignItems="center" flexDir="column" minH="90vh">
 			<Image src="/icons/empty.png" />
 			<Heading>{title}</Heading>
-			<Text my="6">{`${message}`}</Text>
+			<Text my="3">{`${message}`}</Text>
 			<Button
 				backgroundColor="#4258EF"
 				_hover={{ backgroundColor: "#273edc" }}
