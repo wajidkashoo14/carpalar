@@ -307,113 +307,248 @@ const OrderDetails = () => {
 						bg="#fff"
 						m="2"
 						height="fit-content"
-						p="3"
 					>
 						<Flex flexDir="column">
-							<Heading textAlign="center">Overview</Heading>
-							<Flex
-								justifyContent="space-evenly"
-								alignItems="flex-start"
-								my="2"
-							>
+							<Flex bg=" #4369e43d" pb="4" flexDir="column">
+								<Heading textAlign="center">Overview</Heading>
 								<Flex
-									width="30%"
-									border="1px solid #4369e43d"
-									boxShadow="md"
-									p="2"
-									flexDir="column"
-									borderRadius="7"
-									bg="#fff"
+									justifyContent="space-evenly"
+									alignItems="flex-start"
+									my="2"
 								>
-									<Flex justifyContent="space-between">
-										<Text mb="3">Paid</Text>
-										<Text
-											textAlign="right"
-											color="green.400"
-											fontWeight="bolder"
-										>
-											58%
-										</Text>
+									<Flex
+										width="30%"
+										border="1px solid #4369e43d"
+										boxShadow="md"
+										p="2"
+										flexDir="column"
+										borderRadius="7"
+										bg="#fff"
+									>
+										<Flex justifyContent="space-between">
+											<Text mb="3">Paid</Text>
+											<Text
+												textAlign="right"
+												color="green.400"
+												fontWeight="bolder"
+											>
+												58%
+											</Text>
+										</Flex>
+										<Box>
+											<Heading as="h4">$ 1212.00</Heading>
+											<Text
+												color="gray.400"
+												fontWeight="light"
+												fontStyle="italic"
+											>
+												Total amount paid to date
+											</Text>
+										</Box>
 									</Flex>
-
-									<Box>
-										<Heading as="h4">$ 1212.00</Heading>
-
-										<Text
-											color="gray.400"
-											fontWeight="light"
-											fontStyle="italic"
-										>
-											Total amount paid to date
-										</Text>
-									</Box>
-								</Flex>
-								<Flex
-									width="30%"
-									border="1px solid #4369e43d"
-									boxShadow="md"
-									p="2"
-									flexDir="column"
-									borderRadius="7"
-									bg="#fff"
-								>
-									<Flex justifyContent="space-between">
-										<Text mb="3">Left</Text>
-										<Text
-											textAlign="right"
-											color="red.400"
-											fontWeight="bolder"
-										>
-											58%
-										</Text>
+									<Flex
+										width="30%"
+										border="1px solid #4369e43d"
+										boxShadow="md"
+										p="2"
+										flexDir="column"
+										borderRadius="7"
+										bg="#fff"
+									>
+										<Flex justifyContent="space-between">
+											<Text mb="3">Left</Text>
+											<Text
+												textAlign="right"
+												color="red.400"
+												fontWeight="bolder"
+											>
+												58%
+											</Text>
+										</Flex>
+										<Box>
+											<Heading as="h4">$ 1212.00</Heading>
+											<Text
+												color="gray.400"
+												fontWeight="light"
+												fontStyle="italic"
+											>
+												Total amount left
+											</Text>
+										</Box>
 									</Flex>
-									<Box>
-										<Heading as="h4">$ 1212.00</Heading>
-
-										<Text
-											color="gray.400"
-											fontWeight="light"
-											fontStyle="italic"
-										>
-											Total amount left
-										</Text>
-									</Box>
-								</Flex>
-								<Flex
-									width="30%"
-									border="1px solid #4369e43d"
-									boxShadow="md"
-									p="2"
-									flexDir="column"
-									borderRadius="7"
-									bg="#fff"
-								>
-									<Flex justifyContent="space-between">
-										<Text mb="3">Installment</Text>
+									<Flex
+										width="30%"
+										border="1px solid #4369e43d"
+										boxShadow="md"
+										p="2"
+										flexDir="column"
+										borderRadius="7"
+										bg="#fff"
+									>
+										<Flex justifyContent="space-between">
+											<Text mb="3">Installment</Text>
+										</Flex>
+										<Box>
+											<Heading as="h4">$ 1212.00</Heading>
+											<Text
+												color="gray.400"
+												fontWeight="light"
+												fontStyle="italic"
+											>
+												Installment amount
+											</Text>
+										</Box>
 									</Flex>
-									<Box>
-										<Heading as="h4">$ 1212.00</Heading>
-
-										<Text
-											color="gray.400"
-											fontWeight="light"
-											fontStyle="italic"
-										>
-											Installment amount
-										</Text>
-									</Box>
 								</Flex>
 							</Flex>
-							<Flex minH="20vh" boxShadow="md" width="100%">
-								<Heading textAlign="center">
-									Payment History
+							<Flex
+								mt="3"
+								minH="20vh"
+								boxShadow="md"
+								width="100%"
+								flexDir="column"
+								justifyContent="center"
+								// alignItems="center"
+							>
+								{/* <Heading>Payment History</Heading> */}
+								<Heading fontSize="1rem" textAlign="center">
+									Transaction History
 								</Heading>
+								<Flex
+									flexDir="column"
+									p="4"
+									minHeight="50vh"
+									bg="#fff"
+								>
+									<Flex
+										borderRadius="5"
+										boxShadow="md"
+										p="2"
+										justifyContent="space-between"
+									>
+										<Text>
+											Paid
+											<span
+												style={{
+													color: "#aaaaaa",
+													display: "block",
+													fontSize: "14px",
+												}}
+											>
+												2020-10-12
+											</span>
+										</Text>
+										<Text
+											fontWeight="bold"
+											color="green.300"
+										>
+											$ 333.00
+										</Text>
+									</Flex>
+									<Flex
+										borderRadius="5"
+										boxShadow="md"
+										p="2"
+										justifyContent="space-between"
+									>
+										<Text>
+											Paid
+											<span
+												style={{
+													color: "#aaaaaa",
+													display: "block",
+													fontSize: "14px",
+												}}
+											>
+												2020-10-12
+											</span>
+										</Text>
+										<Text
+											fontWeight="bold"
+											color="green.300"
+										>
+											$ 333.00
+										</Text>
+									</Flex>
+								</Flex>
+							</Flex>
+							<Flex
+								mt="3"
+								minH="20vh"
+								boxShadow="md"
+								width="100%"
+								flexDir="column"
+								justifyContent="center"
+								// alignItems="center"
+							>
+								{/* <Heading>Payment History</Heading> */}
+								<Heading fontSize="1rem" textAlign="center">
+									Pending Installments
+								</Heading>
+								<Flex
+									flexDir="column"
+									p="4"
+									minHeight="50vh"
+									bg="#fff"
+								>
+									<Flex
+										borderRadius="5"
+										boxShadow="md"
+										p="2"
+										justifyContent="space-between"
+									>
+										<Text>
+											Due Date
+											<span
+												style={{
+													color: "#aaaaaa",
+													display: "block",
+													fontSize: "14px",
+												}}
+											>
+												2020-10-12
+											</span>
+										</Text>
+										<Text
+											fontWeight="bold"
+											color="green.300"
+										>
+											$ 333.00
+										</Text>
+									</Flex>
+									<Flex
+										borderRadius="5"
+										boxShadow="md"
+										p="2"
+										justifyContent="space-between"
+									>
+										<Text>
+											Paid
+											<span
+												style={{
+													color: "#aaaaaa",
+													display: "block",
+													fontSize: "14px",
+												}}
+											>
+												2020-10-12
+											</span>
+										</Text>
+										<Text
+											fontWeight="bold"
+											color="green.300"
+										>
+											$ 333.00
+										</Text>
+									</Flex>
+								</Flex>
 							</Flex>
 						</Flex>
 					</Flex>
 
 					<Flex
 						flexDir="column"
+						height="fit-content"
 						justifyContent="flex-start"
 						width="30%"
 						p="5"
@@ -442,41 +577,6 @@ const OrderDetails = () => {
 							</Flex>
 						</Flex>
 
-						{/* <Flex flexDir="column" p="4" minHeight="50vh" bg="#fff">
-							<Heading fontSize="1rem">
-								Transaction History
-							</Heading>
-							<Text
-								color="gray.600"
-								fontWeight="light"
-								fontStyle="italic"
-								mb="4"
-							>
-								Transaction on platform
-							</Text>
-							<Flex
-								borderRadius="5"
-								boxShadow="md"
-								p="2"
-								justifyContent="space-between"
-							>
-								<Text>
-									Paid
-									<span
-										style={{
-											color: "#aaaaaa",
-											display: "block",
-											fontSize: "14px",
-										}}
-									>
-										2020-10-12
-									</span>
-								</Text>
-								<Text fontWeight="bold" color="green.300">
-									$ 333.00
-								</Text>
-							</Flex>
-						</Flex> */}
 						<Flex
 							flexDir="column"
 							p="4"
@@ -489,7 +589,7 @@ const OrderDetails = () => {
 								color="gray.600"
 								fontWeight="light"
 								fontStyle="italic"
-								mb="4"
+								mb="2"
 							>
 								Vehicle Overview
 							</Text>
