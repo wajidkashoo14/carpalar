@@ -75,15 +75,15 @@ function Navbar() {
 						</Flex>
 						<Flex alignItems={"center"}>
 							<FaWpforms color="#3856b9" fontSize="20" />
-							<Link href="Applications">Applications</Link>
+							<Link href="/user/Applications">Applications</Link>
 						</Flex>
 						<Flex alignItems={"center"}>
 							<AiOutlineShop color="#3856b9" fontSize="20" />
-							<Link href="orders">Purchases</Link>
+							<Link href="/user/orders">Purchases</Link>
 						</Flex>
 						<Flex alignItems={"center"}>
 							<FaUserAlt color="#3856b9" fontSize="15" />
-							<Link href="profile">Profile</Link>
+							<Link href="/user/profile">Profile</Link>
 						</Flex>
 					</Flex>
 				) : (
