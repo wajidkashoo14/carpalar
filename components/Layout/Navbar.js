@@ -73,7 +73,7 @@ function Navbar() {
           <Flex gap="8" alignItems="flex-start">
             <Flex alignItems={"center"}>
               <RiDashboardFill color="#3856b9" fontSize="20" />
-              <Link href="/user/dashboard">Dashboard</Link>
+              <Link href="dashboard">Dashboard</Link>
             </Flex>
             <Flex alignItems={"center"}>
               <FaWpforms color="#3856b9" fontSize="20" />
