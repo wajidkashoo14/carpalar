@@ -25,7 +25,11 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 
 function Navbar() {
 	const router = useRouter();
-
+	function logoutHandler(e) {
+		Cookies.remove("user");
+		Cookies.remove("token");
+		router.push("/");
+	}
 	const onClickHandler = () => {
 		const user = Cookies.get("user")
 			? JSON.parse(Cookies.get("user"))
@@ -139,6 +143,7 @@ function Navbar() {
 							placeItems="center"
 							variant="outline"
 							marginBottom={2}
+							onClick={logoutHandler}
 						>
 							<Text
 								display="flex"
