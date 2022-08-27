@@ -71,10 +71,9 @@ function Signin() {
   function onSignInSubmit(data) {
     console.log("in onSignInSubmit");
     const captchaVerifier = window.recaptchaVerifier;
-    const number =
-      data.user.country_code.toString() + data.user.mobile.toString();
-    console.log("number", number);
-    signInWithPhoneNumber(auth, number, captchaVerifier)
+    const number = data.user.mobile.toString();
+    console.log("number", `+91${number}`);
+    signInWithPhoneNumber(auth, `+91${number}`, captchaVerifier)
       .then((result) => {
         window.confirmationCode = result;
         setStep(3);
