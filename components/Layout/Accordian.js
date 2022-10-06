@@ -49,18 +49,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										Do you offer any sort of warranty?
+										What is the Minimum weekly Payment?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4} textAlign="left">
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								Weekly payments from as low as NGN 32000 per week or more spread over 24 Months (pre-owned vehicles) 
 							</AccordionPanel>
 						</AccordionItem>
 
@@ -68,18 +63,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										When should I get my oil changed?
+										What is included in the contract?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								Comprehensive insurance and vehicle tracking included in the value of the car.
 							</AccordionPanel>
 						</AccordionItem>
 
@@ -87,18 +77,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										How do I check my tire pressure?
+										Are the cars Nigerian or Foreign used?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								All our Cars are Foreign Used. We do not offer Nigerian Used Cars unless when a vehicle is being reassigned to a new driver.
 							</AccordionPanel>
 						</AccordionItem>
 
@@ -106,18 +91,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										How often should I rotate my tires?
+										Do I have the option to choose the type of car I want?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								Yes - but this is from a list of cars that we have available at the time a driver application was processed.
 							</AccordionPanel>
 						</AccordionItem>
 					</Accordion>
@@ -126,18 +106,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										What is Auto Detailing?
+										Is making a down payment necessary?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								Yes, we require a 13 percent down payment of the total value of the car before it can be picked up by the driver.
 							</AccordionPanel>
 						</AccordionItem>
 
@@ -145,18 +120,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										Is it urgent to fix an oil leak?
+										I do not have an account with Bolt or Uber, can I still register and get a car?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								No, you must have active Bolt and Uber accounts before we assign a vehicle to you
 							</AccordionPanel>
 						</AccordionItem>
 
@@ -164,18 +134,13 @@ function Accordian() {
 							<h2>
 								<AccordionButton>
 									<Box flex="1" textAlign="left">
-										What causes brake pulsation?
+										How long do I have to work with your car before it becomes mine?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								This depends on your devotions and desire to own the own car. Our contract is for 106 Weeks (including Saturdays and Sundays). Bulk and advance payments are accepted.
 							</AccordionPanel>
 						</AccordionItem>
 
@@ -187,18 +152,13 @@ function Accordian() {
 										textAlign="left"
 										border="none"
 									>
-										Why is it important to rotate tires?
+										What measures are in place against theft and accidents?
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								Our cars are secured with Auto tracker and comprehensive Insurance.
 							</AccordionPanel>
 						</AccordionItem>
 					</Accordion>
